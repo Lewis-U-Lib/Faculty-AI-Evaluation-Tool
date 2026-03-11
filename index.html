@@ -3781,5 +3781,75 @@ if(document.readyState==="loading"){
   if(a) a.href = window.location.href;
 })();
 </script>
-</body>
+!-- ═══════════════════════════════════════════════════════════════
+     AI EVAL TOOL — IFRAME HEIGHT BROADCASTER
+     Paste this just BEFORE the closing </body> tag in your
+     GitHub repo's index.html (Faculty-AI-Toolkit)
+     ═══════════════════════════════════════════════════════════════ -->
+<script>
+(function () {
+  "use strict";
+
+  // Only run when inside an iframe
+  if (window.self === window.top) return;
+
+  var lastHeight = 0;
+  var BUFFER     = 16;
+
+  function sendHeight() {
+    var h = Math.max(
+      document.body.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.scrollHeight,
+      document.documentElement.offsetHeight
+    );
+
+    h += BUFFER;
+
+    if (h === lastHeight) return;
+    lastHeight = h;
+
+    var msg = { type: "ai-tool-resize", height: h };
+
+    // Send to parent — using "*" for broad compatibility
+    // with any LibGuides subdomain that embeds this tool
+    try {
+      window.parent.postMessage(msg, "*");
+    } catch (e) { }
+  }
+
+  // Watch for ALL DOM changes (selections, results, popups, etc.)
+  if (typeof MutationObserver !== "undefined") {
+    var observer = new MutationObserver(function () {
+      setTimeout(sendHeight, 120);
+    });
+    observer.observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      characterData: true
+    });
+  }
+
+  // Send on resize and after load
+  window.addEventListener("resize", sendHeight);
+  window.addEventListener("load", function () {
+    sendHeight();
+    setTimeout(sendHeight, 500);
+    setTimeout(sendHeight, 1500);
+    setTimeout(sendHeight, 3000);
+  });
+
+  // Safety-net polling: every 1.5s for ~60s, then every 5s
+  var count = 0;
+  var interval = setInterval(function () {
+    sendHeight();
+    count++;
+    if (count > 40) {
+      clearInterval(interval);
+      setInterval(sendHeight, 5000);
+    }
+  }, 1500);
+})();
+</script></body>
 </html>
