@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Use-Case Decision Tree — Generative AI Video Production for Academic Libraries</title>
+  <meta name="description" content="Interactive decision tree for evaluating generative AI video production use cases in academic libraries.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    body{font-family:'Montserrat','Segoe UI',system-ui,sans-serif;overflow-x:hidden}
+    #root{min-height:100vh;position:relative}
+
+    /* Scanline overlay */
+    .scanlines{position:fixed;top:0;left:0;right:0;bottom:0;pointer-events:none;z-index:1;
+      background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.03) 2px,rgba(0,0,0,0.03) 4px);
+      opacity:0.4}
+
+    /* Grid pattern overlay */
+    .grid-bg{position:fixed;top:0;left:0;right:0;bottom:0;pointer-events:none;z-index:0;opacity:0.04;
+      background-image:
+        linear-gradient(rgba(232,196,70,0.3) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(232,196,70,0.3) 1px,transparent 1px);
+      background-size:60px 60px}
+
+    @keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+    @keyframes glow-pulse{0%,100%{box-shadow:0 0 8px rgba(232,196,70,0.15),0 0 20px rgba(232,196,70,0.05)}50%{box-shadow:0 0 16px rgba(232,196,70,0.3),0 0 40px rgba(232,196,70,0.1)}}
+    @keyframes border-glow{0%,100%{border-color:rgba(232,196,70,0.25)}50%{border-color:rgba(232,196,70,0.5)}}
+    @keyframes flicker{0%,100%{opacity:1}92%{opacity:1}93%{opacity:0.8}94%{opacity:1}96%{opacity:0.9}97%{opacity:1}}
+    @keyframes electric-slide{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+    .option-btn{transition:all 0.25s ease}
+    .option-btn:hover{background:rgba(232,196,70,0.08) !important;border-color:#E8C446 !important;transform:translateX(4px);box-shadow:0 0 15px rgba(232,196,70,0.15),inset 0 0 15px rgba(232,196,70,0.03) !important}
+    .option-btn:focus-visible{outline:3px solid #E8C446;outline-offset:2px}
+    .nav-btn{transition:all 0.2s ease}
+    .nav-btn:hover:not(:disabled){background:rgba(232,196,70,0.06) !important;border-color:#E8C446 !important;color:#FFE584 !important;box-shadow:0 0 10px rgba(232,196,70,0.12)}
+    .nav-btn:focus-visible{outline:3px solid #E8C446;outline-offset:2px}
+    .ref-link{color:#E8C446;text-decoration:none;font-weight:600;transition:all 0.2s ease;text-shadow:0 0 8px rgba(232,196,70,0.3)}
+    .ref-link:hover{color:#FFE584;text-decoration:underline;text-shadow:0 0 16px rgba(232,196,70,0.5)}
+    ::-webkit-scrollbar{width:6px}
+    ::-webkit-scrollbar-track{background:#1C0B12}
+    ::-webkit-scrollbar-thumb{background:#4A1A2A;border-radius:3px}
+    ::-webkit-scrollbar-thumb:hover{background:#E8C446;box-shadow:0 0 6px #E8C446}
+    .cc-icon{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;border:2px solid #E8C446;color:#E8C446;font-size:11px;font-weight:800;flex-shrink:0;transition:all 0.3s ease;background:rgba(232,196,70,0.04);box-shadow:0 0 8px rgba(232,196,70,0.1)}
+    .cc-row:hover .cc-icon{background:rgba(232,196,70,0.12);border-color:#FFE584;color:#FFE584;box-shadow:0 0 16px rgba(232,196,70,0.3)}
+    .cc-link{color:#E8C446;text-decoration:none;font-weight:600;text-shadow:0 0 6px rgba(232,196,70,0.2)}
+    .cc-link:hover{text-decoration:underline;color:#FFE584;text-shadow:0 0 12px rgba(232,196,70,0.4)}
+  </style>
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div id="root"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script>
+    var e=React.createElement,useState=React.useState,useCallback=React.useCallback;
+
+    var C={
+      bg:"#1C0B12",bgMid:"#220E16",bgDeep:"#14070D",
+      card:"#2A1320",cardHi:"#321828",cardBorder:"#4A1A2A",
+      gold:"#E8C446",goldLight:"#FFE584",goldDim:"#BFA03A",goldPale:"rgba(232,196,70,0.06)",
+      teal:"#2E9B6A",tealPale:"rgba(46,155,106,0.08)",
+      crimson:"#E04060",crimsonPale:"rgba(224,64,96,0.08)",
+      text:"#FFFFFF",textBody:"#F0E8E4",textMuted:"#D8CCC6",textDim:"#A8949C",
+      border:"#4A1A2A",borderLight:"#3D1522",
+      neonGold:"0 0 10px rgba(232,196,70,0.2),0 0 30px rgba(232,196,70,0.06)",
+      neonGoldStrong:"0 0 15px rgba(232,196,70,0.3),0 0 40px rgba(232,196,70,0.1)"
+    };
+
+    var nodes={
+      start:{id:"start",type:"question",question:"What is the primary purpose of the proposed video?",options:[
+        {label:"Library outreach, marketing, or promotional content",next:"style"},
+        {label:"Transitional segment within an instructional or informational video",next:"transitional_check"},
+        {label:"Direct instruction, curricular teaching, or pedagogical content",next:"prohibited_instructional"},
+        {label:"Unsure / doesn\u2019t clearly fit the above categories",next:"gray_area"}]},
+      transitional_check:{id:"transitional_check",type:"question",question:"Does the segment deliver in-depth educational information or pedagogical instruction?",subtitle:"Bumpers, intros, transitions, and interstitials typically do not \u2014 but segments that teach, explain, or demonstrate content do.",options:[
+        {label:"No \u2014 it\u2019s a bumper, intro, interstitial, or transition only",next:"style"},
+        {label:"Yes \u2014 it teaches, explains, or delivers instructional content",next:"prohibited_instructional"}]},
+      style:{id:"style",type:"question",question:"Does the proposed visual style avoid realistic human simulation?",subtitle:"Examples of approved non-realistic styles: puppetry, claymation, stop-motion, stylized cartoons, surreal or abstract visuals, paper-craft, collage, or other clearly artificial aesthetics.",options:[
+        {label:"Yes \u2014 uses a clearly non-realistic, stylized artistic medium",next:"ip_check"},
+        {label:"No \u2014 uses photorealistic humans, deepfake-style visuals, or hyperrealistic environments",next:"prohibited_style"},
+        {label:"Uncertain \u2014 not sure if the chosen style could risk uncanny-valley effects",next:"style_review"}]},
+      ip_check:{id:"ip_check",type:"question",question:"Is the content free of copyrighted characters, public figure likenesses, and unauthorized institutional trademarks?",subtitle:"This includes third-party IP (e.g., Disney, Marvel, Nintendo), recognizable public figures, and your institution\u2019s own logos or marks if used without authorization.",options:[
+        {label:"Yes \u2014 all AI-generated assets have been verified as original",next:"deception_check"},
+        {label:"No or unsure \u2014 potential IP concerns exist or originality hasn\u2019t been verified",next:"ip_remediation"}]},
+      deception_check:{id:"deception_check",type:"question",question:"Could the video reasonably be mistaken for recorded footage of real events or real people?",subtitle:"Consider whether a typical viewer might believe the content depicts actual people, places, or events rather than AI-generated material.",options:[
+        {label:"No \u2014 the content is clearly stylized and would not be mistaken for reality",next:"mission_check"},
+        {label:"Yes or possibly \u2014 some elements could be perceived as depicting real events or individuals",next:"deception_remediation"}]},
+      mission_check:{id:"mission_check",type:"question",question:"Does the content align with your institution\u2019s mission, values, and branding standards?",subtitle:"Consider your library\u2019s and institution\u2019s stated mission, code of conduct, community values, and visual identity guidelines.",options:[
+        {label:"Yes \u2014 fully consistent with institutional mission and values",next:"approved"},
+        {label:"Potential conflict or uncertainty about alignment",next:"gray_area"}]},
+      approved:{id:"approved",type:"outcome",status:"approved",title:"APPROVED \u2014 Proceed to Production",body:"This use case meets all recommended policy requirements for generative AI video production. You may proceed with production, ensuring human oversight at every stage, transparent AI disclosure on all distribution platforms, and thorough documentation of prompts, assets, and review decisions.",actions:["Begin your production workflow with documented human review at each stage (script, assets, clips, final edit, pre-publication)","Apply a clear AI disclosure statement on every platform where the video is published","Complete a human review sign-off checklist before publication","Archive all production documentation \u2014 prompts, version histories, review comments, and final assets"]},
+      prohibited_instructional:{id:"prohibited_instructional",type:"outcome",status:"prohibited",title:"STOP & CONSIDER \u2014 Instructional Content",body:"Before moving forward, it\u2019s worth pausing on this one. Generative AI video for direct instruction, pedagogical content, or curricular teaching raises some real concerns. Research suggests that AI-generated instructional content can undermine viewer trust and engender feelings of misinformation (Sew et al., 2025). When your library\u2019s credibility as an educational resource is on the line, that\u2019s worth taking seriously. Here\u2019s why this gives us pause:",actions:["Viewers may question the accuracy or authenticity of AI-generated educational material, even when the content is correct","AI-generated instructional content can blur the line between vetted, human-authored pedagogy and synthetic output \u2014 and audiences notice","Your library\u2019s role as a trusted information source could be undermined if instructional content feels impersonal or machine-driven","Consider traditional production methods (recorded lectures, screen captures, live-action) which carry stronger credibility signals for teaching contexts","If you believe a narrow exception applies, document your reasoning and submit it to your oversight body before proceeding"]},
+      prohibited_style:{id:"prohibited_style",type:"outcome",status:"prohibited",title:"STOP & CONSIDER \u2014 Realistic Human Simulation",body:"This is a good moment to step back and think carefully. Photorealistic human avatars, deepfake-style visuals, and hyperrealistic environments carry significant risks for library outreach content. The goal isn\u2019t to limit creativity \u2014 it\u2019s to make sure the end product doesn\u2019t create problems that undermine the work itself. Here\u2019s what to weigh:",actions:["Uncanny-valley effects can make viewers uncomfortable and disengaged, working against your outreach goals rather than toward them","Realistic AI-generated humans risk being perceived as deceptive \u2014 even with a disclosure statement, viewers may feel misled","Institutional trust is hard to build and easy to erode; content that looks like it\u2019s trying to pass as real footage raises red flags","Non-realistic styles (puppetry, claymation, cartoon, surreal, abstract, paper-craft) sidestep these risks entirely and can be just as engaging","Revise your visual approach to a clearly stylized medium, then restart this assessment to continue through the remaining questions"]},
+      gray_area:{id:"gray_area",type:"outcome",status:"review",title:"REVIEW REQUIRED \u2014 Consult Your Oversight Body",body:"This use case doesn\u2019t clearly fall within the pre-approved or cautioned categories. Before proceeding, submit a brief written proposal describing the intended purpose, audience, and creative approach to your library\u2019s designated oversight body (e.g., a generative media committee, outreach review group, or library administration) for evaluation and written approval.",actions:["Prepare a brief written proposal describing the intended use case, target audience, and creative approach","Submit the proposal to your designated oversight body for review","Await written approval before beginning any production work","Document the approval decision and any conditions in your project folder"]},
+      style_review:{id:"style_review",type:"outcome",status:"review",title:"REVIEW REQUIRED \u2014 Style Uncertainty",body:"When there is uncertainty about whether a proposed artistic medium risks realistic human replication or uncanny-valley effects, the production team should consult with colleagues and/or an oversight body before proceeding. A brief written rationale for the chosen style should be documented and retained.",actions:["Document a brief written rationale explaining the proposed style and why it may or may not qualify as non-realistic","Consult with your team, colleagues, or oversight body to reach consensus","Obtain written confirmation that the style is acceptable before proceeding","After confirmation, restart this assessment to continue through the remaining questions"]},
+      ip_remediation:{id:"ip_remediation",type:"outcome",status:"review",title:"ACTION REQUIRED \u2014 IP & Copyright Concern",body:"All AI-generated assets should be verified for originality before use. Prompts and outputs must not replicate copyrighted characters, mimic identifiable public figures, or reproduce institutional trademarks without authorization. The ALA\u2019s guidance on generative AI and intellectual property is a helpful reference.",actions:["Remove or replace any assets with potential IP concerns","Conduct an asset originality verification \u2014 use reverse image searches where feasible","Review your prompts to ensure they do not reference copyrighted or trademarked material","Document the verification process, then restart this assessment"]},
+      deception_remediation:{id:"deception_remediation",type:"outcome",status:"review",title:"ACTION REQUIRED \u2014 Deception Risk",body:"Content that could be mistaken for real footage or real individuals conflicts with transparency and ethical AI use principles. The visual approach should be revised to ensure viewers clearly understand the AI-generated nature of the content. Prominent AI disclosure alone is not sufficient \u2014 the visuals themselves should be unmistakably stylized.",actions:["Revise the visual approach to be more clearly stylized and non-deceptive","Consider switching to a more distinctly non-realistic medium (puppetry, claymation, cartoon, etc.)","Ensure your AI disclosure statement will be prominently placed on all platforms","After revising, restart this assessment to verify the updated approach"]}
+    };
+
+    var SC={
+      approved:{color:C.teal,bg:C.tealPale,icon:"\u2713",label:"APPROVED"},
+      prohibited:{color:C.crimson,bg:C.crimsonPale,icon:"\uD83E\uDD14",label:"STOP & CONSIDER"},
+      review:{color:C.gold,bg:C.goldPale,icon:"\u26A0",label:"REVIEW NEEDED"}
+    };
+
+    function App(){
+      var hs=useState(["start"]),history=hs[0],setHistory=hs[1];
+      var cid=history[history.length-1],cur=nodes[cid],step=history.length;
+      var go=useCallback(function(n){setHistory(function(h){return h.concat([n])});window.scrollTo({top:0,behavior:"smooth"});},[]);
+      var back=useCallback(function(){setHistory(function(h){return h.length>1?h.slice(0,-1):h});},[]);
+      var reset=useCallback(function(){setHistory(["start"]);window.scrollTo({top:0,behavior:"smooth"});},[]);
+
+      var dots=history.map(function(id,i){
+        var nd=nodes[id],act=i===history.length-1,out=nd.type==="outcome";
+        var dc=out?SC[nd.status].color:act?C.gold:C.textDim;
+        return e("div",{key:i,style:{display:"flex",alignItems:"center",gap:6}},
+          i>0?e("div",{style:{width:24,height:2,background:act?"linear-gradient(90deg,"+C.gold+","+C.goldDim+")":C.border,borderRadius:1}}):null,
+          e("div",{style:{width:act?14:8,height:act?14:8,borderRadius:"50%",background:dc,boxShadow:act?"0 0 12px "+dc+",0 0 24px "+dc+"40":"none",transition:"all 0.3s ease"}})
+        );
+      });
+
+      var qCard=null;
+      if(cur.type==="question"){
+        var opts=cur.options.map(function(o,i){
+          return e("button",{key:i,className:"option-btn",onClick:function(){go(o.next)},style:{background:C.cardHi,border:"1px solid "+C.border,borderRadius:10,padding:"16px 20px",color:C.text,fontSize:15,fontWeight:500,fontFamily:"inherit",cursor:"pointer",textAlign:"left",lineHeight:1.55,display:"flex",alignItems:"flex-start",gap:12,transition:"all 0.25s ease"}},
+            e("span",{style:{minWidth:28,height:28,borderRadius:7,background:"linear-gradient(135deg,"+C.gold+","+C.goldDim+")",display:"flex",alignItems:"center",justifyContent:"center",fontSize:13,fontWeight:800,color:C.bg,flexShrink:0,marginTop:2,boxShadow:"0 0 8px rgba(232,196,70,0.25)"}},String.fromCharCode(65+i)),
+            o.label
+          );
+        });
+        qCard=e("div",{key:cid,style:{background:C.card,border:"1px solid "+C.border,borderRadius:16,padding:"28px 28px 22px",boxShadow:C.neonGold,animation:"fadeIn 0.35s ease, glow-pulse 4s ease-in-out infinite"}},
+          e("div",{style:{fontSize:12,fontWeight:700,letterSpacing:3,color:C.gold,textTransform:"uppercase",marginBottom:14,textShadow:"0 0 10px rgba(232,196,70,0.3)"}},"Question "+step+" of ~6"),
+          e("h2",{style:{fontSize:22,fontWeight:700,margin:"0 0 10px",lineHeight:1.45,color:C.text}},cur.question),
+          cur.subtitle?e("p",{style:{fontSize:14,color:C.textMuted,margin:"0 0 20px",lineHeight:1.65,fontWeight:500}},cur.subtitle):null,
+          e("div",{style:{display:"flex",flexDirection:"column",gap:8,marginTop:16}},opts)
+        );
+      }
+
+      var oCard=null;
+      if(cur.type==="outcome"){
+        var cf=SC[cur.status],tt=cur.title.split(" \u2014 ");
+        var glowCol=cf.color;
+        var acts=cur.actions.map(function(a,i){
+          return e("div",{key:i,style:{display:"flex",alignItems:"flex-start",gap:10,padding:"12px 16px",background:cf.bg,borderRadius:8,fontSize:14,fontWeight:500,lineHeight:1.6,color:C.textBody,border:"1px solid "+glowCol+"15"}},
+            e("span",{style:{minWidth:24,height:24,borderRadius:"50%",background:glowCol+"20",border:"1px solid "+glowCol+"30",display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,fontWeight:700,color:glowCol,flexShrink:0,marginTop:2,boxShadow:"0 0 6px "+glowCol+"20"}},i+1),a
+          );
+        });
+        oCard=e("div",{key:cid,style:{background:C.card,border:"2px solid "+glowCol+"40",borderRadius:16,overflow:"hidden",boxShadow:"0 0 20px "+glowCol+"18,0 0 40px "+glowCol+"08",animation:"fadeIn 0.35s ease"}},
+          e("div",{style:{background:cf.bg,borderBottom:"1px solid "+glowCol+"25",padding:"18px 28px",display:"flex",alignItems:"center",gap:14}},
+            e("div",{style:{width:42,height:42,borderRadius:"50%",background:glowCol+"15",border:"2px solid "+glowCol,display:"flex",alignItems:"center",justifyContent:"center",fontSize:20,fontWeight:700,color:glowCol,boxShadow:"0 0 14px "+glowCol+"35"}},cf.icon),
+            e("div",null,
+              e("div",{style:{fontSize:12,fontWeight:700,letterSpacing:3,color:glowCol,textTransform:"uppercase",textShadow:"0 0 8px "+glowCol+"40"}},cf.label),
+              e("div",{style:{fontSize:19,fontWeight:700,color:C.text,marginTop:3}},tt.length>1?tt[1]:cur.title)
+            )
+          ),
+          e("div",{style:{padding:"22px 28px 26px"}},
+            e("p",{style:{fontSize:15,lineHeight:1.75,color:C.textBody,margin:"0 0 22px",fontWeight:500}},cur.body),
+            e("div",{style:{fontSize:12,fontWeight:700,letterSpacing:2,color:C.textDim,textTransform:"uppercase",marginBottom:12}},cur.status==="prohibited"?"Things to Consider":"Recommended Next Steps"),
+            e("div",{style:{display:"flex",flexDirection:"column",gap:7}},acts)
+          )
+        );
+      }
+
+      var bc=null;
+      if(history.length>1){
+        var crumbs=history.map(function(id,i){
+          var nd=nodes[id],out=nd.type==="outcome";
+          var lb=out?SC[nd.status].label:"Q"+(i+1),cl=out?SC[nd.status].color:C.textDim;
+          return e("div",{key:i,style:{display:"flex",alignItems:"center",gap:5}},
+            i>0?e("span",{style:{color:C.textDim,fontSize:13}},"\u2192"):null,
+            e("span",{style:{fontSize:13,fontWeight:600,color:cl,background:cl+"15",padding:"3px 10px",borderRadius:4,boxShadow:"0 0 4px "+cl+"15"}},lb)
+          );
+        });
+        bc=e("div",{style:{marginTop:24,padding:"18px 22px",background:C.card,borderRadius:10,border:"1px solid "+C.border}},
+          e("div",{style:{fontSize:12,fontWeight:700,letterSpacing:2,color:C.textDim,textTransform:"uppercase",marginBottom:10}},"Decision Path"),
+          e("div",{style:{display:"flex",flexWrap:"wrap",gap:5,alignItems:"center"}},crumbs)
+        );
+      }
+
+      var legend=Object.keys(SC).map(function(k){
+        return e("div",{key:k,style:{display:"flex",alignItems:"center",gap:7,fontSize:13,color:C.textBody,fontWeight:500}},
+          e("div",{style:{width:11,height:11,borderRadius:"50%",background:SC[k].color,boxShadow:"0 0 6px "+SC[k].color+"50"}}),SC[k].label
+        );
+      });
+
+      function ccI(l){return e("span",{className:"cc-icon","aria-hidden":"true"},l);}
+      var ccBlock=e("div",{style:{marginTop:32,padding:"24px",background:C.card,borderRadius:12,border:"1px solid "+C.border,textAlign:"center",boxShadow:"0 0 20px rgba(232,196,70,0.04)"}},
+        e("div",{className:"cc-row",style:{display:"flex",alignItems:"center",justifyContent:"center",gap:10,marginBottom:14,flexWrap:"wrap"}},ccI("CC"),ccI("BY"),ccI("NC"),ccI("ND")),
+        e("p",{style:{fontSize:13,color:C.textBody,lineHeight:1.7,fontWeight:500}},"This work is licensed under a ",e("a",{href:"https://creativecommons.org/licenses/by-nc-nd/4.0/",target:"_blank",rel:"noopener noreferrer",className:"cc-link"},"Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License"),"."),
+        e("p",{style:{fontSize:12,color:C.textMuted,marginTop:8,lineHeight:1.5,fontWeight:400}},"You may share this work with attribution. No commercial use. No derivatives or adaptations.")
+      );
+
+      return e("div",{style:{minHeight:"100vh",background:"linear-gradient(160deg,"+C.bgMid+" 0%,"+C.bg+" 35%,"+C.bgDeep+" 100%)",color:C.text,padding:"32px 20px 48px",position:"relative",zIndex:2}},
+        /* Electric top bar */
+        e("div",{style:{position:"fixed",top:0,left:0,right:0,height:3,zIndex:10,background:"linear-gradient(90deg,"+C.gold+",#940731,"+C.gold+",#940731,"+C.gold+")",backgroundSize:"200% 100%",animation:"electric-slide 3s linear infinite",boxShadow:"0 0 10px rgba(232,196,70,0.4),0 2px 20px rgba(232,196,70,0.15)"}}),
+        e("div",{style:{maxWidth:720,margin:"0 auto"}},
+          /* Header */
+          e("div",{style:{textAlign:"center",marginBottom:16}},
+            e("div",{style:{display:"inline-block",fontSize:11,fontWeight:700,letterSpacing:4,color:C.gold,textTransform:"uppercase",background:"rgba(232,196,70,0.06)",padding:"8px 20px",borderRadius:20,marginBottom:20,border:"1px solid rgba(232,196,70,0.18)",boxShadow:"0 0 12px rgba(232,196,70,0.08)",textShadow:"0 0 8px rgba(232,196,70,0.3)"}},"Policy Assessment Tool"),
+            /* Metallic shimmer title */
+            e("h1",{style:{fontSize:34,fontWeight:900,margin:"0 0 12px",letterSpacing:-0.5,background:"linear-gradient(90deg,"+C.goldDim+","+C.gold+","+C.goldLight+","+C.gold+","+C.goldDim+")",backgroundSize:"200% auto",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",animation:"shimmer 3s linear infinite",filter:"drop-shadow(0 0 12px rgba(232,196,70,0.25))"}},"Use-Case Decision Tree"),
+            e("p",{style:{fontSize:16,color:C.textBody,margin:"0 0 6px",lineHeight:1.5,fontWeight:500}},"Generative AI Video Production for Academic Libraries"),
+            e("p",{style:{fontSize:14,color:C.textMuted,margin:0,lineHeight:1.5,fontWeight:400}},"Evaluate whether a proposed video project is approved, requires review, or falls outside recommended use."),
+            /* Electric divider */
+            e("div",{style:{width:80,height:2,margin:"20px auto 0",borderRadius:1,background:"linear-gradient(90deg,transparent,"+C.gold+",transparent)",boxShadow:"0 0 8px rgba(232,196,70,0.3)"}})
+          ),
+          e("div",{style:{display:"flex",alignItems:"center",justifyContent:"center",gap:6,marginBottom:28,flexWrap:"wrap"}},dots),
+          qCard||oCard,
+          e("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginTop:20,gap:12}},
+            e("button",{className:"nav-btn",onClick:back,disabled:history.length<=1,style:{background:"transparent",border:"1px solid "+C.border,borderRadius:8,padding:"11px 22px",color:history.length<=1?C.textDim:C.textBody,fontSize:14,fontFamily:"inherit",fontWeight:600,cursor:history.length<=1?"default":"pointer",opacity:history.length<=1?0.4:1}},"\u2190 Back"),
+            e("button",{className:"nav-btn",onClick:reset,style:{background:"transparent",border:"1px solid "+C.border,borderRadius:8,padding:"11px 22px",color:C.textBody,fontSize:14,fontFamily:"inherit",fontWeight:600,cursor:"pointer"}},"Start Over \u21BA")
+          ),
+          bc,
+          e("div",{style:{marginTop:20,display:"flex",justifyContent:"center",gap:22,flexWrap:"wrap"}},legend),
+          e("div",{style:{marginTop:40,textAlign:"center",borderTop:"1px solid "+C.border,paddingTop:20}},
+            e("p",{style:{fontSize:13,color:C.textMuted,lineHeight:1.8,fontWeight:400}},"A policy assessment tool for academic libraries employing generative AI in video production.",e("br"),"Based on recommended frameworks for ethical AI use, transparency, and institutional accountability.",e("br"),e("span",{style:{color:C.textDim}},"Adapt to your institution\u2019s specific policies, values, and governance structures.")),
+            e("p",{style:{fontSize:14,marginTop:14}},e("a",{href:"references.html",className:"ref-link"},"\uD83D\uDCDA View References & Bibliography"))
+          ),
+          ccBlock
+        )
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("root")).render(e(App));
+  </script>
+</body>
+</html>
