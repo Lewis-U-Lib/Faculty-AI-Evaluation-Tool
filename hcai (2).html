@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Human-Centered AI (HCAI) — Lewis University Library AI Evaluation Toolkit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+  <style>
+:root {
+  --navy:       #520e20;
+  --navy-mid:   #641028;
+  --navy-card:  #781230;
+  --slate:      #8a1638;
+  --cyan:       #debb70;
+  --cyan-dim:   #b89a4a;
+  --white:      #ffffff;
+  --off-white:  #f5f0e8;
+  --muted:      #e8ced3;
+  --border:     rgba(222,187,112,.22);
+  --font-h:     'Barlow Condensed', sans-serif;
+  --font-b:     'Barlow', sans-serif;
+  --font-s:     'Lora', Georgia, serif;
+  --r:          14px;
+  --ease:       .18s cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--font-b);
+  background:var(--navy);
+  color:var(--muted);
+  min-height:100vh;
+  line-height:1.7;
+}
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 90% 55% at 15% 10%, rgba(149,6,49,.18) 0%, transparent 65%),
+    radial-gradient(ellipse 70% 70% at 85% 90%, rgba(82,14,32,.9) 0%, transparent 70%),
+    repeating-linear-gradient(0deg,transparent,transparent 47px,rgba(222,187,112,.015) 48px),
+    repeating-linear-gradient(90deg,transparent,transparent 47px,rgba(222,187,112,.015) 48px);
+}
+
+/* ── LAYOUT ── */
+.page{position:relative;z-index:1;max-width:780px;margin:0 auto;padding:40px 24px 80px;}
+
+/* ── HEADER ── */
+.hdr{text-align:center;padding:30px 0 40px;border-bottom:1px solid var(--border);margin-bottom:40px;}
+.hdr__back{
+  display:inline-block;font-family:var(--font-h);font-size:13px;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);
+  text-decoration:none;margin-bottom:18px;transition:opacity var(--ease);
+}
+.hdr__back:hover{opacity:.7;}
+.hdr__title{
+  font-family:var(--font-h);font-size:clamp(28px,5vw,44px);font-weight:700;
+  line-height:1.25;color:var(--white);margin-bottom:12px;
+}
+.hdr__title em{
+  font-style:normal;color:var(--cyan);
+  text-decoration:underline;text-decoration-color:rgba(222,187,112,.35);text-underline-offset:6px;
+}
+.hdr__sub{font-family:var(--font-s);font-size:17px;color:var(--muted);max-width:600px;margin:0 auto;font-style:italic;line-height:1.6;}
+
+/* ── ARTICLE BODY ── */
+.article{font-size:16.5px;color:rgba(255,255,255,.85);line-height:1.8;}
+.article h2{
+  font-family:var(--font-h);font-size:clamp(22px,3.5vw,30px);font-weight:700;
+  color:var(--white);margin:48px 0 16px;padding-bottom:8px;
+  border-bottom:2px solid rgba(222,187,112,.15);
+}
+.article h2 .h2-num{
+  display:inline-block;font-size:14px;font-weight:700;color:var(--cyan);
+  background:rgba(222,187,112,.1);border:1px solid rgba(222,187,112,.25);
+  border-radius:999px;padding:2px 12px;margin-right:10px;vertical-align:middle;
+  position:relative;top:-2px;
+}
+.article h3{
+  font-family:var(--font-h);font-size:18px;font-weight:700;
+  color:var(--cyan);margin:28px 0 10px;letter-spacing:.02em;
+}
+.article p{margin-bottom:18px;}
+.article p + p{margin-top:0;}
+
+/* Blockquotes — scholarly pulled quotes */
+.pullquote{
+  margin:28px 0;padding:20px 24px;
+  border-left:3px solid var(--cyan);
+  background:rgba(222,187,112,.04);border-radius:0 var(--r) var(--r) 0;
+  font-family:var(--font-s);font-size:16px;font-style:italic;
+  color:var(--white);line-height:1.7;
+}
+.pullquote cite{
+  display:block;margin-top:10px;font-family:var(--font-b);
+  font-size:13px;font-style:normal;color:var(--cyan);font-weight:600;
+}
+
+/* RST mapping cards */
+.rst-card{
+  margin:20px 0;padding:22px 24px;
+  background:var(--navy-card);border:1px solid var(--border);
+  border-radius:var(--r);
+}
+.rst-card__hd{
+  font-family:var(--font-h);font-size:18px;font-weight:700;
+  color:var(--white);margin-bottom:10px;display:flex;align-items:center;gap:10px;
+}
+.rst-card__badge{
+  font-size:11px;font-weight:700;color:var(--navy);
+  background:var(--cyan);border-radius:999px;padding:3px 10px;
+  letter-spacing:.06em;text-transform:uppercase;
+}
+.rst-card p{margin-bottom:10px;font-size:15px;color:rgba(255,255,255,.78);}
+.rst-card ul{margin:8px 0 0 20px;font-size:14.5px;color:rgba(255,255,255,.72);list-style:none;}
+.rst-card ul li{padding:4px 0;padding-left:18px;position:relative;}
+.rst-card ul li::before{content:'✦';position:absolute;left:0;color:var(--cyan);font-size:11px;top:6px;}
+
+/* Works Cited */
+.works-cited{margin-top:48px;padding-top:32px;border-top:2px solid rgba(222,187,112,.15);}
+.works-cited h2{margin-top:0;}
+.cite-entry{
+  font-size:14px;color:rgba(255,255,255,.72);line-height:1.7;
+  margin-bottom:14px;padding-left:28px;text-indent:-28px;
+}
+.cite-entry a{color:var(--cyan);text-decoration:none;word-break:break-all;}
+.cite-entry a:hover{text-decoration:underline;}
+
+/* Back to tool link */
+.back-bar{
+  text-align:center;margin-top:48px;padding-top:28px;
+  border-top:1px solid var(--border);
+}
+.back-btn{
+  display:inline-block;padding:12px 28px;border-radius:999px;
+  background:rgba(222,187,112,.12);border:2px solid rgba(222,187,112,.4);
+  color:var(--cyan);font-family:var(--font-h);font-size:15px;font-weight:700;
+  text-decoration:none;letter-spacing:.04em;transition:all var(--ease);
+}
+.back-btn:hover{background:rgba(222,187,112,.22);border-color:var(--cyan);}
+
+/* Footer */
+.page-footer{
+  text-align:center;margin-top:40px;font-size:12px;color:rgba(255,255,255,.3);
+}
+.page-footer a{color:var(--cyan);text-decoration:none;}
+
+@media(max-width:600px){
+  .page{padding:24px 16px 60px;}
+  .article{font-size:15.5px;}
+  .pullquote{padding:16px 18px;font-size:15px;}
+  .rst-card{padding:18px;}
+  .collab-lanes{grid-template-columns:1fr;}
+}
+
+/* ── COLLABORATIVE WORKFLOW ── */
+.collab-lanes{
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;
+}
+.collab-lane{
+  padding:20px;border-radius:var(--r);
+  border:1px solid var(--border);
+}
+.collab-lane--human{background:rgba(222,187,112,.04);border-color:rgba(222,187,112,.2);}
+.collab-lane--ai{background:rgba(72,199,176,.04);border-color:rgba(72,199,176,.2);}
+.collab-lane__hd{
+  font-family:var(--font-h);font-size:15px;font-weight:700;
+  margin-bottom:12px;display:flex;align-items:center;gap:8px;
+}
+.collab-lane--human .collab-lane__hd{color:var(--cyan);}
+.collab-lane--ai .collab-lane__hd{color:#6ec6a0;}
+.collab-lane__tag{
+  font-size:10px;font-weight:700;border-radius:999px;padding:2px 9px;
+  letter-spacing:.06em;text-transform:uppercase;
+}
+.collab-lane--human .collab-lane__tag{background:rgba(222,187,112,.15);color:var(--cyan);}
+.collab-lane--ai .collab-lane__tag{background:rgba(72,199,176,.15);color:#6ec6a0;}
+.collab-lane ul{margin:0;padding:0;list-style:none;font-size:14px;color:rgba(255,255,255,.75);}
+.collab-lane ul li{padding:5px 0 5px 18px;position:relative;line-height:1.55;}
+.collab-lane--human ul li::before{content:'◆';position:absolute;left:0;color:var(--cyan);font-size:8px;top:9px;}
+.collab-lane--ai ul li::before{content:'◆';position:absolute;left:0;color:#6ec6a0;font-size:8px;top:9px;}
+
+/* Workflow phase cards */
+.phase-card{
+  margin:20px 0;padding:20px 22px;
+  background:var(--navy-card);border:1px solid var(--border);
+  border-radius:var(--r);
+}
+.phase-card__hd{
+  font-family:var(--font-h);font-size:16px;font-weight:700;
+  color:var(--white);margin-bottom:8px;
+}
+.phase-card__hd .phase-num{
+  display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;
+  font-size:12px;font-weight:700;color:var(--navy);
+  background:var(--cyan);border-radius:50%;margin-right:8px;
+  vertical-align:middle;position:relative;top:-1px;
+}
+.phase-card p{font-size:14.5px;color:rgba(255,255,255,.75);margin-bottom:6px;}
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ══ HEADER ══ -->
+  <header class="hdr">
+    <a class="hdr__back" href="index.html">← Back to AI Evaluation Tool</a>
+    <h1 class="hdr__title">Human-Centered AI<br/>& the <em>AI Evaluation Toolkit</em></h1>
+    <p class="hdr__sub">What HCAI means, why it matters, and how this toolkit was designed to conform to its principles</p>
+  </header>
+
+  <!-- ══ ARTICLE ══ -->
+  <article class="article">
+
+    <!-- § 1 -->
+    <h2><span class="h2-num">1</span> What Is Human-Centered AI?</h2>
+
+    <p>Human-Centered Artificial Intelligence (HCAI) is a design philosophy and governance framework that insists AI systems should <em>amplify and augment</em> human abilities rather than replace or diminish them. The concept was most comprehensively articulated by Ben Shneiderman, Emeritus Distinguished University Professor of Computer Science at the University of Maryland, in a series of foundational publications culminating in his 2022 monograph <em>Human-Centered AI</em> (Oxford University Press).</p>
+
+    <p>At its core, HCAI challenges a long-held assumption in AI research: that increased automation necessarily means decreased human control. Shneiderman's two-dimensional framework argues that this is a false trade-off. Well-designed systems can achieve <em>both</em> high levels of automation <em>and</em> high levels of human control simultaneously. A cellphone camera is a familiar example: sophisticated algorithms handle exposure, focus, and image processing automatically, while the photographer retains full creative control over composition, subject, and timing.</p>
+
+    <div class="pullquote">
+      "The goal is not to replace people, but to empower them by making design choices that give humans control over technology."
+      <cite>— Shneiderman, <em>Human-Centered AI</em> (2022)</cite>
+    </div>
+
+    <p>This reframing is not merely theoretical. HCAI has been taken up across major governance frameworks, including the NIST AI Risk Management Framework (2023), which identifies seven characteristics of trustworthy AI — validity, reliability, safety, fairness, transparency, accountability, and privacy — and structures its guidance around four functions: Govern, Map, Measure, and Manage. The European Union's AI Act (2024), the first comprehensive AI legislation, similarly operationalizes a risk-based, human-centered approach. UNESCO's Recommendation on the Ethics of Artificial Intelligence (2021) calls explicitly for human-centered AI that addresses inequalities in access to knowledge. And Floridi et al.'s AI4People framework (2018) synthesizes five ethical principles — beneficence, non-maleficence, autonomy, justice, and explicability — that undergird responsible AI development across sectors.</p>
+
+    <p>What unites these frameworks is a shared conviction: AI's value is determined not by the technology itself, but by how it is designed, governed, and situated within human systems of meaning and accountability.</p>
+
+
+    <!-- § 2 -->
+    <h2><span class="h2-num">2</span> The RST Triad: Reliability, Safety &amp; Trustworthiness</h2>
+
+    <p>Shneiderman's HCAI framework organizes its governance principles around three interdependent goals, often called the <strong>RST triad</strong>: Reliability, Safety, and Trustworthiness. These are not abstract aspirations; each maps to concrete practices at specific organizational levels.</p>
+
+    <h3>Reliability</h3>
+    <p>Reliable systems emerge from rigorous software engineering practices: audit trails that enable failure analysis, verification and validation testing, bias testing to enhance fairness, and explainable user interfaces that make system behavior comprehensible. Reliability operates at the <em>team level</em> — the people building the system are responsible for technical soundness.</p>
+
+    <h3>Safety</h3>
+    <p>Safety culture is an organizational property, not a technical feature. It requires leadership commitment, hiring and training oriented toward safe practices, extensive reporting of failures and near misses, internal review processes, and alignment with industry standards. Safety operates at the <em>organizational level</em> — management creates the conditions under which reliable systems can be built and maintained.</p>
+
+    <h3>Trustworthiness</h3>
+    <p>Trustworthiness is established through independent oversight — external verification that the system does what it claims. This includes regulatory compliance, external audits, standards adherence, and transparency with end users about how the system works, what data it uses, and what its limitations are. Trustworthiness operates at the <em>industry and public level</em> — it requires accountability beyond the building team.</p>
+
+    <div class="pullquote">
+      "Effective governance limits the dangers and increases the benefits of HCAI to individuals, organizations, and society."
+      <cite>— Shneiderman, "Bridging the Gap Between Ethics and Practice" (2020)</cite>
+    </div>
+
+    <p>Recent scholarship has extended the RST triad into specific domains. In education, Noroozi et al. (2025) argue that AI's impact is determined not by technology itself but by how it is "pedagogically framed, ethically guided, and supported by people and institutions." Le Dinh et al. (2025) propose a three-phase HCAI guidance model — Human-before-the-loop (design), Human-in-the-loop (development and deployment), and Human-over-the-loop (ongoing governance) — that maps directly to the RST triad's team/organization/industry structure.</p>
+
+
+    <!-- § 3 -->
+    <h2><span class="h2-num">3</span> HCAI in Practice: The AI Evaluation Toolkit</h2>
+
+    <p>The Lewis University Library AI Evaluation Tool was built using assistive AI for algorithmic construction, coding, interface design, and other technical elements outside the domain expertise of the Research Team. This section documents how that process conformed to HCAI principles across each dimension of the RST triad.</p>
+
+    <div class="rst-card">
+      <div class="rst-card__hd"><span class="rst-card__badge">Reliability</span> Technical Practices</div>
+      <p>Reliability was ensured through systematic human oversight of every layer of the tool's construction:</p>
+      <ul>
+        <li><strong>Human-curated content:</strong> All 1,131 activities, 161 rules, and 35 AI tool entries across 62 categories and 9 disciplines were reviewed, validated, and editorially refined by the Research Team. AI assisted with structure and formatting; humans determined substance and accuracy.</li>
+        <li><strong>Three-tier source provenance:</strong> Every activity is traceable through the SOURCES, ORIGIN_DB, and KW_SOURCES databases, achieving zero empty citations across all 1,131 activities. Users can verify the scholarly basis for any recommendation.</li>
+        <li><strong>Iterative verification:</strong> Cross-audits between the Evaluation Tool and the Reference Guide identified and resolved citation discrepancies, stale counts, and data mismatches across multiple revision cycles.</li>
+        <li><strong>Explainable interface:</strong> The carousel filtering system, chip bar, and expandable activity cards make the tool's matching logic transparent to users — faculty can see <em>why</em> they received specific recommendations based on their selections.</li>
+      </ul>
+    </div>
+
+    <div class="rst-card">
+      <div class="rst-card__hd"><span class="rst-card__badge">Safety</span> Organizational Practices</div>
+      <p>Safety culture was maintained through deliberate constraints on AI's role in the development process:</p>
+      <ul>
+        <li><strong>Bounded AI scope:</strong> AI was used for algorithmic construction, UI/UX coding, accessibility implementation, and data formatting — domains where its strengths (pattern execution, code generation, cross-referencing) complement human expertise. Content decisions, pedagogical framing, and source evaluation remained human responsibilities.</li>
+        <li><strong>Transparent disclosure:</strong> The HCAI disclaimer appears in both the header and footer of the tool, publicly documenting the role of assistive AI. Users are never left to wonder whether content was human-authored or machine-generated.</li>
+        <li><strong>Continuous revision:</strong> The tool has undergone multiple expansion and audit cycles — from 305 to 500 to 1,131 activities, from 78 to 122+ provenance keys, from zero to 55 context-linking regex patterns — each involving human review of AI-assisted outputs.</li>
+      </ul>
+    </div>
+
+    <div class="rst-card">
+      <div class="rst-card__hd"><span class="rst-card__badge">Trustworthiness</span> Transparency &amp; Accountability</div>
+      <p>Trustworthiness was established through radical openness about the tool's construction and limitations:</p>
+      <ul>
+        <li><strong>Open deployment:</strong> The tool is published via GitHub Pages under the Lewis University Library organization, making its source code inspectable by anyone.</li>
+        <li><strong>Complete Reference Guide:</strong> A companion 122-source bibliography with full citations, DOI links, and provenance mappings allows independent verification of the tool's scholarly foundations.</li>
+        <li><strong>User control:</strong> Faculty retain full control over their exploration — the carousel interface, keyword search, Bloom's taxonomy filters, and discipline selectors ensure that the tool <em>recommends</em> rather than <em>prescribes</em>. No algorithmic black box determines outcomes; users see and shape every filtering decision.</li>
+        <li><strong>This page:</strong> This HCAI documentation itself is an act of trustworthiness — publicly articulating the framework, mapping conformance, and inviting scrutiny.</li>
+      </ul>
+    </div>
+
+
+    <!-- § 4 -->
+    <h2><span class="h2-num">4</span> The Collaborative Workflow: What Co-Creation Actually Looked Like</h2>
+
+    <p>Abstract frameworks only matter if they describe real practice. This section documents the actual division of labor between the Research Team and generative AI tools (primarily Claude, with support from NotebookLM) across the toolkit's development — not as an idealized model, but as a transparent record of how human-centered co-creation functioned on the ground.</p>
+
+    <div class="collab-lanes">
+      <div class="collab-lane collab-lane--human">
+        <div class="collab-lane__hd"><span class="collab-lane__tag">Human</span> Research Team</div>
+        <ul>
+          <li>Conceived the project, defined its relationship to the LibGuide ecosystem, and set the pedagogical roadmap</li>
+          <li>Conducted research using library databases, subject guides, and scholarly tools to identify disciplinary applications, ethical frameworks, and Creative Commons resources</li>
+          <li>Evaluated, selected, and verified all scholarly sources — including provenance to CC-licensed and open-access materials</li>
+          <li>Made every editorial and pedagogical decision about what activities to include, how to frame them, and which disciplinary contexts they served</li>
+          <li>Authored the initial blueprints, wireframes, and conceptual architecture for each component</li>
+          <li>Provided oversight of all prompts, inputs, and iterative directions to AI — the "steering" at every turn</li>
+          <li>Performed final quality review of all outputs before deployment</li>
+        </ul>
+      </div>
+      <div class="collab-lane collab-lane--ai">
+        <div class="collab-lane__hd"><span class="collab-lane__tag">AI</span> Claude &amp; NotebookLM</div>
+        <ul>
+          <li>Built the HTML/CSS/JavaScript architecture — the carousel interface, filtering algorithms, responsive layouts, and accessibility features</li>
+          <li>Co-designed the visual aesthetic in iterative dialogue, including color systems, typography, UX patterns, and WCAG compliance</li>
+          <li>Identified additional scholarly resources to supplement the Research Team's findings</li>
+          <li>Integrated human-supplied research into the tool's data structures (SOURCES, ORIGIN_DB, KW_SOURCES, RULE_FALLBACK)</li>
+          <li>Synthesized activities from concepts and disciplinary ideas provided by the Research Team — translating pedagogical goals into structured, implementable formats</li>
+          <li>Built the matching algorithms, keyword engines, Bloom's taxonomy filters, and context-linking regex patterns</li>
+          <li>Collated and cross-referenced resources across the Evaluation Tool and Reference Guide</li>
+          <li>Troubleshot code, resolved deployment issues (including GitHub Pages failures), and debugged JavaScript errors</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>The project moved through four broad phases, each of which involved its own internal cycles of iteration:</p>
+
+    <div class="phase-card">
+      <div class="phase-card__hd"><span class="phase-num">1</span> Inception &amp; Research</div>
+      <p>The Research Team conceived the idea for the toolkit, defined its relationship to the existing LibGuide ecosystem, and developed an initial roadmap and tentative blueprint for what the tool should do — match faculty with AI-assisted activities based on their teaching context. The team conducted foundational research using library databases and scholarly tools to identify disciplinary applications, ethical frameworks, pedagogical models, and Creative Commons resources that would form the tool's intellectual backbone.</p>
+    </div>
+    <div class="phase-card">
+      <div class="phase-card__hd"><span class="phase-num">2</span> Synthesis &amp; Construction</div>
+      <p>The Research Team brought concepts, sources, and editorial direction to the AI environment. Claude synthesized these into structured activities, wired them into the provenance system, built or modified interface components, and generated integration code — always under human-directed prompting.</p>
+    </div>
+    <div class="phase-card">
+      <div class="phase-card__hd"><span class="phase-num">3</span> Review &amp; Iteration</div>
+      <p>The Research Team reviewed all outputs, identified errors, requested modifications, challenged framing decisions, and directed further refinement. Many components went through 5–10+ revision cycles. Claude and NotebookLM assisted with troubleshooting, accessibility audits, and cross-referencing during this phase.</p>
+    </div>
+    <div class="phase-card">
+      <div class="phase-card__hd"><span class="phase-num">4</span> Verification &amp; Deployment</div>
+      <p>Final human review confirmed accuracy, pedagogical soundness, citation integrity, and accessibility compliance before each release. The Research Team maintained sole authority over what was published.</p>
+    </div>
+
+    <p>Two principles governed this collaboration throughout. First, <strong>AI never operated autonomously on consequential decisions</strong> — every substantive choice about content, framing, inclusion, or exclusion was made or approved by the Research Team. Second, <strong>AI's contributions were treated as drafts, not deliverables</strong> — raw material for human judgment, not finished products. This is the operational core of HCAI: not the absence of AI, but the persistent presence of human agency at every decision point that matters.</p>
+
+    <div class="pullquote">
+      "The goal of effective governance is to limit the dangers and increase the benefits of HCAI to individuals, organizations, and society."
+      <cite>— Shneiderman, "Bridging the Gap Between Ethics and Practice" (2020)</cite>
+    </div>
+
+
+    <!-- § 5 -->
+    <h2><span class="h2-num">5</span> Why HCAI Matters for Academic Libraries</h2>
+
+    <p>Academic libraries occupy a distinctive position in the HCAI landscape. As institutional knowledge intermediaries, libraries are simultaneously <em>users</em> of AI (integrating tools into discovery, instruction, and research support), <em>educators</em> about AI (teaching information literacy in an era of generative content), and <em>builders</em> with AI (creating tools, guides, and resources that serve faculty and students). This triple role makes HCAI conformance not optional but essential to institutional credibility.</p>
+
+    <p>The literature increasingly recognizes this. Atchley et al. (2024) argue that higher education must capitalize on metacognitive skills to ensure AI collaboration enhances rather than undermines learning effectiveness — a goal that aligns with the ACRL Framework for Information Literacy's emphasis on critical evaluation and knowledge creation. Ouyang and Jiao (2021) identify three paradigms of AI in education — AI-directed, AI-supported, and AI-empowered — and argue that only the human-centered, AI-empowered paradigm genuinely serves learner agency.</p>
+
+    <p>For libraries building AI-assisted tools, HCAI provides a principled answer to the question every stakeholder will eventually ask: <em>How do we know this is trustworthy?</em> The answer is not "because AI is powerful" but rather "because humans remained in control at every consequential decision point, because the evidence is transparent and verifiable, and because we are accountable for the result."</p>
+
+    <div class="pullquote">
+      "AI's impact in education is not determined by the technology itself, but by how it is pedagogically framed, ethically guided, and supported by people and institutions."
+      <cite>— Noroozi et al. (2025)</cite>
+    </div>
+
+    <p>The AI Evaluation Toolkit is one attempt to model what that accountability looks like in practice. It is not a finished product but an evolving scholarly resource — one that will continue to be revised, expanded, and held to the standards articulated here.</p>
+
+
+    <!-- WORKS CITED -->
+    <div class="works-cited">
+      <h2><span class="h2-num">§</span> Works Cited</h2>
+
+      <div class="cite-entry">Atchley, P., Pannell, H., Wofford, K., et al. (2024). Human and AI collaboration in the higher education environment: Opportunities and concerns. <em>Cognitive Research: Principles and Implications, 9</em>, 20. <a href="https://doi.org/10.1186/s41235-024-00547-9" target="_blank" rel="noopener">https://doi.org/10.1186/s41235-024-00547-9</a></div>
+
+      <div class="cite-entry">European Parliament. (2024). Regulation (EU) 2024/1689: The Artificial Intelligence Act. <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj" target="_blank" rel="noopener">https://eur-lex.europa.eu/eli/reg/2024/1689/oj</a></div>
+
+      <div class="cite-entry">Floridi, L., Cowls, J., Beltrametti, M., Chatila, R., Chazerand, P., Dignum, V., Luetge, C., Madelin, R., Pagallo, U., Rossi, F., Schafer, B., Valcke, P., &amp; Vayena, E. (2018). AI4People — An ethical framework for a good AI society: Opportunities, risks, principles, and recommendations. <em>Minds and Machines, 28</em>(4), 689–707. <a href="https://doi.org/10.1007/s11023-018-9482-5" target="_blank" rel="noopener">https://doi.org/10.1007/s11023-018-9482-5</a></div>
+
+      <div class="cite-entry">Le Dinh, T., Pham Thi, T. T., Pham-Nguyen, C., &amp; Nam, L. N. H. (2025). Human-centered artificial intelligence in higher education: A framework for systematic literature reviews. <em>Information, 16</em>(3), 240. <a href="https://doi.org/10.3390/info16030240" target="_blank" rel="noopener">https://doi.org/10.3390/info16030240</a></div>
+
+      <div class="cite-entry">National Institute of Standards and Technology. (2023). <em>AI Risk Management Framework (AI RMF 1.0)</em>. NIST AI 100-1. <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">https://www.nist.gov/itl/ai-risk-management-framework</a></div>
+
+      <div class="cite-entry">Noroozi, O., Banihashem, S. K., et al. (2025). Artificial intelligence in higher education: Impact depends on support, pedagogy, human agency, and purpose. <em>Innovations in Education and Teaching International</em>. <a href="https://doi.org/10.1080/14703297.2025.2539579" target="_blank" rel="noopener">https://doi.org/10.1080/14703297.2025.2539579</a></div>
+
+      <div class="cite-entry">Ouyang, F., &amp; Jiao, P. (2021). Artificial intelligence in education: The three paradigms. <em>Computers and Education: Artificial Intelligence, 2</em>, 100020. <a href="https://doi.org/10.1016/j.caeai.2021.100020" target="_blank" rel="noopener">https://doi.org/10.1016/j.caeai.2021.100020</a></div>
+
+      <div class="cite-entry">Shneiderman, B. (2020a). Human-centered artificial intelligence: Reliable, safe &amp; trustworthy. <em>International Journal of Human-Computer Interaction, 36</em>(6), 495–504. <a href="https://doi.org/10.1080/10447318.2020.1741118" target="_blank" rel="noopener">https://doi.org/10.1080/10447318.2020.1741118</a></div>
+
+      <div class="cite-entry">Shneiderman, B. (2020b). Bridging the gap between ethics and practice: Guidelines for reliable, safe, and trustworthy human-centered AI systems. <em>ACM Transactions on Interactive Intelligent Systems, 10</em>(4), Article 26. <a href="https://doi.org/10.1145/3419764" target="_blank" rel="noopener">https://doi.org/10.1145/3419764</a></div>
+
+      <div class="cite-entry">Shneiderman, B. (2022). <em>Human-centered AI</em>. Oxford University Press. <a href="https://doi.org/10.1093/oso/9780192845290.001.0001" target="_blank" rel="noopener">https://doi.org/10.1093/oso/9780192845290.001.0001</a></div>
+
+      <div class="cite-entry">UNESCO. (2021). <em>Recommendation on the ethics of artificial intelligence</em>. <a href="https://www.unesco.org/en/artificial-intelligence/recommendation-ethics" target="_blank" rel="noopener">https://www.unesco.org/en/artificial-intelligence/recommendation-ethics</a></div>
+
+    </div>
+
+  </article>
+
+  <!-- ══ BACK TO TOOL ══ -->
+  <div class="back-bar">
+    <a class="back-btn" href="index.html">← Return to AI Evaluation Tool</a>
+  </div>
+
+  <footer class="page-footer">
+    <p>Lewis University Library · AI Evaluation Toolkit · <a href="index.html">Evaluation Tool</a> · <a href="AI_Toolkit_Reference.html">Reference Guide</a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>
