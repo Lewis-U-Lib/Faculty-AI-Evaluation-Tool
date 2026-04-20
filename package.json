@@ -1,0 +1,10 @@
+{
+  "name": "faculty-ai-evaluation-tool",
+  "private": true,
+  "scripts": {
+    "test:smoke": "playwright test tests/smoke.spec.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.53.0"
+  }
+}
