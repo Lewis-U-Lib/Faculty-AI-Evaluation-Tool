@@ -143,14 +143,13 @@ Current state:
 
 ```
 rules=157  activities=1131  sources=148
-  arch       135/1131 (11%)
   tier       1131/1131 (100%)
   mode       1131/1131 (100%)
   bloom      1131/1131 (100%)
-0 errors, 4 warnings
+0 errors, 1 warning
 ```
 
-The four remaining warnings are one copy error, `arch` coverage, efficacy language in 151 activities, and 37 unreferenced sources. None blocks publishing; all are visible on every run rather than discoverable only by audit.
+The remaining warning covers 37 bibliography records that are not yet referenced by the per-activity mapping layers. They remain available in the full Sources tab while their activity-level relationships are reviewed. The 2026-08-31 activity audit resolved the copy error and efficacy-language backlog. Existing `arch` values are retained as editorial history, but `arch` is not consumed by either runtime and is no longer treated as required coverage.
 
 ### What the guards would have caught
 
@@ -173,7 +172,7 @@ The four remaining warnings are one copy error, `arch` coverage, efficacy langua
 | Data stores round-tripped, index | 10 of 10 preserved |
 | Data stores round-tripped, guide | 10 of 10 preserved |
 | Cross-file parity | 10 shared stores, 0 divergent |
-| `validate.py` | 0 errors, 16 warnings |
+| `validate.py` | 0 errors, 1 warning |
 | `selftest.py` | 5 of 5 defect classes caught |
 | DOI identity, all 16 DOI-bearing sources | 16 resolve, 0 mismatches |
 | Built files in Chromium | 0 page errors, both |
@@ -190,11 +189,11 @@ Two stores differ from the pre-split originals by design, and the round-trip tes
 
 **Twelve malformed descriptions — FIXED in 1.0.** "can support draft", "can support scope" and similar, residue of the May 2026 rewrite that converted "Use X to *verb*" without adjusting the verb form. All twelve now read "can help <verb>", which restores grammaticality while keeping the softened, non-directive register the rewrite intended. Applied by `scripts/fix_can_support.py`; `validate.py` still guards against the construction returning.
 
-**One copy error remains** — "What would you can ask the original authors?" in *Experimental Replication Feasibility Assessment*. Should read "What could you ask". Flagged by `validate.py`, not changed.
+**One copy error — FIXED.** "What would you can ask the original authors?" in *Experimental Replication Feasibility Assessment* now reads "What could you ask the original authors?" `validate.py` continues to guard against the error returning.
 
 **A find-and-replace artifact appears three times** — a substitution of "student-facing" with "teaching/course" that leaves the sentence odd: `TOOLS.magicschool.desc`, *Syllabi Language Workshop* ("formal, conversational, and teaching/course plain language"), and *AI-Assisted Rubric Design Workshop* ("discipline-specific criteria, teaching/course language"). All three read as though the intended word was "student-facing". Not changed — editorial call.
 
-**`arch` at 11% coverage** — 135 of 1,131 activities. Reported by `validate.py` on every run so partial completion stays visible.
+**`arch` metadata retained, not required.** Existing values remain available for editorial history. Because neither runtime consumes `arch`, it is not part of the required schema or coverage gate.
 
 ---
 

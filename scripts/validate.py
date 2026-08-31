@@ -20,7 +20,7 @@ Checks
     - "can support" + bare infinitive (residue of the May 2026 rewrite)
     - other known copy errors
     - unqualified efficacy claims (ensures / dramatically / perfect / essential)
-    - metadata coverage below 100% (arch, tier, mode)
+    - runtime metadata coverage below 100% (tier, mode, bloom)
     - sources defined but never referenced anywhere
 """
 import argparse
@@ -34,7 +34,10 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 
 REQUIRED_ACTIVITY_FIELDS = ["title", "desc", "time", "bloom", "tags", "instructions", "mode", "tier"]
-COVERAGE_FIELDS = ["arch", "tier", "mode", "bloom"]
+# `arch` is retained where it already exists for editorial history, but it is
+# not consumed by either runtime and is not part of the required activity
+# schema. Coverage checks therefore apply only to metadata the site uses.
+COVERAGE_FIELDS = ["tier", "mode", "bloom"]
 
 MALFORMED = re.compile(
     r"can support (?:scope|draft|build|create|design|generate|identify|compare|analyze"
