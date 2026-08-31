@@ -1,0 +1,691 @@
+[
+ {
+  "id": "cite-01",
+  "defect_class": "fabricated_citation",
+  "domain": "Education",
+  "difficulty": "intro",
+  "scenario": "A student asked for sources on retrieval practice in college classrooms.",
+  "specimen": "Roediger, H. L., & Marsh, E. J. (2019). Retrieval practice and long-term retention in undergraduate populations. Journal of Educational Psychology Review, 41(3), 288–307. https://doi.org/10.1037/edu0907412\n\nHalvorsen, T. A., & Ibarra-Nunez, C. (2021). Spacing effects across disciplinary contexts: A three-semester field study. Contemporary Educational Psychology, 66, 101—118. https://doi.org/10.1016/j.cedpsych.2021.912004",
+  "defects": [
+   "Roediger and Marsh are real researchers in this exact area, which makes the entry pass a plausibility check; the article title, journal, volume, and DOI are invented.",
+   "'Journal of Educational Psychology Review' conflates two real journals: Journal of Educational Psychology and Educational Psychology Review.",
+   "The second entry's authors do not exist; the journal and volume are real, which is what makes the DOI look credible.",
+   "Neither DOI resolves — both were verified against Crossref as non-existent before this specimen was written."
+  ],
+  "verification_path": "Paste each DOI into doi.org. Then search the journal's own site for the title. Then search the author name plus the title in Google Scholar. A real article survives all three.",
+  "teaching_note": "The most useful thing here is the first entry. Students expect fabrications to look obviously fake; this one pairs real, correctly-matched authors with an invented article. The tell is the journal name, not the authors.",
+  "serves": [
+   "citation autopsy",
+   "SIFT",
+   "hallucination detection",
+   "source verification"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "cite-02",
+  "defect_class": "fabricated_citation",
+  "domain": "Health Sciences & Nursing",
+  "difficulty": "intermediate",
+  "scenario": "A student asked for evidence on early mobility protocols in post-surgical patients.",
+  "specimen": "A 2022 randomized controlled trial in the Journal of Advanced Nursing found that early mobility protocols initiated within 12 hours of surgery reduced length of stay by 1.8 days (95% CI: 1.2–2.4) across a sample of 412 post-surgical patients (Whitmore et al., 2022).",
+  "defects": [
+   "No such trial exists. The journal is real and publishes this kind of work.",
+   "The confidence interval is internally consistent and the sample size is plausible for the design, which defeats a numeric sniff test.",
+   "No DOI or volume is given — the citation is deliberately incomplete, which is itself the signal.",
+   "'Whitmore et al.' is unverifiable without more identifying detail, and the absence of that detail is the point."
+  ],
+  "verification_path": "A claim this specific must have a locatable trial. Search PubMed for the journal, year, and outcome. Absence of a DOI on a precise statistical claim is a red flag before you search at all.",
+  "teaching_note": "Good for clinical contexts because the numbers are the persuasive element. Ask students what they would need to see before acting on this in practice.",
+  "serves": [
+   "citation autopsy",
+   "evidence appraisal",
+   "clinical verification",
+   "PICO"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "cite-03",
+  "defect_class": "fabricated_citation",
+  "domain": "Library & Information Science",
+  "difficulty": "advanced",
+  "scenario": "A student asked for literature on algorithmic literacy instruction in academic libraries.",
+  "specimen": "Head, A. J., & Eisenberg, M. B. (2020). Algorithmic literacy and the academic library: A framework for instruction. College & Research Libraries, 81(4), 592–611.\n\nSee also the ACRL Framework's sixth frame, 'Information Systems as Algorithmic,' which addresses this directly.",
+  "defects": [
+   "Head and Eisenberg are real and co-authored Project Information Literacy work, so the pairing is credible; this article is invented.",
+   "College & Research Libraries is real and volume 81 corresponds to 2020, so the bibliographic scaffolding checks out.",
+   "The second claim is the more dangerous one: the ACRL Framework has six frames, but there is no frame called 'Information Systems as Algorithmic.' A fabricated authority is presented as a settled reference point.",
+   "A student who trusts the second sentence will build an argument on a frame that does not exist."
+  ],
+  "verification_path": "C&RL is open access — search the actual issue's table of contents. For the framework claim, read the ACRL Framework directly and list its six frames.",
+  "teaching_note": "This is the strongest specimen for LIS because it fabricates a professional standard rather than an article. Students catch fake articles faster than fake frameworks.",
+  "serves": [
+   "citation autopsy",
+   "ACRL frames",
+   "authority evaluation",
+   "SIFT"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "cite-04",
+  "defect_class": "fabricated_citation",
+  "domain": "STEM",
+  "difficulty": "intermediate",
+  "scenario": "A student asked for the origin of a widely-used constant in their field.",
+  "specimen": "The value was first derived by Kowalski and Petrov in their 1987 Physical Review B paper, which remains the standard reference. Subsequent work has refined the figure but not displaced the original derivation.",
+  "defects": [
+   "No authors, title, volume, page, or DOI — the citation is entirely nominal.",
+   "The confident historical framing ('remains the standard reference') substitutes for verifiable detail.",
+   "Physical Review B is real and 1987 is plausible, so the claim sits in a believable frame.",
+   "'Subsequent work has refined the figure' is unfalsifiable as written."
+  ],
+  "verification_path": "A foundational paper has a findable citation. Search the journal archive by year and author. If a claim about a field's standard reference cannot be resolved to a specific paper, treat the claim as unsupported.",
+  "teaching_note": "Useful for showing that fabrication is often an absence rather than a falsehood. There is nothing here to disprove, which is the problem.",
+  "serves": [
+   "citation autopsy",
+   "source verification",
+   "scientific provenance"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "cite-05",
+  "defect_class": "fabricated_citation",
+  "domain": "Humanities",
+  "difficulty": "advanced",
+  "scenario": "A student asked for scholarship on a critical concept in literary theory.",
+  "specimen": "As Spivak argues in her 1993 essay 'The Politics of Untranslatability,' the subaltern text resists the very apparatus that would recover it — a position she develops further in Outside in the Teaching Machine.",
+  "defects": [
+   "Outside in the Teaching Machine is a real 1993 Spivak book, which anchors the claim.",
+   "'The Politics of Untranslatability' is not a Spivak essay; the phrasing echoes real debates in translation studies, making it feel familiar.",
+   "The paraphrased argument is plausible enough to pass as a summary of Spivak's actual positions, so a student may recognize the ideas and accept the citation.",
+   "This is the hardest class to catch: a real author, a real adjacent book, and an argument consistent with their corpus."
+  ],
+  "verification_path": "Check the book's actual table of contents. Search the MLA Bibliography for the essay title. Recognizing the argument is not evidence that the source exists.",
+  "teaching_note": "Pair with a real Spivak citation and ask students to determine which is which using only verification steps, not familiarity.",
+  "serves": [
+   "citation autopsy",
+   "close reading",
+   "theory verification",
+   "SIFT"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "cite-06",
+  "defect_class": "fabricated_citation",
+  "domain": "Business",
+  "difficulty": "intro",
+  "scenario": "A student asked for data on remote work productivity.",
+  "specimen": "A McKinsey Global Institute report from 2023 found that fully remote teams showed a 22% decline in cross-functional collaboration but a 15% increase in individual task throughput.",
+  "defects": [
+   "McKinsey is real and publishes on this topic, so the institutional attribution carries weight.",
+   "No report title, no URL, no author — the citation is to an organization, not a document.",
+   "The paired statistics have the shape of a real finding: one negative, one positive, both precise.",
+   "The figures cannot be traced to any specific publication."
+  ],
+  "verification_path": "Search MGI's publication index for 2023 reports on remote work. An organizational attribution without a document title is not a citation.",
+  "teaching_note": "Students routinely accept brand-name attributions. Ask what 'McKinsey found' would need to include to be checkable.",
+  "serves": [
+   "citation autopsy",
+   "SIFT",
+   "business research",
+   "authority evaluation"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "bias-01",
+  "defect_class": "bias_stereotype",
+  "domain": "Education",
+  "difficulty": "intro",
+  "scenario": "Asked to draft two recommendation letters from equivalent faculty notes, differing only in the student's name and pronouns.",
+  "specimen": "LETTER A (for 'Michael'): Michael is an exceptional analytical thinker who drove our lab's most ambitious project. He argues his positions forcefully and independently, and he has the intellectual confidence to challenge senior researchers when the data warrant it.\n\nLETTER B (for 'Michelle'): Michelle is a wonderful and dedicated student who was a joy to have in the lab. She is warm, supportive of her peers, and unfailingly helpful. Her hard work and positive attitude made her a valued member of our team.",
+  "defects": [
+   "Letter A uses agentic language (analytical, drove, forcefully, independently, confidence, challenge); Letter B uses communal language (wonderful, joy, warm, supportive, helpful, hard work, positive attitude).",
+   "Letter B contains no evidence of intellectual capability at all — only effort and disposition.",
+   "'Hard work' attributes success to effort rather than ability, a documented asymmetry in real letters.",
+   "The source notes were identical; only the name changed."
+  ],
+  "verification_path": "Count agentic versus communal adjectives in each letter. Ask what evidence of research capability appears in each. Then reread with the names swapped.",
+  "teaching_note": "This reproduces the pattern documented by Trix & Psenka (2003) and Madera, Hebl & Martin (2009) in human-written letters. The point is not that the model invented the bias but that it learned it from us, which makes the exercise about the training corpus rather than the machine.",
+  "serves": [
+   "bias audit",
+   "swap test",
+   "recommendation letters",
+   "training data critique"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "bias-02",
+  "defect_class": "bias_stereotype",
+  "domain": "Health Sciences & Nursing",
+  "difficulty": "advanced",
+  "scenario": "Asked to describe a typical presentation of coronary syndrome.",
+  "specimen": "The classic presentation involves crushing substernal chest pain radiating to the left arm or jaw, often accompanied by diaphoresis and shortness of breath. The patient typically reports the pain as an elephant sitting on the chest. Onset is frequently associated with exertion.",
+  "defects": [
+   "The description is clinically accurate for the male-pattern presentation and presents it as 'the classic presentation' without qualification.",
+   "Women more frequently present with fatigue, nausea, jaw or back pain, and dyspnea without the classic chest pain, and this is omitted entirely.",
+   "The omission is the defect. Nothing stated is false, which is what makes it dangerous.",
+   "A student who studies this as 'the' presentation is being trained toward a documented diagnostic disparity."
+  ],
+  "verification_path": "Compare against the course's clinical guideline for sex differences in presentation. Ask what populations the described presentation represents and which it excludes.",
+  "teaching_note": "The most important bias specimen in the set, because the failure mode is omission rather than falsehood. Students looking for errors will find none.",
+  "serves": [
+   "bias audit",
+   "clinical reasoning",
+   "health equity",
+   "omission detection"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "bias-03",
+  "defect_class": "bias_stereotype",
+  "domain": "Business",
+  "difficulty": "intro",
+  "scenario": "Asked to describe the leadership team of a successful startup.",
+  "specimen": "The CEO is a driven visionary who dropped out of a top engineering program to found the company. His CTO, a brilliant systems architect, handles the technical roadmap. The head of HR, Sarah, keeps the culture strong and makes sure everyone feels supported as the team scales.",
+  "defects": [
+   "Technical and executive roles default to unnamed male figures; the single named individual holds the people-facing role and is female.",
+   "The founder narrative (dropout, top engineering program, visionary) reproduces a narrow and well-documented archetype.",
+   "Competence language is reserved for the male roles ('brilliant systems architect'); the female role gets relational language ('keeps the culture strong').",
+   "No prompt element specified any gender."
+  ],
+  "verification_path": "Ask for the same description five times and tabulate role-gender assignment. Then ask explicitly for a female CTO and compare the language used.",
+  "teaching_note": "Runs quickly and the pattern is visible in one output. Good entry point before the subtler specimens.",
+  "serves": [
+   "bias audit",
+   "swap test",
+   "occupational stereotype"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "bias-04",
+  "defect_class": "bias_stereotype",
+  "domain": "Social Sciences",
+  "difficulty": "advanced",
+  "scenario": "Asked to summarize the causes of an urban neighborhood's economic decline.",
+  "specimen": "The neighborhood's decline can be traced to a combination of factors: declining educational attainment among residents, the erosion of two-parent households, reduced workforce participation, and a rise in crime that discouraged business investment.",
+  "defects": [
+   "Every listed cause is located inside the community; none are structural.",
+   "Redlining, disinvestment, highway construction, deindustrialization, and discriminatory lending are absent.",
+   "The causal direction is asserted rather than argued: crime is presented as a cause of disinvestment rather than a possible consequence.",
+   "The framing tracks a specific and contested position in the literature while presenting itself as a neutral summary."
+  ],
+  "verification_path": "List which causes are internal to the community and which are external. Check the omitted structural factors against the course readings. Ask whose explanatory frame this represents.",
+  "teaching_note": "Strong for social theory courses because the bias is theoretical rather than demographic. Ask students to name the tradition this summary belongs to.",
+  "serves": [
+   "bias audit",
+   "framing analysis",
+   "structural analysis",
+   "omission detection"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "bias-05",
+  "defect_class": "bias_stereotype",
+  "domain": "Humanities",
+  "difficulty": "intermediate",
+  "scenario": "Asked for the most important novels of the twentieth century.",
+  "specimen": "Ulysses, The Great Gatsby, To the Lighthouse, The Sound and the Fury, Nineteen Eighty-Four, Lolita, One Hundred Years of Solitude, Beloved, Things Fall Apart, and Mrs. Dalloway.",
+  "defects": [
+   "The list is heavily Anglophone and European despite the global framing of the question.",
+   "It reproduces a specific mid-century Anglo-American canon-formation rather than a global assessment.",
+   "Two non-Western works appear and both are the standard single representatives of their traditions in Anglophone syllabi.",
+   "The list is presented without any statement of the selection criteria or whose canon it reflects."
+  ],
+  "verification_path": "Map each title by original language and region. Compare against a list of major twentieth-century novels in any single non-European literary tradition.",
+  "teaching_note": "Useful precisely because the list is not wrong — every book on it is significant. The defect is what 'most important' silently means.",
+  "serves": [
+   "bias audit",
+   "canon critique",
+   "training data critique"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "bias-06",
+  "defect_class": "bias_stereotype",
+  "domain": "Arts & Media",
+  "difficulty": "intermediate",
+  "scenario": "Asked to generate character descriptions for a screenplay set in a hospital.",
+  "specimen": "DR. ELLIS — 50s, silver-haired, commanding presence, the department's most respected diagnostician.\nNURSE MARIA — 30s, warm, endlessly patient, the emotional center of the ward.\nDR. CHEN — 30s, brilliant, hyper-focused, socially awkward, always the first to spot the anomaly in the data.",
+  "defects": [
+   "Authority and diagnostic skill attach to the senior figure; caregiving attaches to the nursing role.",
+   "The Chen character combines technical brilliance with social deficiency, a specific and well-documented ethnic stereotype.",
+   "Nursing is characterized by disposition rather than clinical expertise.",
+   "None of these traits were specified in the prompt."
+  ],
+  "verification_path": "Rewrite each description with the names rotated among the roles and note which combinations feel unnatural. That reaction is the finding.",
+  "teaching_note": "Pairs well with bias-03. The Chen description is the one worth dwelling on because students often read it as a compliment.",
+  "serves": [
+   "bias audit",
+   "character analysis",
+   "occupational stereotype",
+   "swap test"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "bias-07",
+  "defect_class": "bias_stereotype",
+  "domain": "STEM",
+  "difficulty": "advanced",
+  "scenario": "Asked to propose participant inclusion criteria for a clinical study of a new analgesic.",
+  "specimen": "Inclusion: adults aged 18–65, BMI 18.5–29.9, no significant comorbidities, not pregnant or breastfeeding, no concurrent medications that may interact with the study drug, able to provide informed consent in English.",
+  "defects": [
+   "The criteria systematically exclude the populations most likely to use the drug: older adults, patients with comorbidities, and patients on multiple medications.",
+   "The English-language requirement excludes non-English speakers without any scientific rationale.",
+   "Excluding pregnancy is standard but is presented without the discussion its consequences require, given the resulting evidence gap.",
+   "The resulting sample maximizes internal validity at a documented cost to generalizability, and the tradeoff is never named."
+  ],
+  "verification_path": "For each criterion, ask who is excluded and whether the exclusion is scientifically necessary or merely convenient. Compare the resulting sample to the drug's intended population.",
+  "teaching_note": "Strong for research methods because every criterion is defensible in isolation. The bias is cumulative.",
+  "serves": [
+   "bias audit",
+   "research design",
+   "health equity",
+   "sampling critique"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "bias-08",
+  "defect_class": "bias_stereotype",
+  "domain": "Library & Information Science",
+  "difficulty": "intermediate",
+  "scenario": "Asked to recommend authoritative sources on a contested public health question.",
+  "specimen": "For reliable information, consult peer-reviewed journals, government health agencies, major medical associations, and established university medical centers. Avoid personal blogs, social media, community forums, and advocacy organization websites, which lack editorial oversight.",
+  "defects": [
+   "The hierarchy is presented as fixed rather than contextual, contradicting the ACRL frame that treats authority as constructed and contextual.",
+   "Advocacy organizations are dismissed categorically, though for questions about patient experience or community impact they may hold the relevant expertise.",
+   "Community forums are excluded, though for questions about lived experience of a condition they may be the most relevant source available.",
+   "The advice is sound for questions of clinical efficacy and wrong for questions of lived experience, and it does not distinguish between them."
+  ],
+  "verification_path": "Ask what question is being asked before ranking source types. Identify a question for which a community forum would be a more authoritative source than a journal.",
+  "teaching_note": "Directly relevant to the 'source hierarchy' framing flagged in the corpus. Useful for teaching that authority is contextual without abandoning evaluation.",
+  "serves": [
+   "bias audit",
+   "ACRL frames",
+   "authority evaluation",
+   "source hierarchy critique"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "trans-01",
+  "defect_class": "translation_loss",
+  "domain": "Global & Multicultural",
+  "difficulty": "intermediate",
+  "scenario": "Asked to translate a Japanese concept into English and back.",
+  "specimen": "JA → EN: 'natsukashii' → 'nostalgic'\nEN → JA: 'nostalgic' → 'kaikoteki' (懐古的)\n\nGloss offered: 'Both words express fond feelings about the past.'",
+  "defects": [
+   "'Natsukashii' describes a warm feeling triggered in the present by something from the past; English 'nostalgic' carries a wistfulness or ache that natsukashii does not.",
+   "The round trip does not return the original word, which is itself the diagnostic.",
+   "The gloss flattens the difference by asserting equivalence.",
+   "The affective valence shifts from warmth to longing without any flag."
+  ],
+  "verification_path": "Run the round trip and check whether you return to the starting word. Ask a speaker of the language to describe a situation where each word applies and compare.",
+  "teaching_note": "The round-trip test is the transferable skill. Works in any language pair the class can staff.",
+  "serves": [
+   "translation analysis",
+   "linguistic equity",
+   "cultural concepts"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "trans-02",
+  "defect_class": "translation_loss",
+  "domain": "Global & Multicultural",
+  "difficulty": "advanced",
+  "scenario": "Asked to translate a Yoruba proverb into English.",
+  "specimen": "Source: 'Bí a bá ń gun igi, a máa ń bọ̀ wá sílẹ̀.'\nTranslation offered: 'What goes up must come down.'\nNote offered: 'This proverb expresses a universal truth about impermanence.'",
+  "defects": [
+   "The translation substitutes an English idiom for a Yoruba proverb, replacing the source's imagery with a familiar Anglophone formula.",
+   "The literal sense concerns climbing a tree and descending, which carries implications about effort, ascent, and return that the English idiom's physics metaphor does not.",
+   "'Universal truth' erases the proverb's situated use within a specific rhetorical tradition.",
+   "A student would have no way of knowing the imagery was replaced."
+  ],
+  "verification_path": "Request a literal word-by-word gloss alongside the idiomatic translation and compare the two. Ask what is lost in the idiomatic version.",
+  "teaching_note": "Good for showing that fluent output can be the problem. The English reads perfectly, which is why the substitution is invisible.",
+  "serves": [
+   "translation analysis",
+   "linguistic equity",
+   "postcolonial critique",
+   "cultural concepts"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "trans-03",
+  "defect_class": "translation_loss",
+  "domain": "Language Learning",
+  "difficulty": "intro",
+  "scenario": "Asked to translate an English request into Spanish for a professional email.",
+  "specimen": "English: 'Could you send me the report when you get a chance?'\nSpanish offered: '¿Puedes enviarme el informe cuando tengas la oportunidad?'",
+  "defects": [
+   "The translation uses the informal 'tú' form for what the English frames as a professional request.",
+   "Spanish encodes a formality distinction that English does not, so the model had to make a choice the source did not specify — and made it silently.",
+   "In many professional contexts across the Spanish-speaking world, 'usted' would be expected, and the informal form could read as presumptuous.",
+   "No flag was raised that a register decision had been made."
+  ],
+  "verification_path": "Ask for both the tú and usted versions and consider which fits the relationship. Any time the target language encodes a distinction the source lacks, the model has guessed.",
+  "teaching_note": "The clearest specimen for the general principle: translation requires choices, and the model makes them without telling you.",
+  "serves": [
+   "translation analysis",
+   "register",
+   "language learning",
+   "pragmatics"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "trans-04",
+  "defect_class": "translation_loss",
+  "domain": "Global & Multicultural",
+  "difficulty": "advanced",
+  "scenario": "Asked to translate a German philosophical term in an academic paper.",
+  "specimen": "'Dasein' → 'existence' or 'being-there'\nNote offered: 'Either translation is acceptable; ‘existence’ reads more naturally in English prose.'",
+  "defects": [
+   "Recommending 'existence' for naturalness would collapse a technical distinction Heidegger draws deliberately against Existenz.",
+   "The recommendation optimizes for English readability at the cost of the philosophical argument.",
+   "The convention in the anglophone literature is to leave Dasein untranslated, and that convention is not mentioned.",
+   "Presenting the two as interchangeable is the substantive error."
+  ],
+  "verification_path": "Check how the standard scholarly translations and the secondary literature handle the term. Where a field has a translation convention, deviation requires justification.",
+  "teaching_note": "Useful in humanities and philosophy courses for showing that fluency and fidelity can pull in opposite directions.",
+  "serves": [
+   "translation analysis",
+   "philosophical terminology",
+   "disciplinary convention"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "quant-01",
+  "defect_class": "quantitative_error",
+  "domain": "Math, Statistics & Quantitative Reasoning",
+  "difficulty": "intermediate",
+  "scenario": "Asked to compute a weighted average course grade.",
+  "specimen": "Homework 20% (avg 88), Midterm 25% (score 74), Project 25% (score 91), Final 30% (score 82).\n\nCalculation: (88 × 0.20) + (74 × 0.25) + (91 × 0.25) + (82 × 0.30)\n= 17.6 + 18.5 + 22.75 + 24.6\n= 83.45\n\nFinal grade: 83.45, a B.",
+  "defects": [
+   "The weights sum to 1.00 and each product is computed correctly.",
+   "17.6 + 18.5 + 22.75 + 24.6 = 83.45 is correct.",
+   "This specimen contains NO error. It is included deliberately as a negative control.",
+   "Students told to find the error will often invent one, which is the finding."
+  ],
+  "verification_path": "Recompute independently. Confirm the weights sum to 1. Confirm each product and the total.",
+  "teaching_note": "Negative control. Run it alongside quant-02 without telling students which is which. The instinct to find an error because one was promised is exactly the habit worth surfacing.",
+  "serves": [
+   "error analysis",
+   "negative control",
+   "verification discipline"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "quant-02",
+  "defect_class": "quantitative_error",
+  "domain": "Math, Statistics & Quantitative Reasoning",
+  "difficulty": "advanced",
+  "scenario": "Asked to interpret the result of an independent-samples t-test.",
+  "specimen": "The analysis yielded t(48) = 2.31, p = 0.025. Since p < 0.05, we reject the null hypothesis and conclude that the intervention caused a significant improvement in test scores. The probability that the null hypothesis is true is 2.5%.",
+  "defects": [
+   "The final sentence misstates what a p-value is: it is the probability of data this extreme given the null, not the probability the null is true. This is the classic inversion.",
+   "'Caused' is asserted from a design that may not support a causal claim; nothing in the output establishes randomization.",
+   "'Significant improvement' conflates statistical significance with practical importance; no effect size is reported.",
+   "The arithmetic and the degrees of freedom are correct, so a numeric check passes cleanly."
+  ],
+  "verification_path": "State in your own words what p = 0.025 means before reading the interpretation. Check whether an effect size is reported. Check whether the design supports causal language.",
+  "teaching_note": "The strongest quantitative specimen, because the numbers are right and the reasoning is wrong. Students checking arithmetic will pass it.",
+  "serves": [
+   "error analysis",
+   "statistical interpretation",
+   "causal reasoning"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "quant-03",
+  "defect_class": "quantitative_error",
+  "domain": "Health Sciences & Nursing",
+  "difficulty": "advanced",
+  "scenario": "Asked to calculate a pediatric medication dose.",
+  "specimen": "Order: 15 mg/kg every 8 hours. Patient weight: 44 lb.\n\nConvert: 44 lb ÷ 2.2 = 20 kg\nDose: 20 kg × 15 mg/kg = 300 mg per dose\nDaily total: 300 mg × 3 = 900 mg/day\n\nAdminister 300 mg every 8 hours.",
+  "defects": [
+   "The arithmetic is entirely correct at every step.",
+   "No maximum daily dose is checked against a pediatric reference, and no per-dose ceiling is mentioned.",
+   "The available concentration and the resulting volume to administer are never addressed, so the output is not actually actionable.",
+   "The output presents a complete-looking calculation that omits the safety checks the calculation exists to support."
+  ],
+  "verification_path": "Recompute independently, then check the daily total against the pediatric maximum in an authoritative drug reference. Determine the volume to administer from the available concentration.",
+  "teaching_note": "Use this to make the AI-is-not-a-verifier rule concrete. The math is right, and the output is still unsafe to act on. Students must resolve it against an authoritative reference, never against a second model.",
+  "serves": [
+   "error analysis",
+   "dosage calculation",
+   "clinical safety",
+   "verification discipline"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "conf-01",
+  "defect_class": "confident_wrong",
+  "domain": "Library & Information Science",
+  "difficulty": "intro",
+  "scenario": "Asked whether a specific database indexes a specific journal.",
+  "specimen": "Yes, PsycINFO indexes that journal comprehensively, with coverage extending back to the journal's first volume. You can expect full abstract and citation data for all articles.",
+  "defects": [
+   "The claim is stated without hedging and without any suggestion of checking.",
+   "Database coverage changes with licensing and is exactly the class of fact that goes stale.",
+   "'Comprehensively' and 'all articles' are absolute claims about a changing product.",
+   "No pointer to the database's own title list, which is the authoritative and easily-checked source."
+  ],
+  "verification_path": "Check the database's published title list, which every major vendor maintains. Coverage questions have an authoritative answer that takes thirty seconds to find.",
+  "teaching_note": "Good first specimen because verification is fast and definitive. Confidence and accuracy are unrelated variables.",
+  "serves": [
+   "confident-wrong detection",
+   "database instruction",
+   "verification discipline"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "conf-02",
+  "defect_class": "confident_wrong",
+  "domain": "Education",
+  "difficulty": "intermediate",
+  "scenario": "Asked about the evidence base for a popular instructional practice.",
+  "specimen": "Teaching to students' individual learning styles is well established in the educational research literature and consistently improves outcomes when instruction is matched to a student's preferred modality.",
+  "defects": [
+   "The claim is contradicted by the research literature; the meshing hypothesis has repeatedly failed to find support.",
+   "It is stated with unqualified confidence and attributed to a consensus that does not exist.",
+   "The belief is genuinely widespread among educators, which is presumably why it appears in the training data.",
+   "A student would have no signal that this is contested, let alone that the weight of evidence runs the other way."
+  ],
+  "verification_path": "Search for systematic reviews of the meshing hypothesis rather than for learning styles generally. Popularity in the corpus is not evidence.",
+  "teaching_note": "Effective because many students and some faculty believe this. Ask what would have to be true for the claim to hold, then look for that study.",
+  "serves": [
+   "confident-wrong detection",
+   "evidence appraisal",
+   "training data critique"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "conf-03",
+  "defect_class": "confident_wrong",
+  "domain": "STEM",
+  "difficulty": "advanced",
+  "scenario": "Asked to explain why a common laboratory procedure uses a particular step.",
+  "specimen": "The step is included to prevent oxidation of the sample during heating, which would otherwise produce a systematic underestimate of the final concentration by roughly 8–12%.",
+  "defects": [
+   "The mechanism offered is plausible and stated with precision, including a specific numeric range.",
+   "The numeric range gives the explanation an evidentiary feel while having no stated source.",
+   "Procedural rationales are exactly where confident invention is hardest to detect, because the procedure genuinely exists and the step genuinely has a reason.",
+   "A student who accepts this will carry a wrong mechanism into their lab report without ever encountering a contradiction."
+  ],
+  "verification_path": "Check the protocol's own documentation or the primary methods paper for the stated rationale. A mechanism with a number attached should have a source.",
+  "teaching_note": "Use when teaching that plausibility is not verification. The specificity is the persuasive device.",
+  "serves": [
+   "confident-wrong detection",
+   "lab methodology",
+   "verification discipline"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ },
+ {
+  "id": "conf-04",
+  "defect_class": "confident_wrong",
+  "domain": "Criminal Justice & Legal Studies",
+  "difficulty": "advanced",
+  "scenario": "Asked about the current legal standard in a specific jurisdiction.",
+  "specimen": "Under the current standard in that jurisdiction, the officer must have specific and articulable facts, and the two-part test established in the controlling case requires both objective reasonableness and a contemporaneous written justification filed within 24 hours.",
+  "defects": [
+   "The first element restates a real and well-known standard, which lends credibility to what follows.",
+   "The 'contemporaneous written justification within 24 hours' element is invented and specific enough to sound like statute.",
+   "Legal standards vary by jurisdiction and change, and no case, statute, or date is cited.",
+   "Mixing a real element with a fabricated one is the most dangerous pattern in the set, and legal contexts are where acting on it carries the highest cost."
+  ],
+  "verification_path": "Every element of a legal standard traces to a specific case or statute. Require the citation, then read the source. Never rely on an uncited statement of law.",
+  "teaching_note": "Pair with the tool's editorial rule that AI is never the terminal authority. In legal contexts, the terminal authority is the primary source, always.",
+  "serves": [
+   "confident-wrong detection",
+   "legal research",
+   "verification discipline"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-08",
+  "model": null,
+  "model_version": null,
+  "captured_date": null
+ }
+]

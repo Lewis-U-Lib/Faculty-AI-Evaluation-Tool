@@ -1,0 +1,1028 @@
+{
+ "t_quick": {
+  "s": [
+   "freeman2014",
+   "mollick2023"
+  ],
+  "r": [
+   "nerantzi2023"
+  ]
+ },
+ "t_assign": {
+  "s": [
+   "wiggins2005",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "nicol2006"
+  ]
+ },
+ "t_policy": {
+  "s": [
+   "perkins2023",
+   "ala_ai2024"
+  ],
+  "r": [
+   "bearman2023"
+  ]
+ },
+ "t_design": {
+  "s": [
+   "wiggins2005",
+   "cast_udl"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "t_materials": {
+  "s": [
+   "cast_udl",
+   "nerantzi2023"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "t_feedback": {
+  "s": [
+   "nicol2006",
+   "boud2015"
+  ],
+  "r": [
+   "winne2011"
+  ]
+ },
+ "first_year": {
+  "s": [
+   "kalyuga2007",
+   "freeman2014"
+  ],
+  "r": [
+   "mollick2023a"
+  ]
+ },
+ "upper_": {
+  "s": [
+   "anderson2001",
+   "freeman2014"
+  ],
+  "r": [
+   "wiggins2005"
+  ]
+ },
+ "health": {
+  "s": [
+   "sackett1996",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "herdman2018"
+  ]
+ },
+ "stem": {
+  "s": [
+   "freeman2014",
+   "anderson2001"
+  ],
+  "r": [
+   "tufte2001"
+  ]
+ },
+ "humanities": {
+  "s": [
+   "bean2011",
+   "anderson2001"
+  ],
+  "r": [
+   "acrl2016"
+  ]
+ },
+ "online": {
+  "s": [
+   "garrison2007",
+   "darby2019"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "grad": {
+  "s": [
+   "grant2009",
+   "brand2015"
+  ],
+  "r": [
+   "bearman2023"
+  ]
+ },
+ "r_health": {
+  "s": [
+   "sackett1996",
+   "page2021"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "r_stem": {
+  "s": [
+   "freeman2014",
+   "tufte2001"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "r_humanities": {
+  "s": [
+   "bean2011",
+   "acrl2016"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "r_social": {
+  "s": [
+   "braun2006",
+   "grant2009"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "r_inter": {
+  "s": [
+   "lave1991",
+   "acrl2016"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "r_impact": {
+  "s": [
+   "bean2011",
+   "brand2015"
+  ],
+  "r": [
+   "nerantzi2023"
+  ]
+ },
+ "r_collab": {
+  "s": [
+   "brand2015",
+   "lave1991"
+  ],
+  "r": [
+   "topping2005"
+  ]
+ },
+ "r_conf": {
+  "s": [
+   "brand2015",
+   "bean2011"
+  ],
+  "r": [
+   "tufte2001"
+  ]
+ },
+ "r_": {
+  "s": [
+   "grant2009",
+   "acrl2016"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "both": {
+  "s": [
+   "mollick2023",
+   "grant2009"
+  ],
+  "r": [
+   "acrl2016"
+  ]
+ },
+ "cap_": {
+  "s": [
+   "wiggins2005",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "lib_": {
+  "s": [
+   "sousa2025",
+   "acrl2016"
+  ],
+  "r": [
+   "ala_ai2024"
+  ]
+ },
+ "arts": {
+  "s": [
+   "hertzmann2023",
+   "nerantzi2023"
+  ],
+  "r": [
+   "usco_ai2023"
+  ]
+ },
+ "bus_": {
+  "s": [
+   "toubia2024",
+   "ballantine2024"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "biz": {
+  "s": [
+   "toubia2024",
+   "ballantine2024"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "edu_": {
+  "s": [
+   "darlinghammond2024",
+   "wiggins2005"
+  ],
+  "r": [
+   "tomlinson2016"
+  ]
+ },
+ "fac_": {
+  "s": [
+   "darlinghammond2024",
+   "bean2011"
+  ],
+  "r": [
+   "hora2016"
+  ]
+ },
+ "faculty": {
+  "s": [
+   "darlinghammond2024",
+   "bean2011"
+  ],
+  "r": [
+   "hora2016"
+  ]
+ },
+ "lang_": {
+  "s": [
+   "kohnke2023",
+   "cast_udl"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "language": {
+  "s": [
+   "kohnke2023",
+   "cast_udl"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "cj_": {
+  "s": [
+   "benjamin2019",
+   "nist_ai2023"
+  ],
+  "r": [
+   "shneiderman2022"
+  ]
+ },
+ "criminal": {
+  "s": [
+   "benjamin2019",
+   "nist_ai2023"
+  ],
+  "r": [
+   "shneiderman2022"
+  ]
+ },
+ "env_": {
+  "s": [
+   "rolnick2022",
+   "freeman2014"
+  ],
+  "r": [
+   "tufte2001"
+  ]
+ },
+ "environmental": {
+  "s": [
+   "rolnick2022",
+   "freeman2014"
+  ],
+  "r": [
+   "tufte2001"
+  ]
+ },
+ "comm_": {
+  "s": [
+   "hobbs2020",
+   "caulfield2019"
+  ],
+  "r": [
+   "acrl2016"
+  ]
+ },
+ "study_": {
+  "s": [
+   "dunlosky2013",
+   "zimmerman2002"
+  ],
+  "r": [
+   "schraw1998"
+  ]
+ },
+ "student": {
+  "s": [
+   "dunlosky2013",
+   "zimmerman2002"
+  ],
+  "r": [
+   "schraw1998"
+  ]
+ },
+ "peer_": {
+  "s": [
+   "topping2005",
+   "nicol2006"
+  ],
+  "r": [
+   "kagan2009"
+  ]
+ },
+ "r_grant": {
+  "s": [
+   "seckel2024",
+   "grant2009"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "hum_": {
+  "s": [
+   "bean2011",
+   "anderson2001"
+  ],
+  "r": [
+   "acrl2016"
+  ]
+ },
+ "soc": {
+  "s": [
+   "braun2006",
+   "saldana2021"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "curriculum": {
+  "s": [
+   "suskie2018",
+   "wiggins2005"
+  ],
+  "r": [
+   "darlinghammond2024"
+  ]
+ },
+ "cs_": {
+  "s": [
+   "dakhel2023",
+   "bull2024"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "applied": {
+  "s": [
+   "hora2016",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "bean2011"
+  ]
+ },
+ "math": {
+  "s": [
+   "freeman2014",
+   "tufte2001"
+  ],
+  "r": [
+   "schwabish2021"
+  ]
+ },
+ "data_viz": {
+  "s": [
+   "schwabish2021",
+   "tufte2001"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "community": {
+  "s": [
+   "lave1991",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "braun2006"
+  ]
+ },
+ "research_data": {
+  "s": [
+   "brand2015",
+   "nist_ai2023"
+  ],
+  "r": [
+   "page2021"
+  ]
+ },
+ "global": {
+  "s": [
+   "lave1991",
+   "cast_udl"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "flipped": {
+  "s": [
+   "freeman2014",
+   "dunlosky2013"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "creative": {
+  "s": [
+   "bean2011",
+   "mla_cccc2023"
+  ],
+  "r": [
+   "hertzmann2023"
+  ]
+ },
+ "accessibility": {
+  "s": [
+   "cast_udl",
+   "darby2019"
+  ],
+  "r": [
+   "tomlinson2016"
+  ]
+ },
+ "interdisciplinary": {
+  "s": [
+   "lave1991",
+   "grant2009"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "firstyear": {
+  "s": [
+   "kalyuga2007",
+   "freeman2014"
+  ],
+  "r": [
+   "dunlosky2013"
+  ]
+ },
+ "simulations": {
+  "s": [
+   "mollick2023a",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "hybrid": {
+  "s": [
+   "garrison2007",
+   "darby2019"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "r_arts": {
+  "s": [
+   "hertzmann2023",
+   "bean2011"
+  ],
+  "r": [
+   "nerantzi2023"
+  ]
+ },
+ "r_business": {
+  "s": [
+   "toubia2024",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "ballantine2024"
+  ]
+ },
+ "r_education": {
+  "s": [
+   "darlinghammond2024",
+   "grant2009"
+  ],
+  "r": [
+   "wiggins2005"
+  ]
+ },
+ "r_library": {
+  "s": [
+   "sousa2025",
+   "acrl2016"
+  ],
+  "r": [
+   "ala_ai2024"
+  ]
+ },
+ "r_litreview": {
+  "s": [
+   "grant2009",
+   "page2021"
+  ],
+  "r": [
+   "acrl2016"
+  ]
+ },
+ "r_publication": {
+  "s": [
+   "brand2015",
+   "bean2011"
+  ],
+  "r": [
+   "seckel2024"
+  ]
+ },
+ "r_qualitative": {
+  "s": [
+   "braun2006",
+   "saldana2021"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "r_scholarly": {
+  "s": [
+   "brand2015",
+   "bean2011"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "r_data": {
+  "s": [
+   "brand2015",
+   "nist_ai2023"
+  ],
+  "r": [
+   "page2021"
+  ]
+ },
+ "r_writing": {
+  "s": [
+   "bean2011",
+   "seckel2024"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "t_assessment": {
+  "s": [
+   "wiggins2005",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "suskie2018"
+  ]
+ },
+ "t_grad": {
+  "s": [
+   "grant2009",
+   "brand2015"
+  ],
+  "r": [
+   "darlinghammond2024"
+  ]
+ },
+ "t_multimodal": {
+  "s": [
+   "nerantzi2023",
+   "hertzmann2023"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "t_accessibility": {
+  "s": [
+   "cast_udl",
+   "darby2019"
+  ],
+  "r": [
+   "tomlinson2016"
+  ]
+ },
+ "t_discussion": {
+  "s": [
+   "freeman2014",
+   "kagan2009"
+  ],
+  "r": [
+   "paul2006"
+  ]
+ },
+ "t_capstone": {
+  "s": [
+   "wiggins2005",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "lave1991"
+  ]
+ },
+ "t_policy_adv": {
+  "s": [
+   "perkins2023",
+   "ala_ai2024"
+  ],
+  "r": [
+   "nist_ai2023"
+  ]
+ },
+ "remember_": {
+  "s": [
+   "long2020",
+   "bloom1956"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "remember_ai": {
+  "s": [
+   "long2020",
+   "kassorla2024"
+  ],
+  "r": [
+   "miao2024"
+  ]
+ },
+ "remember_hum": {
+  "s": [
+   "anderson2001",
+   "bean2011"
+  ],
+  "r": [
+   "burdick2012"
+  ]
+ },
+ "remember_stem": {
+  "s": [
+   "freeman2014",
+   "anderson2001"
+  ],
+  "r": [
+   "abet2024"
+  ]
+ },
+ "remember_health": {
+  "s": [
+   "sackett1996",
+   "herdman2018"
+  ],
+  "r": [
+   "hayden2014"
+  ]
+ },
+ "remember_social": {
+  "s": [
+   "creswell2018",
+   "anderson2001"
+  ],
+  "r": [
+   "braun2006"
+  ]
+ },
+ "remember_bus": {
+  "s": [
+   "toubia2024",
+   "anderson2001"
+  ],
+  "r": [
+   "davenport2018"
+  ]
+ },
+ "remember_edu": {
+  "s": [
+   "darlinghammond2024",
+   "anderson2001"
+  ],
+  "r": [
+   "miao2024"
+  ]
+ },
+ "remember_arts": {
+  "s": [
+   "hertzmann2023",
+   "anderson2001"
+  ],
+  "r": [
+   "crawford2021"
+  ]
+ },
+ "remember_lib": {
+  "s": [
+   "acrl2016",
+   "hervieux2024"
+  ],
+  "r": [
+   "sousa2025"
+  ]
+ },
+ "understand_": {
+  "s": [
+   "anderson2001",
+   "long2020"
+  ],
+  "r": [
+   "bloom1956"
+  ]
+ },
+ "understand_cross": {
+  "s": [
+   "long2020",
+   "kassorla2024"
+  ],
+  "r": [
+   "hibbert2024"
+  ]
+ },
+ "understand_hum": {
+  "s": [
+   "bean2011",
+   "burdick2012"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "understand_stem": {
+  "s": [
+   "freeman2014",
+   "anderson2001"
+  ],
+  "r": [
+   "abet2024"
+  ]
+ },
+ "understand_health": {
+  "s": [
+   "sackett1996",
+   "herdman2018"
+  ],
+  "r": [
+   "hayden2014"
+  ]
+ },
+ "understand_bus": {
+  "s": [
+   "toubia2024",
+   "davenport2018"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "understand_edu": {
+  "s": [
+   "darlinghammond2024",
+   "miao2024"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "understand_lib": {
+  "s": [
+   "acrl2016",
+   "sousa2025"
+  ],
+  "r": [
+   "hervieux2024"
+  ]
+ },
+ "understand_arts": {
+  "s": [
+   "hertzmann2023",
+   "anderson2001"
+  ],
+  "r": [
+   "crawford2021"
+  ]
+ },
+ "understand_final": {
+  "s": [
+   "anderson2001",
+   "long2020"
+  ],
+  "r": [
+   "fink2013"
+  ]
+ },
+ "apply_arts": {
+  "s": [
+   "hertzmann2023",
+   "nerantzi2023"
+  ],
+  "r": [
+   "usco_ai2023"
+  ]
+ },
+ "apply_business": {
+  "s": [
+   "toubia2024",
+   "davenport2018"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "apply_social": {
+  "s": [
+   "creswell2018",
+   "braun2006"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "business_": {
+  "s": [
+   "toubia2024",
+   "ballantine2024"
+  ],
+  "r": [
+   "davenport2018"
+  ]
+ },
+ "education_": {
+  "s": [
+   "darlinghammond2024",
+   "miao2024"
+  ],
+  "r": [
+   "wiggins2005"
+  ]
+ },
+ "library_": {
+  "s": [
+   "sousa2025",
+   "acrl2016"
+  ],
+  "r": [
+   "hervieux2024"
+  ]
+ },
+ "cross_cutting": {
+  "s": [
+   "long2020",
+   "kassorla2024"
+  ],
+  "r": [
+   "fink2013"
+  ]
+ },
+ "social_": {
+  "s": [
+   "creswell2018",
+   "braun2006"
+  ],
+  "r": [
+   "saldana2021"
+  ]
+ },
+ "health_": {
+  "s": [
+   "sackett1996",
+   "herdman2018"
+  ],
+  "r": [
+   "hayden2014"
+  ]
+ },
+ "stem_": {
+  "s": [
+   "freeman2014",
+   "abet2024"
+  ],
+  "r": [
+   "tufte2001"
+  ]
+ },
+ "humanities_": {
+  "s": [
+   "bean2011",
+   "burdick2012"
+  ],
+  "r": [
+   "acrl2016"
+  ]
+ },
+ "arts_": {
+  "s": [
+   "hertzmann2023",
+   "nerantzi2023"
+  ],
+  "r": [
+   "crawford2021"
+  ]
+ },
+ "interdisciplinary_": {
+  "s": [
+   "lave1991",
+   "fink2013"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "capstone_ai": {
+  "s": [
+   "kinzie2013",
+   "wiggins2005"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "final_eight": {
+  "s": [
+   "fink2013",
+   "long2020"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "practical_ai": {
+  "s": [
+   "long2020",
+   "speicher2023"
+  ],
+  "r": [
+   "mollick2023a"
+  ]
+ },
+ "research_ethics": {
+  "s": [
+   "resnik2020",
+   "floridi2018"
+  ],
+  "r": [
+   "nist_ai2023"
+  ]
+ },
+ "curriculum_": {
+  "s": [
+   "suskie2018",
+   "maki2010"
+  ],
+  "r": [
+   "wiggins2005"
+  ]
+ }
+}
