@@ -1,0 +1,66 @@
+{
+  "project": "Faculty AI Evaluation Tool",
+  "org": "Lewis University Library",
+  "version": "1.0.0",
+  "shared_stores": [
+    "RULES",
+    "ORIGIN_DB",
+    "KW_SOURCES",
+    "RULE_FALLBACK",
+    "BLOOM_SRC",
+    "SPECIMENS",
+    "SYLLABUS_SPECTRUM",
+    "ORIGIN_TYPE_LINKS"
+  ],
+  "targets": [
+    {
+      "name": "index",
+      "template": "templates/index.template.html",
+      "output": "index.html",
+      "source": "6.9.index.html",
+      "stores": {
+        "RULES": "rules",
+        "ORIGIN_DB": "origin_db",
+        "KW_SOURCES": "kw_sources",
+        "RULE_FALLBACK": "rule_fallback",
+        "BLOOM_SRC": "bloom_src",
+        "SPECIMENS": "specimens",
+        "SYLLABUS_SPECTRUM": "syllabus_spectrum",
+        "ORIGIN_TYPE_LINKS": "origin_type_links",
+        "SOURCES": "sources",
+        "TOOLS": "tools"
+      },
+      "shapes": {
+        "SOURCES": "object",
+        "TOOLS": "object"
+      }
+    },
+    {
+      "name": "reference",
+      "template": "templates/reference.template.html",
+      "output": "Reference.html",
+      "source": "Reference_29.html",
+      "stores": {
+        "RULES": "rules",
+        "ORIGIN_DB": "origin_db",
+        "KW_SOURCES": "kw_sources",
+        "RULE_FALLBACK": "rule_fallback",
+        "BLOOM_SRC": "bloom_src",
+        "SPECIMENS": "specimens",
+        "SYLLABUS_SPECTRUM": "syllabus_spectrum",
+        "ORIGIN_TYPE_LINKS": "origin_type_links",
+        "BIB": "sources",
+        "TOOLS": "tools"
+      },
+      "shapes": {
+        "BIB": "array",
+        "TOOLS": "array"
+      }
+    }
+  ],
+  "id_keyed": [
+    "sources",
+    "tools"
+  ],
+  "_note_id_keyed": "Only these canonical files are stored as objects keyed by id. Everything else keeps its published shape; RULES in particular is an ordered array and must not be re-keyed."
+}

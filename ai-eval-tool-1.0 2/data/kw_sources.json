@@ -1,0 +1,4340 @@
+{
+ "devil's advocate": {
+  "s": [
+   "mollick2023a",
+   "freeman2014"
+  ],
+  "r": [
+   "bean2011"
+  ]
+ },
+ "question cascade": {
+  "s": [
+   "freeman2014",
+   "mollick2023"
+  ],
+  "r": [
+   "garrison2007"
+  ]
+ },
+ "fact-check": {
+  "s": [
+   "acrl2016",
+   "caulfield2019"
+  ],
+  "r": [
+   "bearman2023"
+  ]
+ },
+ "fact check": {
+  "s": [
+   "acrl2016",
+   "caulfield2019"
+  ],
+  "r": [
+   "bearman2023"
+  ]
+ },
+ "muddiest point": {
+  "s": [
+   "angelo1993",
+   "freeman2014"
+  ],
+  "r": [
+   "schraw1998"
+  ]
+ },
+ "minute paper": {
+  "s": [
+   "angelo1993",
+   "freeman2014"
+  ],
+  "r": [
+   "nicol2006"
+  ]
+ },
+ "think-pair-share": {
+  "s": [
+   "lyman1981",
+   "kagan2009"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "think pair share": {
+  "s": [
+   "lyman1981",
+   "kagan2009"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "jigsaw": {
+  "s": [
+   "aronson1978",
+   "kagan2009"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "fishbowl": {
+  "s": [
+   "kagan2009",
+   "freeman2014"
+  ],
+  "r": [
+   "paul2006"
+  ]
+ },
+ "socratic": {
+  "s": [
+   "paul2006",
+   "freeman2014"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "elaborative interrogation": {
+  "s": [
+   "pressley1988",
+   "dunlosky2013"
+  ],
+  "r": [
+   "schraw1998"
+  ]
+ },
+ "elaborative": {
+  "s": [
+   "pressley1988",
+   "dunlosky2013"
+  ],
+  "r": [
+   "schraw1998"
+  ]
+ },
+ "practice exam": {
+  "s": [
+   "dunlosky2013",
+   "angelo1993"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "concept map": {
+  "s": [
+   "angelo1993",
+   "anderson2001"
+  ],
+  "r": [
+   "schraw1998"
+  ]
+ },
+ "comprehension check": {
+  "s": [
+   "angelo1993",
+   "dunlosky2013"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "pre-class": {
+  "s": [
+   "dunlosky2013",
+   "freeman2014"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "glossary": {
+  "s": [
+   "anderson2001",
+   "dunlosky2013"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "algorithm": {
+  "s": [
+   "anderson2001",
+   "freeman2014"
+  ],
+  "r": [
+   "mollick2023"
+  ]
+ },
+ "peer teaching": {
+  "s": [
+   "topping2005",
+   "aronson1978"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "group project": {
+  "s": [
+   "kagan2009",
+   "aronson1978"
+  ],
+  "r": [
+   "topping2005"
+  ]
+ },
+ "mediator": {
+  "s": [
+   "kagan2009",
+   "topping2005"
+  ],
+  "r": [
+   "aronson1978"
+  ]
+ },
+ "cooperative": {
+  "s": [
+   "kagan2009",
+   "aronson1978"
+  ],
+  "r": [
+   "topping2005"
+  ]
+ },
+ "primary source": {
+  "s": [
+   "acrl2016",
+   "anderson2001"
+  ],
+  "r": [
+   "bean2011"
+  ]
+ },
+ "historiograph": {
+  "s": [
+   "acrl2016",
+   "anderson2001"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "literary movement": {
+  "s": [
+   "anderson2001",
+   "bean2011"
+  ],
+  "r": [
+   "acrl2016"
+  ]
+ },
+ "digital archive": {
+  "s": [
+   "acrl2016",
+   "sousa2025"
+  ],
+  "r": [
+   "ala_ai2024"
+  ]
+ },
+ "financial statement": {
+  "s": [
+   "anderson2001",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "tufte2001"
+  ]
+ },
+ "financial": {
+  "s": [
+   "anderson2001",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "tufte2001"
+  ]
+ },
+ "ratio analysis": {
+  "s": [
+   "anderson2001",
+   "freeman2014"
+  ],
+  "r": [
+   "tufte2001"
+  ]
+ },
+ "market research": {
+  "s": [
+   "anderson2001",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "competitive intelligence": {
+  "s": [
+   "anderson2001",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "tufte2001"
+  ]
+ },
+ "competitor": {
+  "s": [
+   "anderson2001",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "industry trends": {
+  "s": [
+   "anderson2001",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "bearman2023"
+  ]
+ },
+ "email": {
+  "s": [
+   "bean2011",
+   "darby2019"
+  ],
+  "r": [
+   "nicol2006"
+  ]
+ },
+ "batch processing": {
+  "s": [
+   "shneiderman2022",
+   "bearman2023"
+  ],
+  "r": [
+   "nist_ai2023"
+  ]
+ },
+ "office hours": {
+  "s": [
+   "freeman2014",
+   "darby2019"
+  ],
+  "r": [
+   "mollick2023"
+  ]
+ },
+ "stress management": {
+  "s": [
+   "cast_udl",
+   "zimmerman2002"
+  ],
+  "r": [
+   "winne2011"
+  ]
+ },
+ "academic stress": {
+  "s": [
+   "zimmerman2002",
+   "cast_udl"
+  ],
+  "r": [
+   "schraw1998"
+  ]
+ },
+ "language practice": {
+  "s": [
+   "kagan2009",
+   "freeman2014"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "conversation partner": {
+  "s": [
+   "kagan2009",
+   "freeman2014"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "case brief": {
+  "s": [
+   "vlachopoulos2024",
+   "anderson2001"
+  ],
+  "r": [
+   "wiggins2005"
+  ]
+ },
+ "performance task": {
+  "s": [
+   "vlachopoulos2024",
+   "wiggins2005"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "time-constrained": {
+  "s": [
+   "vlachopoulos2024",
+   "wiggins2005"
+  ],
+  "r": [
+   "dunlosky2013"
+  ]
+ },
+ "rubric": {
+  "s": [
+   "wiggins2005",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "nicol2006"
+  ]
+ },
+ "feedback loop": {
+  "s": [
+   "nicol2006",
+   "boud2015"
+  ],
+  "r": [
+   "winne2011"
+  ]
+ },
+ "feedback protocol": {
+  "s": [
+   "boud2015",
+   "nicol2006"
+  ],
+  "r": [
+   "winne2011"
+  ]
+ },
+ "dialogic feedback": {
+  "s": [
+   "boud2015",
+   "nicol2006"
+  ],
+  "r": [
+   "zimmerman2002"
+  ]
+ },
+ "backward design": {
+  "s": [
+   "wiggins2005",
+   "anderson2001"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "syllabus": {
+  "s": [
+   "perkins2023",
+   "wiggins2005"
+  ],
+  "r": [
+   "mla_cccc2023"
+  ]
+ },
+ "udl": {
+  "s": [
+   "cast_udl",
+   "kalyuga2007"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "universal design": {
+  "s": [
+   "cast_udl",
+   "kalyuga2007"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "accessibility": {
+  "s": [
+   "cast_udl",
+   "darby2019"
+  ],
+  "r": [
+   "garrison2007"
+  ]
+ },
+ "scaffolding": {
+  "s": [
+   "kalyuga2007",
+   "cast_udl"
+  ],
+  "r": [
+   "zimmerman2002"
+  ]
+ },
+ "misconception": {
+  "s": [
+   "freeman2014",
+   "kalyuga2007"
+  ],
+  "r": [
+   "mollick2023a"
+  ]
+ },
+ "note-taking": {
+  "s": [
+   "schraw1998",
+   "zimmerman2002"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "metacognit": {
+  "s": [
+   "schraw1998",
+   "winne2011"
+  ],
+  "r": [
+   "zimmerman2002"
+  ]
+ },
+ "self-regulated": {
+  "s": [
+   "zimmerman2002",
+   "winne2011"
+  ],
+  "r": [
+   "schraw1998"
+  ]
+ },
+ "prompt engineering": {
+  "s": [
+   "mollick2023a",
+   "bearman2023"
+  ],
+  "r": [
+   "speicher2023"
+  ]
+ },
+ "prompt literacy": {
+  "s": [
+   "mollick2023a",
+   "acrl2016"
+  ],
+  "r": [
+   "speicher2023"
+  ]
+ },
+ "ai policy": {
+  "s": [
+   "perkins2023",
+   "ala_ai2024"
+  ],
+  "r": [
+   "nist_ai2023"
+  ]
+ },
+ "ai use spectrum": {
+  "s": [
+   "perkins2023",
+   "mollick2023a"
+  ],
+  "r": [
+   "speicher2023"
+  ]
+ },
+ "academic integrity": {
+  "s": [
+   "perkins2023",
+   "mla_cccc2023"
+  ],
+  "r": [
+   "bearman2023"
+  ]
+ },
+ "policy analysis": {
+  "s": [
+   "perkins2023",
+   "us_ed2023"
+  ],
+  "r": [
+   "nist_ai2023"
+  ]
+ },
+ "information literacy": {
+  "s": [
+   "acrl2016",
+   "caulfield2019"
+  ],
+  "r": [
+   "sousa2025"
+  ]
+ },
+ "misinformation": {
+  "s": [
+   "acrl2016",
+   "caulfield2019"
+  ],
+  "r": [
+   "bearman2023"
+  ]
+ },
+ "source evaluation": {
+  "s": [
+   "acrl2016",
+   "caulfield2019"
+  ],
+  "r": [
+   "sousa2025"
+  ]
+ },
+ "lateral reading": {
+  "s": [
+   "caulfield2019",
+   "acrl2016"
+  ],
+  "r": [
+   "sousa2025"
+  ]
+ },
+ "citation": {
+  "s": [
+   "acrl2016",
+   "grant2009"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "literature review": {
+  "s": [
+   "grant2009",
+   "page2021"
+  ],
+  "r": [
+   "acrl2016"
+  ]
+ },
+ "systematic review": {
+  "s": [
+   "page2021",
+   "grant2009"
+  ],
+  "r": [
+   "sackett1996"
+  ]
+ },
+ "scoping": {
+  "s": [
+   "grant2009",
+   "page2021"
+  ],
+  "r": [
+   "acrl2016"
+  ]
+ },
+ "gap analysis": {
+  "s": [
+   "grant2009",
+   "acrl2016"
+  ],
+  "r": [
+   "page2021"
+  ]
+ },
+ "gap identification": {
+  "s": [
+   "grant2009",
+   "acrl2016"
+  ],
+  "r": [
+   "page2021"
+  ]
+ },
+ "evidence scan": {
+  "s": [
+   "sackett1996",
+   "grant2009"
+  ],
+  "r": [
+   "page2021"
+  ]
+ },
+ "pico": {
+  "s": [
+   "sackett1996",
+   "grant2009"
+  ],
+  "r": [
+   "page2021"
+  ]
+ },
+ "differential diagnosis": {
+  "s": [
+   "sackett1996",
+   "herdman2018"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "patient education": {
+  "s": [
+   "sackett1996",
+   "cast_udl"
+  ],
+  "r": [
+   "herdman2018"
+  ]
+ },
+ "clinical": {
+  "s": [
+   "sackett1996",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "herdman2018"
+  ]
+ },
+ "nursing": {
+  "s": [
+   "herdman2018",
+   "sackett1996"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "ebp": {
+  "s": [
+   "sackett1996",
+   "page2021"
+  ],
+  "r": [
+   "herdman2018"
+  ]
+ },
+ "meta-analysis": {
+  "s": [
+   "page2021",
+   "grant2009"
+  ],
+  "r": [
+   "sackett1996"
+  ]
+ },
+ "grant": {
+  "s": [
+   "seckel2024",
+   "grant2009"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "grant writing": {
+  "s": [
+   "seckel2024",
+   "grant2009"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "grant proposal": {
+  "s": [
+   "seckel2024",
+   "grant2009"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "prospectus": {
+  "s": [
+   "grant2009",
+   "nicol2006"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "dissertation": {
+  "s": [
+   "grant2009",
+   "nicol2006"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "co-author": {
+  "s": [
+   "brand2015",
+   "nicol2006"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "credit": {
+  "s": [
+   "brand2015",
+   "nicol2006"
+  ],
+  "r": [
+   "nist_ai2023"
+  ]
+ },
+ "authorship": {
+  "s": [
+   "brand2015",
+   "usco_ai2023"
+  ],
+  "r": [
+   "perkins2023"
+  ]
+ },
+ "copyright": {
+  "s": [
+   "usco_ai2023",
+   "crawford2021"
+  ],
+  "r": [
+   "hertzmann2023"
+  ]
+ },
+ "intellectual property": {
+  "s": [
+   "usco_ai2023",
+   "ala_ai2024"
+  ],
+  "r": [
+   "nist_ai2023"
+  ]
+ },
+ "peer review": {
+  "s": [
+   "topping2005",
+   "nicol2006"
+  ],
+  "r": [
+   "boud2015"
+  ]
+ },
+ "collaborative": {
+  "s": [
+   "topping2005",
+   "lave1991"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "co-creation": {
+  "s": [
+   "lave1991",
+   "topping2005"
+  ],
+  "r": [
+   "mollick2023"
+  ]
+ },
+ "plain language": {
+  "s": [
+   "cast_udl",
+   "nerantzi2023"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "oer": {
+  "s": [
+   "cast_udl",
+   "ala_ai2024"
+  ],
+  "r": [
+   "nerantzi2023"
+  ]
+ },
+ "narrated module": {
+  "s": [
+   "darby2019",
+   "cast_udl"
+  ],
+  "r": [
+   "garrison2007"
+  ]
+ },
+ "visual explainer": {
+  "s": [
+   "tufte2001",
+   "cast_udl"
+  ],
+  "r": [
+   "nerantzi2023"
+  ]
+ },
+ "data viz": {
+  "s": [
+   "tufte2001",
+   "freeman2014"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "infographic": {
+  "s": [
+   "tufte2001",
+   "cast_udl"
+  ],
+  "r": [
+   "nerantzi2023"
+  ]
+ },
+ "thematic": {
+  "s": [
+   "braun2006",
+   "grant2009"
+  ],
+  "r": [
+   "winne2011"
+  ]
+ },
+ "interview": {
+  "s": [
+   "braun2006",
+   "grant2009"
+  ],
+  "r": [
+   "lave1991"
+  ]
+ },
+ "qualitative": {
+  "s": [
+   "braun2006",
+   "grant2009"
+  ],
+  "r": [
+   "lave1991"
+  ]
+ },
+ "coding": {
+  "s": [
+   "braun2006",
+   "anderson2001"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "code review": {
+  "s": [
+   "dakhel2023",
+   "bull2024"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "computational": {
+  "s": [
+   "freeman2014",
+   "bull2024"
+  ],
+  "r": [
+   "tufte2001"
+  ]
+ },
+ "model assumptions": {
+  "s": [
+   "freeman2014",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "schwabish2021"
+  ]
+ },
+ "error propagation": {
+  "s": [
+   "freeman2014",
+   "schwabish2021"
+  ],
+  "r": [
+   "tufte2001"
+  ]
+ },
+ "experimental design": {
+  "s": [
+   "freeman2014",
+   "page2021"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "dataset": {
+  "s": [
+   "tufte2001",
+   "freeman2014"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "statistical": {
+  "s": [
+   "freeman2014",
+   "tufte2001"
+  ],
+  "r": [
+   "page2021"
+  ]
+ },
+ "archival": {
+  "s": [
+   "acrl2016",
+   "grant2009"
+  ],
+  "r": [
+   "sousa2025"
+  ]
+ },
+ "theoretical framework": {
+  "s": [
+   "grant2009",
+   "anderson2001"
+  ],
+  "r": [
+   "wiggins2005"
+  ]
+ },
+ "close reading": {
+  "s": [
+   "anderson2001",
+   "bean2011"
+  ],
+  "r": [
+   "acrl2016"
+  ]
+ },
+ "rhetorical": {
+  "s": [
+   "bean2011",
+   "anderson2001"
+  ],
+  "r": [
+   "mla_cccc2023"
+  ]
+ },
+ "stylistic": {
+  "s": [
+   "bean2011",
+   "anderson2001"
+  ],
+  "r": [
+   "mla_cccc2023"
+  ]
+ },
+ "creative writing": {
+  "s": [
+   "bean2011",
+   "mla_cccc2023"
+  ],
+  "r": [
+   "nerantzi2023"
+  ]
+ },
+ "writing": {
+  "s": [
+   "bean2011",
+   "mla_cccc2023"
+  ],
+  "r": [
+   "awac2025"
+  ]
+ },
+ "revision": {
+  "s": [
+   "nicol2006",
+   "bean2011"
+  ],
+  "r": [
+   "boud2015"
+  ]
+ },
+ "abstract": {
+  "s": [
+   "grant2009",
+   "bean2011"
+  ],
+  "r": [
+   "seckel2024"
+  ]
+ },
+ "elevator pitch": {
+  "s": [
+   "bean2011",
+   "hora2016"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "poster": {
+  "s": [
+   "schwabish2021",
+   "tufte2001"
+  ],
+  "r": [
+   "bean2011"
+  ]
+ },
+ "conference": {
+  "s": [
+   "brand2015",
+   "bean2011"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "social media": {
+  "s": [
+   "hobbs2020",
+   "caulfield2019"
+  ],
+  "r": [
+   "acrl2016"
+  ]
+ },
+ "policy brief": {
+  "s": [
+   "bean2011",
+   "grant2009"
+  ],
+  "r": [
+   "nist_ai2023"
+  ]
+ },
+ "plain-language": {
+  "s": [
+   "cast_udl",
+   "nerantzi2023"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "online": {
+  "s": [
+   "garrison2007",
+   "darby2019"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "async": {
+  "s": [
+   "garrison2007",
+   "darby2019"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "asynchronous": {
+  "s": [
+   "garrison2007",
+   "darby2019"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "flipped": {
+  "s": [
+   "freeman2014",
+   "darby2019"
+  ],
+  "r": [
+   "mollick2023"
+  ]
+ },
+ "simulation": {
+  "s": [
+   "mollick2023a",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "role-play": {
+  "s": [
+   "mollick2023a",
+   "lave1991"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "case study": {
+  "s": [
+   "toubia2024",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "wiggins2005"
+  ]
+ },
+ "capstone": {
+  "s": [
+   "wiggins2005",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "portfolio": {
+  "s": [
+   "wiggins2005",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "hora2016"
+  ]
+ },
+ "service learning": {
+  "s": [
+   "lave1991",
+   "freeman2014"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "interdisciplinary": {
+  "s": [
+   "lave1991",
+   "acrl2016"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "mixed methods": {
+  "s": [
+   "braun2006",
+   "grant2009"
+  ],
+  "r": [
+   "page2021"
+  ]
+ },
+ "survey": {
+  "s": [
+   "braun2006",
+   "freeman2014"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "library": {
+  "s": [
+   "sousa2025",
+   "acrl2016"
+  ],
+  "r": [
+   "ala_ai2024"
+  ]
+ },
+ "collection": {
+  "s": [
+   "sousa2025",
+   "ala_ai2024"
+  ],
+  "r": [
+   "acrl2016"
+  ]
+ },
+ "metadata": {
+  "s": [
+   "sousa2025",
+   "acrl2016"
+  ],
+  "r": [
+   "ala_ai2024"
+  ]
+ },
+ "transcription": {
+  "s": [
+   "darby2019",
+   "cast_udl"
+  ],
+  "r": [
+   "garrison2007"
+  ]
+ },
+ "audio": {
+  "s": [
+   "darby2019",
+   "cast_udl"
+  ],
+  "r": [
+   "garrison2007"
+  ]
+ },
+ "model": {
+  "s": [
+   "anderson2001",
+   "freeman2014"
+  ],
+  "r": [
+   "tufte2001"
+  ]
+ },
+ "methods paper": {
+  "s": [
+   "grant2009",
+   "page2021"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "reproducib": {
+  "s": [
+   "nist_ai2023",
+   "page2021"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "meeting notes": {
+  "s": [
+   "brand2015",
+   "lave1991"
+  ],
+  "r": [
+   "nist_ai2023"
+  ]
+ },
+ "hallucination": {
+  "s": [
+   "bearman2023",
+   "acrl2016"
+  ],
+  "r": [
+   "caulfield2019"
+  ]
+ },
+ "bias": {
+  "s": [
+   "nist_ai2023",
+   "shneiderman2022"
+  ],
+  "r": [
+   "unesco_ai2021"
+  ]
+ },
+ "ethics": {
+  "s": [
+   "unesco_ai2021",
+   "nist_ai2023"
+  ],
+  "r": [
+   "shneiderman2022"
+  ]
+ },
+ "transparency": {
+  "s": [
+   "nist_ai2023",
+   "shneiderman2022"
+  ],
+  "r": [
+   "unesco_ai2021"
+  ]
+ },
+ "business plan": {
+  "s": [
+   "toubia2024",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "ballantine2024"
+  ]
+ },
+ "business ethics": {
+  "s": [
+   "toubia2024",
+   "unesco_ai2021"
+  ],
+  "r": [
+   "benjamin2019"
+  ]
+ },
+ "supply chain": {
+  "s": [
+   "toubia2024",
+   "anderson2001"
+  ],
+  "r": [
+   "ballantine2024"
+  ]
+ },
+ "stock valuation": {
+  "s": [
+   "ballantine2024",
+   "tufte2001"
+  ],
+  "r": [
+   "toubia2024"
+  ]
+ },
+ "financial ratio": {
+  "s": [
+   "ballantine2024",
+   "anderson2001"
+  ],
+  "r": [
+   "tufte2001"
+  ]
+ },
+ "business case": {
+  "s": [
+   "toubia2024",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "ballantine2024"
+  ]
+ },
+ "dupont": {
+  "s": [
+   "ballantine2024",
+   "anderson2001"
+  ],
+  "r": [
+   "toubia2024"
+  ]
+ },
+ "annual report": {
+  "s": [
+   "bean2011",
+   "suskie2018"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "pair programming": {
+  "s": [
+   "dakhel2023",
+   "freeman2014"
+  ],
+  "r": [
+   "bull2024"
+  ]
+ },
+ "code debugging": {
+  "s": [
+   "dakhel2023",
+   "bull2024"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "debugging": {
+  "s": [
+   "dakhel2023",
+   "bull2024"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "unit test": {
+  "s": [
+   "bull2024",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "dakhel2023"
+  ]
+ },
+ "algorithm explain": {
+  "s": [
+   "bull2024",
+   "anderson2001"
+  ],
+  "r": [
+   "dakhel2023"
+  ]
+ },
+ "algorithm complexity": {
+  "s": [
+   "bull2024",
+   "anderson2001"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "code documentation": {
+  "s": [
+   "bull2024",
+   "brand2015"
+  ],
+  "r": [
+   "dakhel2023"
+  ]
+ },
+ "engineering doc": {
+  "s": [
+   "bull2024",
+   "brand2015"
+  ],
+  "r": [
+   "bean2011"
+  ]
+ },
+ "logic error": {
+  "s": [
+   "dakhel2023",
+   "anderson2001"
+  ],
+  "r": [
+   "bull2024"
+  ]
+ },
+ "aesthetics": {
+  "s": [
+   "hertzmann2023",
+   "anderson2001"
+  ],
+  "r": [
+   "nerantzi2023"
+  ]
+ },
+ "ai art": {
+  "s": [
+   "hertzmann2023",
+   "usco_ai2023"
+  ],
+  "r": [
+   "nerantzi2023"
+  ]
+ },
+ "ai-generated art": {
+  "s": [
+   "hertzmann2023",
+   "usco_ai2023"
+  ],
+  "r": [
+   "nerantzi2023"
+  ]
+ },
+ "video art": {
+  "s": [
+   "hertzmann2023",
+   "nerantzi2023"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "sound design": {
+  "s": [
+   "hertzmann2023",
+   "nerantzi2023"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "storyboard": {
+  "s": [
+   "hertzmann2023",
+   "nerantzi2023"
+  ],
+  "r": [
+   "tufte2001"
+  ]
+ },
+ "exhibition": {
+  "s": [
+   "hertzmann2023",
+   "bean2011"
+  ],
+  "r": [
+   "nerantzi2023"
+  ]
+ },
+ "artist statement": {
+  "s": [
+   "hertzmann2023",
+   "bean2011"
+  ],
+  "r": [
+   "mla_cccc2023"
+  ]
+ },
+ "visual analysis": {
+  "s": [
+   "hertzmann2023",
+   "anderson2001"
+  ],
+  "r": [
+   "tufte2001"
+  ]
+ },
+ "translation": {
+  "s": [
+   "kohnke2023",
+   "anderson2001"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "multilingual": {
+  "s": [
+   "kohnke2023",
+   "cast_udl"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "heritage language": {
+  "s": [
+   "kohnke2023",
+   "cast_udl"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "language": {
+  "s": [
+   "kohnke2023",
+   "freeman2014"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "news story": {
+  "s": [
+   "hobbs2020",
+   "caulfield2019"
+  ],
+  "r": [
+   "acrl2016"
+  ]
+ },
+ "media bias": {
+  "s": [
+   "hobbs2020",
+   "caulfield2019"
+  ],
+  "r": [
+   "acrl2016"
+  ]
+ },
+ "campaign": {
+  "s": [
+   "hobbs2020",
+   "caulfield2019"
+  ],
+  "r": [
+   "nist_ai2023"
+  ]
+ },
+ "podcast": {
+  "s": [
+   "hobbs2020",
+   "darby2019"
+  ],
+  "r": [
+   "nerantzi2023"
+  ]
+ },
+ "video essay": {
+  "s": [
+   "hobbs2020",
+   "tufte2001"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "lesson plan": {
+  "s": [
+   "darlinghammond2024",
+   "wiggins2005"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "classroom management": {
+  "s": [
+   "darlinghammond2024",
+   "tomlinson2016"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "iep": {
+  "s": [
+   "tomlinson2016",
+   "cast_udl"
+  ],
+  "r": [
+   "darlinghammond2024"
+  ]
+ },
+ "parent communication": {
+  "s": [
+   "darlinghammond2024",
+   "darby2019"
+  ],
+  "r": [
+   "tomlinson2016"
+  ]
+ },
+ "teaching philosophy": {
+  "s": [
+   "darlinghammond2024",
+   "bean2011"
+  ],
+  "r": [
+   "hora2016"
+  ]
+ },
+ "sotl": {
+  "s": [
+   "darlinghammond2024",
+   "grant2009"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "scholarship of teaching": {
+  "s": [
+   "darlinghammond2024",
+   "grant2009"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "course evaluation": {
+  "s": [
+   "darlinghammond2024",
+   "suskie2018"
+  ],
+  "r": [
+   "nicol2006"
+  ]
+ },
+ "differentiated": {
+  "s": [
+   "tomlinson2016",
+   "cast_udl"
+  ],
+  "r": [
+   "kalyuga2007"
+  ]
+ },
+ "classroom observation": {
+  "s": [
+   "darlinghammond2024",
+   "suskie2018"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "curriculum": {
+  "s": [
+   "wiggins2005",
+   "darlinghammond2024"
+  ],
+  "r": [
+   "suskie2018"
+  ]
+ },
+ "peer teaching obs": {
+  "s": [
+   "darlinghammond2024",
+   "topping2005"
+  ],
+  "r": [
+   "nicol2006"
+  ]
+ },
+ "formative assessment": {
+  "s": [
+   "nicol2006",
+   "suskie2018"
+  ],
+  "r": [
+   "angelo1993"
+  ]
+ },
+ "formative": {
+  "s": [
+   "nicol2006",
+   "suskie2018"
+  ],
+  "r": [
+   "dunlosky2013"
+  ]
+ },
+ "predictive policing": {
+  "s": [
+   "benjamin2019",
+   "nist_ai2023"
+  ],
+  "r": [
+   "shneiderman2022"
+  ]
+ },
+ "ai bias": {
+  "s": [
+   "benjamin2019",
+   "nist_ai2023"
+  ],
+  "r": [
+   "shneiderman2022"
+  ]
+ },
+ "racial bias": {
+  "s": [
+   "benjamin2019",
+   "nist_ai2023"
+  ],
+  "r": [
+   "unesco_ai2021"
+  ]
+ },
+ "climate data": {
+  "s": [
+   "rolnick2022",
+   "tufte2001"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "climate": {
+  "s": [
+   "rolnick2022",
+   "freeman2014"
+  ],
+  "r": [
+   "tufte2001"
+  ]
+ },
+ "environmental impact": {
+  "s": [
+   "rolnick2022",
+   "anderson2001"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "field observation": {
+  "s": [
+   "rolnick2022",
+   "braun2006"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "data visualization": {
+  "s": [
+   "schwabish2021",
+   "tufte2001"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "visualization": {
+  "s": [
+   "schwabish2021",
+   "tufte2001"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "chart": {
+  "s": [
+   "schwabish2021",
+   "tufte2001"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "graphical abstract": {
+  "s": [
+   "schwabish2021",
+   "tufte2001"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "research poster": {
+  "s": [
+   "schwabish2021",
+   "tufte2001"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "data management": {
+  "s": [
+   "brand2015",
+   "nist_ai2023"
+  ],
+  "r": [
+   "page2021"
+  ]
+ },
+ "codebook": {
+  "s": [
+   "saldana2021",
+   "braun2006"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "data analysis": {
+  "s": [
+   "tufte2001",
+   "freeman2014"
+  ],
+  "r": [
+   "schwabish2021"
+  ]
+ },
+ "accreditation": {
+  "s": [
+   "suskie2018",
+   "wiggins2005"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "program-level": {
+  "s": [
+   "maki2010",
+   "suskie2018"
+  ],
+  "r": [
+   "wiggins2005"
+  ]
+ },
+ "self-study": {
+  "s": [
+   "suskie2018",
+   "bean2011"
+  ],
+  "r": [
+   "wiggins2005"
+  ]
+ },
+ "cross-course": {
+  "s": [
+   "suskie2018",
+   "wiggins2005"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "outcome alignment": {
+  "s": [
+   "suskie2018",
+   "wiggins2005"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "career": {
+  "s": [
+   "hora2016",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "wiggins2005"
+  ]
+ },
+ "professional email": {
+  "s": [
+   "hora2016",
+   "bean2011"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "industry": {
+  "s": [
+   "hora2016",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "toubia2024"
+  ]
+ },
+ "interview prep": {
+  "s": [
+   "hora2016",
+   "mollick2023a"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "rehearsal": {
+  "s": [
+   "hora2016",
+   "mollick2023a"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "drug interaction": {
+  "s": [
+   "acpe2025",
+   "sackett1996"
+  ],
+  "r": [
+   "herdman2018"
+  ]
+ },
+ "sbar": {
+  "s": [
+   "sackett1996",
+   "herdman2018"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "medication": {
+  "s": [
+   "acpe2025",
+   "sackett1996"
+  ],
+  "r": [
+   "herdman2018"
+  ]
+ },
+ "dosage": {
+  "s": [
+   "acpe2025",
+   "sackett1996"
+  ],
+  "r": [
+   "herdman2018"
+  ]
+ },
+ "health equity": {
+  "s": [
+   "benjamin2019",
+   "sackett1996"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "community needs": {
+  "s": [
+   "lave1991",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "braun2006"
+  ]
+ },
+ "focus group": {
+  "s": [
+   "saldana2021",
+   "braun2006"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "grounded theory": {
+  "s": [
+   "saldana2021",
+   "braun2006"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "transcript": {
+  "s": [
+   "saldana2021",
+   "braun2006"
+  ],
+  "r": [
+   "lave1991"
+  ]
+ },
+ "memo writing": {
+  "s": [
+   "saldana2021",
+   "braun2006"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "reflexivity": {
+  "s": [
+   "saldana2021",
+   "braun2006"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "conference talk": {
+  "s": [
+   "bean2011",
+   "tufte2001"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "plain language summary": {
+  "s": [
+   "cast_udl",
+   "bean2011"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "broader impacts": {
+  "s": [
+   "seckel2024",
+   "lave1991"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "research brief": {
+  "s": [
+   "bean2011",
+   "brand2015"
+  ],
+  "r": [
+   "schwabish2021"
+  ]
+ },
+ "social media thread": {
+  "s": [
+   "hobbs2020",
+   "bean2011"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "negotiation": {
+  "s": [
+   "mollick2023a",
+   "lave1991"
+  ],
+  "r": [
+   "kagan2009"
+  ]
+ },
+ "client": {
+  "s": [
+   "mollick2023a",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "hora2016"
+  ]
+ },
+ "patient": {
+  "s": [
+   "sackett1996",
+   "mollick2023a"
+  ],
+  "r": [
+   "herdman2018"
+  ]
+ },
+ "wicked problem": {
+  "s": [
+   "rittel1973",
+   "lave1991"
+  ],
+  "r": [
+   "mollick2023a"
+  ]
+ },
+ "discussion post": {
+  "s": [
+   "garrison2007",
+   "darby2019"
+  ],
+  "r": [
+   "bean2011"
+  ]
+ },
+ "weekly": {
+  "s": [
+   "garrison2007",
+   "darby2019"
+  ],
+  "r": [
+   "dunlosky2013"
+  ]
+ },
+ "check-in": {
+  "s": [
+   "garrison2007",
+   "darby2019"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "micro-lecture": {
+  "s": [
+   "darby2019",
+   "cast_udl"
+  ],
+  "r": [
+   "garrison2007"
+  ]
+ },
+ "absent student": {
+  "s": [
+   "darby2019",
+   "cast_udl"
+  ],
+  "r": [
+   "garrison2007"
+  ]
+ },
+ "session recap": {
+  "s": [
+   "darby2019",
+   "garrison2007"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "pre-lab": {
+  "s": [
+   "freeman2014",
+   "dunlosky2013"
+  ],
+  "r": [
+   "kalyuga2007"
+  ]
+ },
+ "lab report": {
+  "s": [
+   "bean2011",
+   "freeman2014"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "thermodynamic": {
+  "s": [
+   "freeman2014",
+   "kalyuga2007"
+  ],
+  "r": [
+   "schwabish2021"
+  ]
+ },
+ "growth mindset": {
+  "s": [
+   "zimmerman2002",
+   "dunlosky2013"
+  ],
+  "r": [
+   "schraw1998"
+  ]
+ },
+ "study": {
+  "s": [
+   "dunlosky2013",
+   "zimmerman2002"
+  ],
+  "r": [
+   "schraw1998"
+  ]
+ },
+ "learning technique": {
+  "s": [
+   "dunlosky2013",
+   "pressley1988"
+  ],
+  "r": [
+   "zimmerman2002"
+  ]
+ },
+ "alt text": {
+  "s": [
+   "cast_udl",
+   "darby2019"
+  ],
+  "r": [
+   "shneiderman2022"
+  ]
+ },
+ "alt-text": {
+  "s": [
+   "cast_udl",
+   "darby2019"
+  ],
+  "r": [
+   "shneiderman2022"
+  ]
+ },
+ "closed caption": {
+  "s": [
+   "cast_udl",
+   "darby2019"
+  ],
+  "r": [
+   "garrison2007"
+  ]
+ },
+ "multi-format": {
+  "s": [
+   "cast_udl",
+   "darby2019"
+  ],
+  "r": [
+   "tomlinson2016"
+  ]
+ },
+ "reading level": {
+  "s": [
+   "cast_udl",
+   "kalyuga2007"
+  ],
+  "r": [
+   "tomlinson2016"
+  ]
+ },
+ "adaptation": {
+  "s": [
+   "cast_udl",
+   "tomlinson2016"
+  ],
+  "r": [
+   "kalyuga2007"
+  ]
+ },
+ "cross-disciplinary": {
+  "s": [
+   "fink2013",
+   "lave1991"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "interdisciplin": {
+  "s": [
+   "lave1991",
+   "grant2009"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "expert panel": {
+  "s": [
+   "mollick2023a",
+   "lave1991"
+  ],
+  "r": [
+   "aronson1978"
+  ]
+ },
+ "global case": {
+  "s": [
+   "lave1991",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "cultural perspective": {
+  "s": [
+   "lave1991",
+   "cast_udl"
+  ],
+  "r": [
+   "benjamin2019"
+  ]
+ },
+ "localization": {
+  "s": [
+   "kohnke2023",
+   "cast_udl"
+  ],
+  "r": [
+   "lave1991"
+  ]
+ },
+ "ai literacy": {
+  "s": [
+   "long2020",
+   "kassorla2024"
+  ],
+  "r": [
+   "hibbert2024"
+  ]
+ },
+ "ai tool": {
+  "s": [
+   "long2020",
+   "speicher2023"
+  ],
+  "r": [
+   "mollick2023a"
+  ]
+ },
+ "ai capability": {
+  "s": [
+   "long2020",
+   "shneiderman2022"
+  ],
+  "r": [
+   "kassorla2024"
+  ]
+ },
+ "ai terminology": {
+  "s": [
+   "long2020",
+   "anderson2001"
+  ],
+  "r": [
+   "miao2024"
+  ]
+ },
+ "ai limitation": {
+  "s": [
+   "long2020",
+   "bearman2023"
+  ],
+  "r": [
+   "shneiderman2022"
+  ]
+ },
+ "ai pipeline": {
+  "s": [
+   "long2020",
+   "bull2024"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "ai identification": {
+  "s": [
+   "long2020",
+   "kassorla2024"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "ai competency": {
+  "s": [
+   "miao2024",
+   "kassorla2024"
+  ],
+  "r": [
+   "long2020"
+  ]
+ },
+ "chatbot": {
+  "s": [
+   "long2020",
+   "mollick2023a"
+  ],
+  "r": [
+   "bearman2023"
+  ]
+ },
+ "generative ai": {
+  "s": [
+   "long2020",
+   "bearman2023"
+  ],
+  "r": [
+   "kassorla2024"
+  ]
+ },
+ "transfer": {
+  "s": [
+   "perkins1992",
+   "anderson2001"
+  ],
+  "r": [
+   "fink2013"
+  ]
+ },
+ "significant learning": {
+  "s": [
+   "fink2013",
+   "anderson2001"
+  ],
+  "r": [
+   "wiggins2005"
+  ]
+ },
+ "integrative": {
+  "s": [
+   "fink2013",
+   "kinzie2013"
+  ],
+  "r": [
+   "kuh2008"
+  ]
+ },
+ "experiential": {
+  "s": [
+   "kolb2015",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "lave1991"
+  ]
+ },
+ "hands-on": {
+  "s": [
+   "kolb2015",
+   "freeman2014"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "reflection": {
+  "s": [
+   "schon1983",
+   "zimmerman2002"
+  ],
+  "r": [
+   "brookfield2017"
+  ]
+ },
+ "reflective": {
+  "s": [
+   "schon1983",
+   "brookfield2017"
+  ],
+  "r": [
+   "zimmerman2002"
+  ]
+ },
+ "field": {
+  "s": [
+   "kolb2015",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "creswell2018"
+  ]
+ },
+ "practicum": {
+  "s": [
+   "kolb2015",
+   "schon1983"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "internship": {
+  "s": [
+   "hora2016",
+   "kolb2015"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "professional identity": {
+  "s": [
+   "schon1983",
+   "hora2016"
+  ],
+  "r": [
+   "brookfield2017"
+  ]
+ },
+ "roi": {
+  "s": [
+   "davenport2018",
+   "toubia2024"
+  ],
+  "r": [
+   "ballantine2024"
+  ]
+ },
+ "business function": {
+  "s": [
+   "davenport2018",
+   "toubia2024"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "disclosure": {
+  "s": [
+   "perkins2023",
+   "nist_ai2023"
+  ],
+  "r": [
+   "usco_ai2023"
+  ]
+ },
+ "entrepreneurship": {
+  "s": [
+   "toubia2024",
+   "hora2016"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "pitch deck": {
+  "s": [
+   "toubia2024",
+   "hora2016"
+  ],
+  "r": [
+   "bean2011"
+  ]
+ },
+ "swot": {
+  "s": [
+   "toubia2024",
+   "anderson2001"
+  ],
+  "r": [
+   "davenport2018"
+  ]
+ },
+ "business model": {
+  "s": [
+   "toubia2024",
+   "davenport2018"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "accounting": {
+  "s": [
+   "ballantine2024",
+   "anderson2001"
+  ],
+  "r": [
+   "toubia2024"
+  ]
+ },
+ "k-12": {
+  "s": [
+   "darlinghammond2024",
+   "miao2024"
+  ],
+  "r": [
+   "tomlinson2016"
+  ]
+ },
+ "teacher prep": {
+  "s": [
+   "darlinghammond2024",
+   "miao2024"
+  ],
+  "r": [
+   "brookfield2017"
+  ]
+ },
+ "classroom": {
+  "s": [
+   "darlinghammond2024",
+   "tomlinson2016"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "assessment alignment": {
+  "s": [
+   "suskie2018",
+   "wiggins2005"
+  ],
+  "r": [
+   "maki2010"
+  ]
+ },
+ "bloom": {
+  "s": [
+   "anderson2001",
+   "bloom1956"
+  ],
+  "r": [
+   "fink2013"
+  ]
+ },
+ "acrl": {
+  "s": [
+   "acrl2016",
+   "hervieux2024"
+  ],
+  "r": [
+   "sousa2025"
+  ]
+ },
+ "database search": {
+  "s": [
+   "acrl2016",
+   "sousa2025"
+  ],
+  "r": [
+   "caulfield2019"
+  ]
+ },
+ "reference": {
+  "s": [
+   "sousa2025",
+   "acrl2016"
+  ],
+  "r": [
+   "hervieux2024"
+  ]
+ },
+ "research guide": {
+  "s": [
+   "sousa2025",
+   "acrl2016"
+  ],
+  "r": [
+   "ala_ai2024"
+  ]
+ },
+ "libguide": {
+  "s": [
+   "sousa2025",
+   "acrl2016"
+  ],
+  "r": [
+   "hervieux2024"
+  ]
+ },
+ "search strategy": {
+  "s": [
+   "acrl2016",
+   "grant2009"
+  ],
+  "r": [
+   "sousa2025"
+  ]
+ },
+ "catalog": {
+  "s": [
+   "sousa2025",
+   "acrl2016"
+  ],
+  "r": [
+   "ala_ai2024"
+  ]
+ },
+ "hipaa": {
+  "s": [
+   "sackett1996",
+   "nist_ai2023"
+  ],
+  "r": [
+   "herdman2018"
+  ]
+ },
+ "clinical setting": {
+  "s": [
+   "sackett1996",
+   "hayden2014"
+  ],
+  "r": [
+   "herdman2018"
+  ]
+ },
+ "prohibited": {
+  "s": [
+   "perkins2023",
+   "nist_ai2023"
+  ],
+  "r": [
+   "sackett1996"
+  ]
+ },
+ "simulation scenario": {
+  "s": [
+   "hayden2014",
+   "mollick2023a"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "triage": {
+  "s": [
+   "sackett1996",
+   "hayden2014"
+  ],
+  "r": [
+   "herdman2018"
+  ]
+ },
+ "lab": {
+  "s": [
+   "freeman2014",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "abet2024"
+  ]
+ },
+ "engineering": {
+  "s": [
+   "abet2024",
+   "freeman2014"
+  ],
+  "r": [
+   "bull2024"
+  ]
+ },
+ "pipeline": {
+  "s": [
+   "bull2024",
+   "freeman2014"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "data cleaning": {
+  "s": [
+   "tufte2001",
+   "freeman2014"
+  ],
+  "r": [
+   "schwabish2021"
+  ]
+ },
+ "hypothesis": {
+  "s": [
+   "freeman2014",
+   "page2021"
+  ],
+  "r": [
+   "creswell2018"
+  ]
+ },
+ "research method": {
+  "s": [
+   "creswell2018",
+   "grant2009"
+  ],
+  "r": [
+   "braun2006"
+  ]
+ },
+ "mixed method": {
+  "s": [
+   "creswell2018",
+   "braun2006"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "survey design": {
+  "s": [
+   "creswell2018",
+   "braun2006"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "policy document": {
+  "s": [
+   "bean2011",
+   "creswell2018"
+  ],
+  "r": [
+   "nist_ai2023"
+  ]
+ },
+ "community-based": {
+  "s": [
+   "lave1991",
+   "creswell2018"
+  ],
+  "r": [
+   "braun2006"
+  ]
+ },
+ "social justice": {
+  "s": [
+   "benjamin2019",
+   "lave1991"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "stakeholder": {
+  "s": [
+   "rittel1973",
+   "lave1991"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "ai-generated image": {
+  "s": [
+   "hertzmann2023",
+   "usco_ai2023"
+  ],
+  "r": [
+   "crawford2021"
+  ]
+ },
+ "music generation": {
+  "s": [
+   "hertzmann2023",
+   "nerantzi2023"
+  ],
+  "r": [
+   "usco_ai2023"
+  ]
+ },
+ "creative process": {
+  "s": [
+   "hertzmann2023",
+   "bean2011"
+  ],
+  "r": [
+   "nerantzi2023"
+  ]
+ },
+ "digital art": {
+  "s": [
+   "hertzmann2023",
+   "nerantzi2023"
+  ],
+  "r": [
+   "crawford2021"
+  ]
+ },
+ "research ethics": {
+  "s": [
+   "resnik2020",
+   "floridi2018"
+  ],
+  "r": [
+   "nist_ai2023"
+  ]
+ },
+ "ai ethics": {
+  "s": [
+   "floridi2018",
+   "nist_ai2023"
+  ],
+  "r": [
+   "unesco_ai2021"
+  ]
+ },
+ "informed consent": {
+  "s": [
+   "resnik2020",
+   "creswell2018"
+  ],
+  "r": [
+   "floridi2018"
+  ]
+ },
+ "data privacy": {
+  "s": [
+   "nist_ai2023",
+   "resnik2020"
+  ],
+  "r": [
+   "floridi2018"
+  ]
+ },
+ "responsible ai": {
+  "s": [
+   "floridi2018",
+   "shneiderman2022"
+  ],
+  "r": [
+   "nist_ai2023"
+  ]
+ },
+ "resume": {
+  "s": [
+   "hora2016",
+   "bean2011"
+  ],
+  "r": [
+   "mollick2023a"
+  ]
+ },
+ "cover letter": {
+  "s": [
+   "hora2016",
+   "bean2011"
+  ],
+  "r": [
+   "mollick2023a"
+  ]
+ },
+ "networking": {
+  "s": [
+   "hora2016",
+   "lave1991"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "workplace": {
+  "s": [
+   "hora2016",
+   "long2020"
+  ],
+  "r": [
+   "davenport2018"
+  ]
+ },
+ "professional development": {
+  "s": [
+   "brookfield2017",
+   "hora2016"
+  ],
+  "r": [
+   "miao2024"
+  ]
+ },
+ "capstone project": {
+  "s": [
+   "kinzie2013",
+   "wiggins2005"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "integrative project": {
+  "s": [
+   "kinzie2013",
+   "fink2013"
+  ],
+  "r": [
+   "wiggins2005"
+  ]
+ },
+ "eportfolio": {
+  "s": [
+   "vlachopoulos2024",
+   "kuh2008"
+  ],
+  "r": [
+   "wiggins2005"
+  ]
+ },
+ "senior thesis": {
+  "s": [
+   "kinzie2013",
+   "grant2009"
+  ],
+  "r": [
+   "wiggins2005"
+  ]
+ },
+ "showcase": {
+  "s": [
+   "kinzie2013",
+   "tufte2001"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "high-impact": {
+  "s": [
+   "kuh2008",
+   "kinzie2013"
+  ],
+  "r": [
+   "fink2013"
+  ]
+ },
+ "first-year": {
+  "s": [
+   "kuh2008",
+   "kalyuga2007"
+  ],
+  "r": [
+   "fink2013"
+  ]
+ },
+ "first year": {
+  "s": [
+   "kuh2008",
+   "kalyuga2007"
+  ],
+  "r": [
+   "fink2013"
+  ]
+ },
+ "learning community": {
+  "s": [
+   "kuh2008",
+   "lave1991"
+  ],
+  "r": [
+   "garrison2007"
+  ]
+ },
+ "undergraduate research": {
+  "s": [
+   "kuh2008",
+   "grant2009"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "program assessment": {
+  "s": [
+   "maki2010",
+   "suskie2018"
+  ],
+  "r": [
+   "wiggins2005"
+  ]
+ },
+ "curriculum map": {
+  "s": [
+   "suskie2018",
+   "wiggins2005"
+  ],
+  "r": [
+   "maki2010"
+  ]
+ },
+ "reviewer": {
+  "s": [
+   "brand2015",
+   "bean2011"
+  ],
+  "r": [
+   "nicol2006"
+  ]
+ },
+ "track changes": {
+  "s": [
+   "brand2015",
+   "bean2011"
+  ],
+  "r": [
+   "nicol2006"
+  ]
+ },
+ "supplementary": {
+  "s": [
+   "brand2015",
+   "page2021"
+  ],
+  "r": [
+   "nist_ai2023"
+  ]
+ },
+ "point-by-point": {
+  "s": [
+   "brand2015",
+   "bean2011"
+  ],
+  "r": [
+   "nicol2006"
+  ]
+ },
+ "consensus": {
+  "s": [
+   "creswell2018",
+   "grant2009"
+  ],
+  "r": [
+   "page2021"
+  ]
+ },
+ "methodological": {
+  "s": [
+   "creswell2018",
+   "grant2009"
+  ],
+  "r": [
+   "page2021"
+  ]
+ },
+ "cross-field": {
+  "s": [
+   "fink2013",
+   "lave1991"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "research-to-teaching": {
+  "s": [
+   "fink2013",
+   "darlinghammond2024"
+  ],
+  "r": [
+   "brookfield2017"
+  ]
+ },
+ "teaching-research": {
+  "s": [
+   "fink2013",
+   "darlinghammond2024"
+  ],
+  "r": [
+   "grant2009"
+  ]
+ },
+ "authentic assessment": {
+  "s": [
+   "vlachopoulos2024",
+   "wiggins2005"
+  ],
+  "r": [
+   "suskie2018"
+  ]
+ },
+ "redesign": {
+  "s": [
+   "wiggins2005",
+   "vlachopoulos2024"
+  ],
+  "r": [
+   "fink2013"
+  ]
+ },
+ "three ways": {
+  "s": [
+   "mollick2023",
+   "cast_udl"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "note-check": {
+  "s": [
+   "schraw1998",
+   "zimmerman2002"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "methods section": {
+  "s": [
+   "grant2009",
+   "bean2011"
+  ],
+  "r": [
+   "page2021"
+  ]
+ },
+ "budget": {
+  "s": [
+   "seckel2024",
+   "grant2009"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "manuscript": {
+  "s": [
+   "brand2015",
+   "bean2011"
+  ],
+  "r": [
+   "nicol2006"
+  ]
+ },
+ "multi-author": {
+  "s": [
+   "brand2015",
+   "lave1991"
+  ],
+  "r": [
+   "topping2005"
+  ]
+ },
+ "controversy": {
+  "s": [
+   "kagan2009",
+   "paul2006"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "digital story": {
+  "s": [
+   "nerantzi2023",
+   "darby2019"
+  ],
+  "r": [
+   "hertzmann2023"
+  ]
+ },
+ "member checking": {
+  "s": [
+   "braun2006",
+   "saldana2021"
+  ],
+  "r": [
+   "creswell2018"
+  ]
+ },
+ "poetry": {
+  "s": [
+   "bean2011",
+   "anderson2001"
+  ],
+  "r": [
+   "mla_cccc2023"
+  ]
+ },
+ "mimicry": {
+  "s": [
+   "bean2011",
+   "anderson2001"
+  ],
+  "r": [
+   "hertzmann2023"
+  ]
+ },
+ "philosophy": {
+  "s": [
+   "anderson2001",
+   "bean2011"
+  ],
+  "r": [
+   "paul2006"
+  ]
+ },
+ "counterfactual": {
+  "s": [
+   "anderson2001",
+   "bean2011"
+  ],
+  "r": [
+   "vlachopoulos2024"
+  ]
+ },
+ "participant validation": {
+  "s": [
+   "braun2006",
+   "saldana2021"
+  ],
+  "r": [
+   "creswell2018"
+  ]
+ },
+ "search query": {
+  "s": [
+   "acrl2016",
+   "sousa2025"
+  ],
+  "r": [
+   "caulfield2019"
+  ]
+ },
+ "letter of recommendation": {
+  "s": [
+   "bean2011",
+   "hora2016"
+  ],
+  "r": [
+   "mollick2023a"
+  ]
+ },
+ "tenure": {
+  "s": [
+   "brookfield2017",
+   "bean2011"
+  ],
+  "r": [
+   "hora2016"
+  ]
+ },
+ "promotion": {
+  "s": [
+   "brookfield2017",
+   "bean2011"
+  ],
+  "r": [
+   "hora2016"
+  ]
+ },
+ "two-stars": {
+  "s": [
+   "boud2015",
+   "nicol2006"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "word problem": {
+  "s": [
+   "freeman2014",
+   "anderson2001"
+  ],
+  "r": [
+   "kalyuga2007"
+  ]
+ },
+ "genre convention": {
+  "s": [
+   "bean2011",
+   "mla_cccc2023"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "research question": {
+  "s": [
+   "grant2009",
+   "creswell2018"
+  ],
+  "r": [
+   "page2021"
+  ]
+ },
+ "refinement": {
+  "s": [
+   "grant2009",
+   "nicol2006"
+  ],
+  "r": [
+   "bean2011"
+  ]
+ },
+ "parity": {
+  "s": [
+   "cast_udl",
+   "garrison2007"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "music theory": {
+  "s": [
+   "hertzmann2023",
+   "anderson2001"
+  ],
+  "r": [
+   "nerantzi2023"
+  ]
+ },
+ "impact assessment": {
+  "s": [
+   "nist_ai2023",
+   "floridi2018"
+  ],
+  "r": [
+   "shneiderman2022"
+  ]
+ },
+ "differentiation": {
+  "s": [
+   "tomlinson2016",
+   "cast_udl"
+  ],
+  "r": [
+   "darlinghammond2024"
+  ]
+ },
+ "audit trail": {
+  "s": [
+   "nist_ai2023",
+   "brand2015"
+  ],
+  "r": [
+   "resnik2020"
+  ]
+ },
+ "calibration": {
+  "s": [
+   "nicol2006",
+   "anderson2001"
+  ],
+  "r": [
+   "dunlosky2013"
+  ]
+ },
+ "technical tutorial": {
+  "s": [
+   "bull2024",
+   "bean2011"
+  ],
+  "r": [
+   "brand2015"
+  ]
+ },
+ "marketing": {
+  "s": [
+   "toubia2024",
+   "davenport2018"
+  ],
+  "r": [
+   "bean2011"
+  ]
+ },
+ "brand voice": {
+  "s": [
+   "toubia2024",
+   "bean2011"
+  ],
+  "r": [
+   "davenport2018"
+  ]
+ },
+ "question bank": {
+  "s": [
+   "dunlosky2013",
+   "angelo1993"
+  ],
+  "r": [
+   "mollick2023a"
+  ]
+ },
+ "accommodations": {
+  "s": [
+   "cast_udl",
+   "tomlinson2016"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "annotated bibliography": {
+  "s": [
+   "acrl2016",
+   "grant2009"
+  ],
+  "r": [
+   "bean2011"
+  ]
+ },
+ "verification protocol": {
+  "s": [
+   "caulfield2019",
+   "acrl2016"
+  ],
+  "r": [
+   "bearman2023"
+  ]
+ },
+ "automation paradox": {
+  "s": [
+   "shneiderman2022",
+   "darlinghammond2024"
+  ],
+  "r": [
+   "bearman2023"
+  ]
+ },
+ "prompt as medium": {
+  "s": [
+   "mollick2023a",
+   "hertzmann2023"
+  ],
+  "r": [
+   "long2020"
+  ]
+ },
+ "reverse-engineer": {
+  "s": [
+   "mollick2023a",
+   "long2020"
+  ],
+  "r": [
+   "speicher2023"
+  ]
+ },
+ "personal ai use": {
+  "s": [
+   "perkins2023",
+   "long2020"
+  ],
+  "r": [
+   "speicher2023"
+  ]
+ },
+ "ai governance": {
+  "s": [
+   "nist_ai2023",
+   "unesco_ai2021"
+  ],
+  "r": [
+   "floridi2018"
+  ]
+ },
+ "error analysis": {
+  "s": [
+   "freeman2014",
+   "anderson2001"
+  ],
+  "r": [
+   "kalyuga2007"
+  ]
+ },
+ "code must be tested": {
+  "s": [
+   "bull2024",
+   "dakhel2023"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "outcome assessment": {
+  "s": [
+   "suskie2018",
+   "maki2010"
+  ],
+  "r": [
+   "wiggins2005"
+  ]
+ },
+ "confidence vs": {
+  "s": [
+   "long2020",
+   "bearman2023"
+  ],
+  "r": [
+   "schraw1998"
+  ]
+ },
+ "claim verification": {
+  "s": [
+   "caulfield2019",
+   "acrl2016"
+  ],
+  "r": [
+   "bearman2023"
+  ]
+ },
+ "scite": {
+  "s": [
+   "caulfield2019",
+   "acrl2016"
+  ],
+  "r": [
+   "bearman2023"
+  ]
+ },
+ "evidence quality": {
+  "s": [
+   "sackett1996",
+   "acrl2016"
+  ],
+  "r": [
+   "caulfield2019"
+  ]
+ },
+ "original contribution": {
+  "s": [
+   "lovitts2005",
+   "anderson2001"
+  ],
+  "r": [
+   "wiggins2005"
+  ]
+ },
+ "significance section": {
+  "s": [
+   "przeworski1995",
+   "sword2012"
+  ],
+  "r": [
+   "lovitts2005"
+  ]
+ },
+ "preliminary data": {
+  "s": [
+   "przeworski1995",
+   "creswell2018"
+  ],
+  "r": [
+   "sword2012"
+  ]
+ },
+ "journal target": {
+  "s": [
+   "sword2012",
+   "lovitts2005"
+  ],
+  "r": [
+   "przeworski1995"
+  ]
+ },
+ "student artifact": {
+  "s": [
+   "walvoord2010",
+   "suskie2018"
+  ],
+  "r": [
+   "maki2010"
+  ]
+ },
+ "information behavior": {
+  "s": [
+   "head2013",
+   "acrl2016"
+  ],
+  "r": [
+   "oakleaf2009"
+  ]
+ },
+ "letter of support": {
+  "s": [
+   "przeworski1995",
+   "sword2012"
+  ],
+  "r": [
+   "creswell2018"
+  ]
+ },
+ "facilities": {
+  "s": [
+   "przeworski1995",
+   "creswell2018"
+  ],
+  "r": [
+   "sword2012"
+  ]
+ },
+ "research evolution": {
+  "s": [
+   "creswell2018",
+   "lovitts2005"
+  ],
+  "r": [
+   "sword2012"
+  ]
+ },
+ "assessment scale": {
+  "s": [
+   "walvoord2010",
+   "suskie2018"
+  ],
+  "r": [
+   "maki2010"
+  ]
+ },
+ "departmental policy": {
+  "s": [
+   "selwyn2016",
+   "miao2024"
+  ],
+  "r": [
+   "unesco_ai2021"
+  ]
+ },
+ "alternative text": {
+  "s": [
+   "cast_udl",
+   "burgstahler2015"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "common error pattern": {
+  "s": [
+   "lister2004",
+   "pears2007"
+  ],
+  "r": [
+   "nicol2006"
+  ]
+ },
+ "character image": {
+  "s": [
+   "hertzmann2023",
+   "eisner2002"
+  ],
+  "r": [
+   "crawford2021"
+  ]
+ },
+ "student-as-text": {
+  "s": [
+   "bean2011",
+   "anderson2001"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "cultural competency": {
+  "s": [
+   "benjamin2019",
+   "crawford2021"
+  ],
+  "r": [
+   "floridi2018"
+  ]
+ },
+ "rapid evidence": {
+  "s": [
+   "sackett1996",
+   "page2021"
+  ],
+  "r": [
+   "creswell2018"
+  ]
+ },
+ "committee report": {
+  "s": [
+   "sword2012",
+   "walvoord2010"
+  ],
+  "r": [
+   "middaugh2010"
+  ]
+ },
+ "thesis chapter": {
+  "s": [
+   "lovitts2005",
+   "sword2012"
+  ],
+  "r": [
+   "creswell2018"
+  ]
+ },
+ "oral defense": {
+  "s": [
+   "lovitts2005",
+   "sword2012"
+  ],
+  "r": [
+   "schon1983"
+  ]
+ },
+ "ethical research scenario": {
+  "s": [
+   "resnik2020",
+   "floridi2018"
+  ],
+  "r": [
+   "creswell2018"
+  ]
+ },
+ "academic vocabulary": {
+  "s": [
+   "anderson2001",
+   "dunlosky2013"
+  ],
+  "r": [
+   "cast_udl"
+  ]
+ },
+ "timeline of ai": {
+  "s": [
+   "miao2024",
+   "selwyn2016"
+  ],
+  "r": [
+   "shneiderman2022"
+  ]
+ },
+ "ai-generated vs. human": {
+  "s": [
+   "perkins2023",
+   "bearman2023"
+  ],
+  "r": [
+   "mollick2023"
+  ]
+ },
+ "summarize an ai research": {
+  "s": [
+   "schwabish2021",
+   "sword2012"
+  ],
+  "r": [
+   "bearman2023"
+  ]
+ },
+ "classify ai outputs": {
+  "s": [
+   "nist_ai2023",
+   "bearman2023"
+  ],
+  "r": [
+   "perkins2023"
+  ]
+ },
+ "irony and subtext": {
+  "s": [
+   "bearman2023",
+   "hertzmann2023"
+  ],
+  "r": [
+   "bean2011"
+  ]
+ },
+ "handles vs. mishandles": {
+  "s": [
+   "bearman2023",
+   "nist_ai2023"
+  ],
+  "r": [
+   "mollick2023"
+  ]
+ },
+ "drug discovery": {
+  "s": [
+   "miao2024",
+   "nist_ai2023"
+  ],
+  "r": [
+   "shneiderman2022"
+  ]
+ },
+ "constructivism": {
+  "s": [
+   "glasersfeld1995",
+   "freeman2014"
+  ],
+  "r": [
+   "selwyn2016"
+  ]
+ },
+ "compare ai search": {
+  "s": [
+   "head2013",
+   "caulfield2019"
+  ],
+  "r": [
+   "acrl2016"
+  ]
+ },
+ "craap test": {
+  "s": [
+   "acrl2016",
+   "head2013"
+  ],
+  "r": [
+   "caulfield2019"
+  ]
+ },
+ "ai-generated hypotheses": {
+  "s": [
+   "creswell2018",
+   "freeman2014"
+  ],
+  "r": [
+   "bearman2023"
+  ]
+ },
+ "mixed-methods research": {
+  "s": [
+   "creswell2018",
+   "patton2015"
+  ],
+  "r": [
+   "merriam2016"
+  ]
+ },
+ "disciplinary ai adoption": {
+  "s": [
+   "miao2024",
+   "bearman2023"
+  ],
+  "r": [
+   "selwyn2016"
+  ]
+ },
+ "domain-specific knowledge": {
+  "s": [
+   "bearman2023",
+   "nist_ai2023"
+  ],
+  "r": [
+   "mollick2023"
+  ]
+ },
+ "ai-resistant assessment": {
+  "s": [
+   "perkins2023",
+   "walvoord2010"
+  ],
+  "r": [
+   "bearman2023"
+  ]
+ },
+ "ai use patterns": {
+  "s": [
+   "siemens2013",
+   "bearman2023"
+  ],
+  "r": [
+   "perkins2023"
+  ]
+ },
+ "historical thinking": {
+  "s": [
+   "anderson2001",
+   "acrl2016"
+  ],
+  "r": [
+   "burdick2012"
+  ]
+ },
+ "ethical review": {
+  "s": [
+   "resnik2020",
+   "floridi2018"
+  ],
+  "r": [
+   "creswell2018"
+  ]
+ },
+ "ai understanding and pattern": {
+  "s": [
+   "nist_ai2023",
+   "bearman2023"
+  ],
+  "r": [
+   "shneiderman2022"
+  ]
+ },
+ "temperature and context window": {
+  "s": [
+   "nist_ai2023",
+   "speicher2023"
+  ],
+  "r": [
+   "bearman2023"
+  ]
+ },
+ "ai changes the information": {
+  "s": [
+   "acrl2016",
+   "miao2024"
+  ],
+  "r": [
+   "head2013"
+  ]
+ },
+ "personalized ai workflow": {
+  "s": [
+   "mollick2023",
+   "bearman2023"
+  ],
+  "r": [
+   "schon1983"
+  ]
+ },
+ "accessible course material": {
+  "s": [
+   "cast_udl",
+   "burgstahler2015"
+  ],
+  "r": [
+   "darby2019"
+  ]
+ },
+ "first ai conversation": {
+  "s": [
+   "mollick2023",
+   "bearman2023"
+  ],
+  "r": [
+   "freeman2014"
+  ]
+ },
+ "multi-modal learning": {
+  "s": [
+   "cast_udl",
+   "darby2019"
+  ],
+  "r": [
+   "burgstahler2015"
+  ]
+ },
+ "journal ai policies": {
+  "s": [
+   "mla_cccc2023",
+   "bearman2023"
+  ],
+  "r": [
+   "resnik2020"
+  ]
+ },
+ "key debates": {
+  "s": [
+   "hertzmann2023",
+   "sawyer2012"
+  ],
+  "r": [
+   "shneiderman2022"
+  ]
+ },
+ "code generation errors": {
+  "s": [
+   "dakhel2023",
+   "lister2004"
+  ],
+  "r": [
+   "margulieux2024"
+  ]
+ },
+ "philosophical arguments": {
+  "s": [
+   "vallor2016",
+   "paul2006"
+  ],
+  "r": [
+   "bean2011"
+  ]
+ },
+ "reproduce ai code": {
+  "s": [
+   "dakhel2023",
+   "pears2007"
+  ],
+  "r": [
+   "lister2004"
+  ]
+ },
+ "textbook explanation": {
+  "s": [
+   "anderson2001",
+   "bearman2023"
+  ],
+  "r": [
+   "dunlosky2013"
+  ]
+ },
+ "interprofessional": {
+  "s": [
+   "ipec2023",
+   "benner2010"
+  ],
+  "r": [
+   "tanner2006"
+  ]
+ },
+ "representation of social": {
+  "s": [
+   "benjamin2019",
+   "crawford2021"
+  ],
+  "r": [
+   "floridi2018"
+  ]
+ },
+ "content analysis": {
+  "s": [
+   "patton2015",
+   "braun2006"
+  ],
+  "r": [
+   "merriam2016"
+  ]
+ },
+ "customer persona": {
+  "s": [
+   "davenport2018",
+   "hmelo2004"
+  ],
+  "r": [
+   "datar2010"
+  ]
+ },
+ "data dashboard": {
+  "s": [
+   "schwabish2021",
+   "tufte2001"
+  ],
+  "r": [
+   "wickham2023"
+  ]
+ },
+ "when not to use ai": {
+  "s": [
+   "bearman2023",
+   "perkins2023"
+  ],
+  "r": [
+   "mollick2023"
+  ]
+ },
+ "training data shapes": {
+  "s": [
+   "crawford2021",
+   "nist_ai2023"
+  ],
+  "r": [
+   "benjamin2019"
+  ]
+ },
+ "vendor lock-in": {
+  "s": [
+   "selwyn2016",
+   "nist_ai2023"
+  ],
+  "r": [
+   "shneiderman2022"
+  ]
+ },
+ "elements of design": {
+  "s": [
+   "eisner2002",
+   "sawyer2012"
+  ],
+  "r": [
+   "hertzmann2023"
+  ]
+ },
+ "sift method": {
+  "s": [
+   "caulfield2019",
+   "acrl2016"
+  ],
+  "r": [
+   "head2013"
+  ]
+ },
+ "ai output temperature": {
+  "s": [
+   "speicher2023",
+   "nist_ai2023"
+  ],
+  "r": [
+   "bearman2023"
+  ]
+ },
+ "discipline's ai adoption": {
+  "s": [
+   "miao2024",
+   "bearman2023"
+  ],
+  "r": [
+   "selwyn2016"
+  ]
+ },
+ "case critique": {
+  "s": [
+   "hmelo2004",
+   "schon1983"
+  ],
+  "r": [
+   "anderson2001"
+  ]
+ },
+ "ai vs. database": {
+  "s": [
+   "head2013",
+   "acrl2016"
+  ],
+  "r": [
+   "caulfield2019"
+  ]
+ },
+ "ai vs database": {
+  "s": [
+   "head2013",
+   "acrl2016"
+  ],
+  "r": [
+   "caulfield2019"
+  ]
+ }
+}

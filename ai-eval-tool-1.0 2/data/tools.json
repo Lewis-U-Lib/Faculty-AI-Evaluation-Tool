@@ -1,0 +1,405 @@
+{
+ "chatgpt": {
+  "icon": "🤖",
+  "name": "ChatGPT",
+  "url": "https://chatgpt.com/",
+  "badge": "Free+",
+  "desc": "Versatile conversational AI for drafting, brainstorming, and structuring content. Highly responsive to detailed prompts.",
+  "bestFor": [
+   "discussion",
+   "assessment",
+   "design",
+   "feedback",
+   "materials",
+   "policy"
+  ]
+ },
+ "claude": {
+  "icon": "💬",
+  "name": "Claude",
+  "url": "https://claude.ai/",
+  "badge": "Free+",
+  "desc": "Excellent for long-form synthesis, nuanced rewriting, and following complex multi-step instructions. Handles large documents well.",
+  "bestFor": [
+   "litreview",
+   "research",
+   "design",
+   "feedback",
+   "materials"
+  ]
+ },
+ "gemini": {
+  "icon": "✦",
+  "name": "Google Gemini",
+  "url": "https://gemini.google.com/",
+  "badge": "Free+",
+  "desc": "Multimodal AI with deep Google/Drive integration. Good for research summaries, multimedia prompts, and slides.",
+  "bestFor": [
+   "design",
+   "research",
+   "materials",
+   "discussion"
+  ]
+ },
+ "copilot": {
+  "icon": "🪟",
+  "name": "Microsoft Copilot",
+  "url": "https://copilot.microsoft.com/",
+  "badge": "Free",
+  "desc": "Integrated into Microsoft 365. Ideal for Word drafts, Teams summaries, and productivity workflows faculty already use.",
+  "bestFor": [
+   "design",
+   "feedback",
+   "materials",
+   "admin"
+  ]
+ },
+ "perplexity": {
+  "icon": "🔎",
+  "name": "Perplexity AI",
+  "url": "https://www.perplexity.ai/",
+  "badge": "Free+",
+  "desc": "Search-first AI that cites its sources. Best for quick literature scans, fact-checking, and verifiable research overviews.",
+  "bestFor": [
+   "litreview",
+   "research",
+   "discussion",
+   "policy"
+  ]
+ },
+ "notebooklm": {
+  "icon": "📓",
+  "name": "NotebookLM",
+  "url": "https://notebooklm.google/",
+  "badge": "Free",
+  "desc": "Upload YOUR documents; Google's AI summarizes, connects themes, and answers questions grounded in your sources. No hallucination of outside content.",
+  "bestFor": [
+   "litreview",
+   "research",
+   "materials",
+   "design",
+   "assessment"
+  ]
+ },
+ "semscholar": {
+  "icon": "📚",
+  "name": "Semantic Scholar",
+  "url": "https://www.semanticscholar.org/",
+  "badge": "Free",
+  "desc": "AI-powered scholarly search with citation graphs and influence scores. Essential for tracking research lineages.",
+  "bestFor": [
+   "litreview",
+   "research"
+  ]
+ },
+ "elicit": {
+  "icon": "🧪",
+  "name": "Elicit",
+  "url": "https://elicit.org/",
+  "badge": "Free+",
+  "desc": "Automates literature review by extracting methods, findings, and sample sizes from papers into structured tables.",
+  "bestFor": [
+   "litreview",
+   "research"
+  ]
+ },
+ "scite": {
+  "icon": "📐",
+  "name": "Scite",
+  "url": "https://scite.ai/",
+  "badge": "Free+",
+  "desc": "Shows exactly how a paper is cited -- supporting, contrasting, or simply mentioning. Critical for evaluating evidence claims.",
+  "bestFor": [
+   "litreview",
+   "research",
+   "assessment"
+  ]
+ },
+ "resrabbit": {
+  "icon": "🐇",
+  "name": "ResearchRabbit",
+  "url": "https://www.researchrabbit.ai/",
+  "badge": "Free",
+  "desc": "Visually maps citation networks around seed papers. Perfect for entering a new field or finding influential authors fast.",
+  "bestFor": [
+   "litreview",
+   "research"
+  ]
+ },
+ "julius": {
+  "icon": "📊",
+  "name": "Julius AI",
+  "url": "https://julius.ai/",
+  "badge": "Free+",
+  "desc": "Upload a dataset; Julius provides AI-assisted analysis, charts, and interpretation. Always validate statistical outputs independently.",
+  "bestFor": [
+   "research",
+   "assessment",
+   "stem"
+  ]
+ },
+ "grammarly": {
+  "icon": "✍️",
+  "name": "Grammarly",
+  "url": "https://www.grammarly.com/",
+  "badge": "Free+",
+  "desc": "AI writing assistant for grammar, clarity, tone, and style. Good scaffolding tool for student writing without full text generation.",
+  "bestFor": [
+   "feedback",
+   "materials",
+   "assessment"
+  ]
+ },
+ "midjourney": {
+  "icon": "🎨",
+  "name": "Midjourney",
+  "url": "https://www.midjourney.com/",
+  "badge": "Paid",
+  "desc": "High-quality AI image generation with strong aesthetic control. Excellent for visual course materials, concept illustrations, and media projects.",
+  "bestFor": [
+   "materials",
+   "arts",
+   "discussion"
+  ]
+ },
+ "dalle": {
+  "icon": "🖼️",
+  "name": "DALL-E 3",
+  "url": "https://openai.com/index/dall-e-3/",
+  "badge": "Paid",
+  "desc": "Image generation built into ChatGPT. Good for quick concept diagrams, illustrative teaching materials, and accessible alt-text creation.",
+  "bestFor": [
+   "materials",
+   "arts",
+   "design"
+  ]
+ },
+ "elevenlabs": {
+  "icon": "🎙️",
+  "name": "ElevenLabs",
+  "url": "https://elevenlabs.io/",
+  "badge": "Free+",
+  "desc": "Realistic AI voice generation for narrated course content, accessibility audio, and language learning materials.",
+  "bestFor": [
+   "materials",
+   "online",
+   "hybrid",
+   "arts"
+  ]
+ },
+ "runway": {
+  "icon": "🎬",
+  "name": "Runway",
+  "url": "https://runwayml.com/",
+  "badge": "Free+",
+  "desc": "AI video generation and editing tools. Useful for short explainer clips, concept visualizations, and creative media assignments.",
+  "bestFor": [
+   "materials",
+   "arts",
+   "research"
+  ]
+ },
+ "otter": {
+  "icon": "🦦",
+  "name": "Otter.ai",
+  "url": "https://otter.ai/",
+  "badge": "Free+",
+  "desc": "AI transcription and auto-generated meeting notes. Useful for recording office hours, lectures, or research interviews for accessibility.",
+  "bestFor": [
+   "online",
+   "hybrid",
+   "research",
+   "materials"
+  ]
+ },
+ "rayyan": {
+  "icon": "🔬",
+  "name": "Rayyan",
+  "url": "https://www.rayyan.ai/",
+  "badge": "Free+",
+  "desc": "Systematic review management. 90% time savings on screening.",
+  "bestFor": [
+   "litreview",
+   "research"
+  ]
+ },
+ "connectedpapers": {
+  "icon": "🕸️",
+  "name": "Connected Papers",
+  "url": "https://www.connectedpapers.com/",
+  "badge": "Free",
+  "desc": "Visual citation networks. Find influential works and gaps.",
+  "bestFor": [
+   "litreview",
+   "research"
+  ]
+ },
+ "anara": {
+  "icon": "🔮",
+  "name": "Anara",
+  "url": "https://anara.com/",
+  "badge": "Free+",
+  "desc": "Search PubMed, arXiv, JSTOR. Chat with documents.",
+  "bestFor": [
+   "litreview",
+   "research",
+   "qualitative"
+  ]
+ },
+ "chatpdf": {
+  "icon": "💬",
+  "name": "ChatPDF",
+  "url": "https://www.chatpdf.com/",
+  "badge": "Free+",
+  "desc": "Ask questions, get answers from PDF documents.",
+  "bestFor": [
+   "litreview",
+   "research",
+   "materials"
+  ]
+ },
+ "kling": {
+  "icon": "🎬",
+  "name": "Kling AI",
+  "url": "https://klingai.com/",
+  "badge": "Free+",
+  "desc": "AI video generation platform with text-to-video, image-to-video, and motion brush tools. Strong cinematic quality with free tier available.",
+  "bestFor": [
+   "creative",
+   "materials",
+   "arts",
+   "research",
+   "simulation"
+  ]
+ },
+ "lumaai": {
+  "icon": "✨",
+  "name": "Luma AI",
+  "url": "https://lumalabs.ai/dream-machine",
+  "badge": "Free+",
+  "desc": "Dream Machine generates fast AI video (5-10 sec) from text or images. Great for storyboards and quick animations.",
+  "bestFor": [
+   "creative",
+   "materials",
+   "arts",
+   "design"
+  ]
+ },
+ "suno": {
+  "icon": "🎵",
+  "name": "Suno",
+  "url": "https://suno.com/",
+  "badge": "Free+",
+  "desc": "AI music and song generation from text prompts. Create original audio for projects, podcasts, presentations.",
+  "bestFor": [
+   "creative",
+   "materials",
+   "arts",
+   "audio"
+  ]
+ },
+ "firefly": {
+  "icon": "🔥",
+  "name": "Adobe Firefly",
+  "url": "https://firefly.adobe.com/",
+  "badge": "Free+",
+  "desc": "Commercial-safe AI image generation integrated with Adobe Creative Cloud. Professional graphics and marketing materials.",
+  "bestFor": [
+   "materials",
+   "design",
+   "arts",
+   "business"
+  ]
+ },
+ "stablediff": {
+  "icon": "🖼️",
+  "name": "Stable Diffusion",
+  "url": "https://stability.ai/",
+  "badge": "Free",
+  "desc": "Open-source image generation. Highly customizable for technical users, research on AI art, custom model training.",
+  "bestFor": [
+   "arts",
+   "research",
+   "STEM",
+   "technical"
+  ]
+ },
+ "synthesia": {
+  "icon": "👤",
+  "name": "Synthesia",
+  "url": "https://www.synthesia.io/",
+  "badge": "Paid",
+  "desc": "AI avatar video creation. Generate lecture videos with realistic presenters in 140+ languages. Accessibility-focused.",
+  "bestFor": [
+   "materials",
+   "online",
+   "accessibility",
+   "training"
+  ]
+ },
+ "consensus": {
+  "icon": "📊",
+  "name": "Consensus",
+  "url": "https://consensus.app/",
+  "badge": "Free+",
+  "desc": "AI-powered academic search engine that extracts findings from scientific papers. Shows whether research supports or refutes claims with meter visualization.",
+  "bestFor": [
+   "litreview",
+   "research",
+   "evidence"
+  ]
+ },
+ "pubmed": {
+  "icon": "🏥",
+  "name": "PubMed.ai",
+  "url": "https://www.pubmed.ai/",
+  "badge": "Free",
+  "desc": "AI-assisted biomedical literature search and research workflow platform. Adds summaries, structured analysis, and MeSH-aware retrieval on top of PubMed-referenced biomedical literature.",
+  "bestFor": [
+   "litreview",
+   "research",
+   "health"
+  ]
+ },
+ "veo": {
+  "icon": "📹",
+  "name": "Google Veo",
+  "url": "https://deepmind.google/models/veo/",
+  "badge": "Free+",
+  "desc": "Google's flagship AI video generator with native audio, 4K output, and vertical video support. Integrated into Gemini app, YouTube Shorts, and Google Vids. Strong physics simulation and character consistency.",
+  "bestFor": [
+   "materials",
+   "arts",
+   "creative",
+   "online",
+   "accessibility"
+  ]
+ },
+ "magicschool": {
+  "icon": "🏫",
+  "name": "MagicSchool AI",
+  "url": "https://www.magicschool.ai/",
+  "badge": "Free+",
+  "desc": "AI platform built by educators for educators. 60+ tools for lesson planning, rubric generation, differentiation, IEP support, and teaching/course AI. Trusted by 5M+ teachers. FERPA/COPPA compliant.",
+  "bestFor": [
+   "design",
+   "assessment",
+   "materials",
+   "feedback",
+   "education"
+  ]
+ },
+ "pika": {
+  "icon": "🎞️",
+  "name": "Pika",
+  "url": "https://pika.art/",
+  "badge": "Free+",
+  "desc": "AI video generator for short-form educational and creative content. Text-to-video, image-to-video, and creative Pikaffects VFX tools. Good for quick explainer clips and visual demonstrations.",
+  "bestFor": [
+   "creative",
+   "materials",
+   "arts",
+   "design"
+  ]
+ }
+}
