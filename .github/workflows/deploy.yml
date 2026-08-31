@@ -1,0 +1,71 @@
+# Build the tool from canonical data and publish to GitHub Pages.
+#
+# Nothing is deployed unless validate.py and selftest.py both pass, so a data
+# error cannot reach faculty. Editing data/*.json in the GitHub web editor is
+# enough to trigger a full validated rebuild — no terminal required.
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'templates/**'
+      - 'scripts/**'
+      - 'build.json'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never let two deploys race; let a running one finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Validate canonical data
+        run: python3 scripts/validate.py
+
+      - name: Self-test the validator
+        run: python3 scripts/selftest.py
+
+      - name: Build
+        run: python3 scripts/build.py
+
+      - name: Keep Pages from running Jekyll
+        run: touch dist/.nojekyll
+
+      - name: Confirm both pages were produced
+        run: |
+          test -s dist/index.html
+          test -s dist/Reference.html
+          echo "index.html     $(wc -c < dist/index.html) bytes"
+          echo "Reference.html $(wc -c < dist/Reference.html) bytes"
+
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

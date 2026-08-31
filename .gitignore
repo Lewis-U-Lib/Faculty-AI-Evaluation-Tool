@@ -1,0 +1,6 @@
+dist/
+review/*.csv
+review/*-report.json
+.extract_tmp.js
+.rt_tmp.js
+__pycache__/

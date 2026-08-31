@@ -1,0 +1,43 @@
+# Monthly bibliography health check. Confirms every DOI still resolves to the
+# work it claims and every public link still responds. Opens an issue on failure.
+# Primo permalinks are skipped: they need an authenticated Lewis session.
+name: Check sources
+
+on:
+  schedule:
+    - cron: '0 9 1 * *'      # 09:00 UTC on the first of each month
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Verify DOIs and links
+        id: verify
+        continue-on-error: true
+        run: python3 scripts/verify_sources.py --dois --links --out review/link-report.json
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: link-report
+          path: review/link-report.json
+
+      - name: Open an issue if anything needs review
+        if: steps.verify.outcome == 'failure'
+        uses: actions/github-script@v9
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Bibliography check needs review (${new Date().toISOString().slice(0,10)})`,
+              body: 'The scheduled source check reported a DOI/title mismatch or an unreachable link. Download the `link-report` artifact from the workflow run for details.'
+            })

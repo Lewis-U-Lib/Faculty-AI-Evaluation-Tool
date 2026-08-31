@@ -1,0 +1,63 @@
+# Validate proposed changes without deploying. Runs on every pull request so a
+# contributor sees problems before merge rather than after publication.
+name: Check pull request
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '20'
+
+      - name: Validate
+        run: python3 scripts/validate.py
+
+      - name: Self-test
+        run: python3 scripts/selftest.py
+
+      - name: Build (not published)
+        run: python3 scripts/build.py
+
+      - name: Cross-file parity
+        run: |
+          python3 - <<'PY'
+          import json, re, subprocess, pathlib
+          def store(doc, name):
+              m = re.search(r'var ' + name + r' = ', doc)
+              if not m: return None
+              start = m.end()
+              depth, i, ins, esc, q = 0, start, False, False, ''
+              while i < len(doc):
+                  c = doc[i]
+                  if esc: esc = False
+                  elif c == '\\': esc = True
+                  elif ins:
+                      if c == q: ins = False
+                  elif c in '"\'': ins, q = True, c
+                  elif c in '[{': depth += 1
+                  elif c in ']}':
+                      depth -= 1
+                      if depth == 0: break
+                  i += 1
+              lit = doc[start:i+1]
+              pathlib.Path('t.js').write_text('const X=' + lit + ';process.stdout.write(JSON.stringify(X));')
+              p = subprocess.run(['node', 't.js'], capture_output=True, text=True)
+              return json.loads(p.stdout) if p.returncode == 0 else None
+          a = pathlib.Path('dist/index.html').read_text()
+          b = pathlib.Path('dist/Reference.html').read_text()
+          bad = []
+          for name in ['RULES','ORIGIN_DB','KW_SOURCES','RULE_FALLBACK','BLOOM_SRC',
+                       'SPECIMENS','SYLLABUS_SPECTRUM','ORIGIN_TYPE_LINKS']:
+              if store(a, name) != store(b, name): bad.append(name)
+          print('divergent stores:', bad or 'none')
+          raise SystemExit(1 if bad else 0)
+          PY

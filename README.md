@@ -47,6 +47,7 @@ Requires Python 3 (standard library only) and, for `extract.py` and `roundtrip_t
 ## Layout
 
 ```
+.github/workflows/        CI: validate + build + deploy to GitHub Pages
 data/                     canonical source of truth — ONE copy, 1.9 MB
   rules.json                157 rules / 1,131 activities  (ordered array)
   sources.json              148 bibliography records      (keyed by id)
@@ -73,11 +74,16 @@ scripts/
   review.py                 CSV export/import for spreadsheet content review
   verify_sources.py         DOI identity and link health against Crossref/DataCite
   selftest.py               proves the validator still catches historical defects
+  fix_can_support.py        one-off content repair (already applied in 1.0)
 
 dist/                     generated — do not edit, not in version control
 build.json                build configuration: targets, stores, shapes
 publish.sh                validate + build
+DEPLOYMENT.md             GitHub Pages migration roadmap
 ```
+
+See **DEPLOYMENT.md** for moving this repository onto GitHub Pages with
+Actions. Published URLs do not change; validation gates every deploy.
 
 ### The marker convention
 
@@ -141,10 +147,10 @@ rules=157  activities=1131  sources=148
   tier       1131/1131 (100%)
   mode       1131/1131 (100%)
   bloom      1131/1131 (100%)
-0 errors, 16 warnings
+0 errors, 4 warnings
 ```
 
-The 16 warnings are the twelve malformed descriptions, one copy error, `arch` coverage, efficacy language in 151 activities, and 37 unreferenced sources. None blocks publishing; all are visible now rather than discoverable only by audit.
+The four remaining warnings are one copy error, `arch` coverage, efficacy language in 151 activities, and 37 unreferenced sources. None blocks publishing; all are visible on every run rather than discoverable only by audit.
 
 ### What the guards would have caught
 
@@ -182,7 +188,11 @@ Two stores differ from the pre-split originals by design, and the round-trip tes
 
 **`TOOLS.magicschool.desc`** — index said "teaching/course AI", the guide said "student-facing AI". The index value was kept pending a decision. Change it in `data/tools.json` if the other is correct; it now propagates to both files from one edit.
 
-**Twelve malformed descriptions** — "can support draft", "can support scope" and similar, residue of the May 2026 rewrite that converted "Use X to *verb*" without adjusting the verb form. Flagged by `validate.py`, listed by title. Each needs a gerund. Left unchanged because content edits are an editorial decision, not a migration step.
+**Twelve malformed descriptions — FIXED in 1.0.** "can support draft", "can support scope" and similar, residue of the May 2026 rewrite that converted "Use X to *verb*" without adjusting the verb form. All twelve now read "can help <verb>", which restores grammaticality while keeping the softened, non-directive register the rewrite intended. Applied by `scripts/fix_can_support.py`; `validate.py` still guards against the construction returning.
+
+**One copy error remains** — "What would you can ask the original authors?" in *Experimental Replication Feasibility Assessment*. Should read "What could you ask". Flagged by `validate.py`, not changed.
+
+**A find-and-replace artifact appears three times** — a substitution of "student-facing" with "teaching/course" that leaves the sentence odd: `TOOLS.magicschool.desc`, *Syllabi Language Workshop* ("formal, conversational, and teaching/course plain language"), and *AI-Assisted Rubric Design Workshop* ("discipline-specific criteria, teaching/course language"). All three read as though the intended word was "student-facing". Not changed — editorial call.
 
 **`arch` at 11% coverage** — 135 of 1,131 activities. Reported by `validate.py` on every run so partial completion stays visible.
 
