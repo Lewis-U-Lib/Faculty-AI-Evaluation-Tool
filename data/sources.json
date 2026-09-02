@@ -886,5 +886,59 @@
   "short": "Perkins et al. - AI Assessment Scale / AIAS (2024)",
   "url": "https://doi.org/10.53761/q3azde36",
   "access": "open"
+ },
+ "li2024hallu": {
+  "cite": "Li, J., Chen, J., Ren, R., Cheng, X., Zhao, W. X., Nie, J.-Y., & Wen, J.-R. (2024). The dawn after the dark: An empirical study on factuality hallucination in large language models.",
+  "short": "Li et al. — Factuality Hallucination (2024)",
+  "url": "https://arxiv.org/abs/2401.03205",
+  "access": "open"
+ },
+ "gamba2025cap": {
+  "cite": "Gamba, F., Sinha, A., Mickus, T., Vazquez, R., Bhamidipati, P., Savelli, C., et al. (2025). Confabulations from ACL Publications (CAP): A dataset for scientific hallucination detection.",
+  "short": "Gamba et al. — CAP Dataset (2025)",
+  "url": "https://arxiv.org/abs/2510.22395",
+  "access": "open"
+ },
+ "hossain2025scihallu": {
+  "cite": "Hossain, A. I., & Ray Choudhury, S. (2025). SciHallu: A multi-granularity hallucination detection dataset for scientific writing. Proceedings of IJCNLP-AACL 2025.",
+  "short": "Hossain & Ray Choudhury — SciHallu (2025)",
+  "url": "https://aclanthology.org/2025.ijcnlp-long.70/",
+  "access": "open"
+ },
+ "shoufan2026": {
+  "cite": "Shoufan, A., & Esmaeil, A.-A.-A. (2026). AI hallucination from students' perspective: A thematic analysis.",
+  "short": "Shoufan & Esmaeil — Student Perspective (2026)",
+  "url": "https://arxiv.org/abs/2602.17671",
+  "access": "open"
+ },
+ "alansari2026": {
+  "cite": "Alansari, A., & Luqman, H. (2026). HalluScore: Large language model hallucination question answering benchmark.",
+  "short": "Alansari & Luqman — HalluScore (2026)",
+  "url": "https://arxiv.org/abs/2605.17007",
+  "access": "open"
+ },
+ "sun2024": {
+  "cite": "Sun, Y., Sheng, D., Zhou, Z., & Wu, Y. (2024). AI hallucination: Towards a comprehensive classification of distorted information in artificial intelligence-generated content. Humanities and Social Sciences Communications, 11, 1278.",
+  "short": "Sun et al. — AIGC Distortion Typology (2024)",
+  "url": "https://doi.org/10.1057/s41599-024-03811-x",
+  "access": "open"
+ },
+ "gambo2025": {
+  "cite": "Gambo, I., Khan, J. A., & Agbonkhese, C. (2025). \"My AI is lying to me\": User-reported LLM hallucinations in AI mobile app reviews. Scientific Reports, 15, 30397.",
+  "short": "Gambo et al. — User-Reported Hallucinations (2025)",
+  "url": "https://doi.org/10.1038/s41598-025-15416-8",
+  "access": "open"
+ },
+ "kamel2024": {
+  "cite": "Kamel, H. (2024). Understanding the impact of AI hallucinations on the university community. Cybrarians Journal, 73.",
+  "short": "Kamel — AI Hallucinations at NGU (2024)",
+  "url": "https://doi.org/10.70000/cj.2024.73.622",
+  "access": "open"
+ },
+ "hwang2025": {
+  "cite": "Hwang, Y., & Jeong, S.-H. (2025). Generative artificial intelligence and misinformation acceptance: An experimental test of the effect of forewarning about artificial intelligence hallucination. Cyberpsychology, Behavior, and Social Networking, 28(4), 284–289.",
+  "short": "Hwang & Jeong — Hallucination Forewarning (2025)",
+  "url": "https://doi.org/10.1089/cyber.2024.0407",
+  "access": "restricted"
  }
 }

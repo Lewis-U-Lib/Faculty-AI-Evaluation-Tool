@@ -12,6 +12,8 @@ The cases are drawn from the tool's own version history:
   3. dangling source id             the class the Perkins key rename could have caused
   4. missing required field         would ship an activity card with holes
   5. malformed 'can support'        the May 2026 rewrite residue, still live
+  6. unknown specimen class         would silently omit a specimen from the library
+  7. dangling specimen source       would display an internal id instead of attribution
 
     python3 scripts/selftest.py
 """
@@ -93,9 +95,23 @@ def missing_field(data):
     return data
 
 
+@case("unknown specimen class")
+def unknown_specimen_class(data):
+    data["specimens"][0]["defect_class"] = "unregistered_error"
+    return data
+
+
+@case("dangling source id in a literature specimen")
+def dangling_specimen_source(data):
+    specimen = next(s for s in data["specimens"]
+                    if s.get("provenance") == "captured_from_literature")
+    specimen["instance_source"] = "ghostsource2099"
+    return data
+
+
 def main():
     base = {name: json.loads((ROOT / "data" / f"{name}.json").read_text(encoding="utf-8"))
-            for name in ("rules", "sources", "kw_sources", "rule_fallback", "bloom_src")}
+            for name in ("rules", "sources", "specimens", "kw_sources", "rule_fallback", "bloom_src")}
 
     passed, failed = 0, 0
     for name, mutate, expect_fail in CASES:

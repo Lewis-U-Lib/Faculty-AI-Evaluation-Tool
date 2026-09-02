@@ -25,7 +25,23 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "registry",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Both DOIs return 404 from Crossref, DataCite and doi.org, so the stated defect 'neither DOI resolves' holds. Roediger confirmed as a central author in the retrieval-practice and testing-effect literature, so the real-author anchor is real. The fabricated article title returns no Crossref match."
+  },
+  "defect_class_source": [
+   "gamba2025cap",
+   "hossain2025scihallu",
+   "li2024hallu"
+  ],
+  "sun2024": {
+   "first": "Unfounded fabrication",
+   "second": "False academic information"
+  }
  },
  {
   "id": "cite-02",
@@ -53,7 +69,23 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "registry",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "No Crossref match for the described trial. Journal of Advanced Nursing is a real journal publishing in this area, so the institutional anchor holds."
+  },
+  "defect_class_source": [
+   "gamba2025cap",
+   "hossain2025scihallu",
+   "li2024hallu"
+  ],
+  "sun2024": {
+   "first": "Unfounded fabrication",
+   "second": "False academic information"
+  }
  },
  {
   "id": "cite-03",
@@ -81,7 +113,23 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "registry",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Head and Eisenberg confirmed as the real authors behind Project Information Literacy. The fabricated article title returns no Crossref match. College & Research Libraries is real and volume 81 corresponds to 2020, so the frame is plausible as intended."
+  },
+  "defect_class_source": [
+   "gamba2025cap",
+   "hossain2025scihallu",
+   "li2024hallu"
+  ],
+  "sun2024": {
+   "first": "Unfounded fabrication",
+   "second": "False academic information"
+  }
  },
  {
   "id": "cite-04",
@@ -108,7 +156,23 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "registry",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "No Crossref match for Kowalski and Petrov in Physical Review B, 1987. The journal is real. The specimen is deliberately unfalsifiable in its own terms, which is the point."
+  },
+  "defect_class_source": [
+   "gamba2025cap",
+   "hossain2025scihallu",
+   "li2024hallu"
+  ],
+  "sun2024": {
+   "first": "Unfounded fabrication",
+   "second": "False academic information"
+  }
  },
  {
   "id": "cite-05",
@@ -136,7 +200,23 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Outside in the Teaching Machine confirmed as a real 1993 Spivak book. 'The Politics of Untranslatability' is the subtitle of Emily Apter's Against World Literature (Verso, 2013), not a Spivak essay. Sharper than the annotation states: the real Spivak essay inside Teaching Machine is 'The Politics of Translation', so the fabricated title sits one word from a real essay by the cited author."
+  },
+  "defect_class_source": [
+   "gamba2025cap",
+   "hossain2025scihallu",
+   "li2024hallu"
+  ],
+  "sun2024": {
+   "first": "Unfounded fabrication",
+   "second": "False academic information"
+  }
  },
  {
   "id": "cite-06",
@@ -164,7 +244,23 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "unverifiable",
+   "method": "registry",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "A specific McKinsey Global Institute report cannot be proven non-existent by registry lookup, because gray literature is not indexed that way. The negative claim is plausible but unconfirmed. Treat as unverified when teaching from it."
+  },
+  "defect_class_source": [
+   "gamba2025cap",
+   "hossain2025scihallu",
+   "li2024hallu"
+  ],
+  "sun2024": {
+   "first": "Unfounded fabrication",
+   "second": "False academic information"
+  }
  },
  {
   "id": "bias-01",
@@ -192,7 +288,21 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "needs_domain_review",
+   "method": "none",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Not checkable by registry lookup or computation. The claims are linguistic, disciplinary or legal and need a reader with the relevant domain. Sound as written on inspection, but unverified."
+  },
+  "defect_class_source": [
+   "benjamin2019"
+  ],
+  "sun2024": {
+   "first": "Other errors",
+   "second": "Discrimination"
+  }
  },
  {
   "id": "bias-02",
@@ -203,7 +313,7 @@
   "specimen": "The classic presentation involves crushing substernal chest pain radiating to the left arm or jaw, often accompanied by diaphoresis and shortness of breath. The patient typically reports the pain as an elephant sitting on the chest. Onset is frequently associated with exertion.",
   "defects": [
    "The description is clinically accurate for the male-pattern presentation and presents it as 'the classic presentation' without qualification.",
-   "Women more frequently present with fatigue, nausea, jaw or back pain, and dyspnea without the classic chest pain, and this is omitted entirely.",
+   "Women more frequently than men present with fatigue, nausea, jaw or back pain and dyspnea, and more often without the classic chest pain, and this is omitted entirely. Most women having an MI do still report chest pain; the difference is comparative, not absolute.",
    "The omission is the defect. Nothing stated is false, which is what makes it dangerous.",
    "A student who studies this as 'the' presentation is being trained toward a documented diagnostic disparity."
   ],
@@ -220,7 +330,21 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "partial",
+   "method": "literature",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Clinically supported. The AHA scientific statement on acute MI in women confirms women more often present with nausea or vomiting, upper back, neck or jaw pain, dyspnea and unusual fatigue, and that awareness gaps drive diagnostic delay. One wording correction applied this pass: the literature also holds that most women having an MI do report chest pain, so the comparison is now explicitly to men rather than absolute."
+  },
+  "defect_class_source": [
+   "benjamin2019"
+  ],
+  "sun2024": {
+   "first": "Other errors",
+   "second": "Discrimination"
+  }
  },
  {
   "id": "bias-03",
@@ -247,7 +371,21 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "needs_domain_review",
+   "method": "none",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Not checkable by registry lookup or computation. The claims are linguistic, disciplinary or legal and need a reader with the relevant domain. Sound as written on inspection, but unverified."
+  },
+  "defect_class_source": [
+   "benjamin2019"
+  ],
+  "sun2024": {
+   "first": "Other errors",
+   "second": "Discrimination"
+  }
  },
  {
   "id": "bias-04",
@@ -275,7 +413,21 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "needs_domain_review",
+   "method": "none",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Not checkable by registry lookup or computation. The claims are linguistic, disciplinary or legal and need a reader with the relevant domain. Sound as written on inspection, but unverified."
+  },
+  "defect_class_source": [
+   "benjamin2019"
+  ],
+  "sun2024": {
+   "first": "Other errors",
+   "second": "Discrimination"
+  }
  },
  {
   "id": "bias-05",
@@ -302,7 +454,21 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "needs_domain_review",
+   "method": "none",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Not checkable by registry lookup or computation. The claims are linguistic, disciplinary or legal and need a reader with the relevant domain. Sound as written on inspection, but unverified."
+  },
+  "defect_class_source": [
+   "benjamin2019"
+  ],
+  "sun2024": {
+   "first": "Other errors",
+   "second": "Discrimination"
+  }
  },
  {
   "id": "bias-06",
@@ -330,7 +496,21 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "needs_domain_review",
+   "method": "none",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Not checkable by registry lookup or computation. The claims are linguistic, disciplinary or legal and need a reader with the relevant domain. Sound as written on inspection, but unverified."
+  },
+  "defect_class_source": [
+   "benjamin2019"
+  ],
+  "sun2024": {
+   "first": "Other errors",
+   "second": "Discrimination"
+  }
  },
  {
   "id": "bias-07",
@@ -358,7 +538,21 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "needs_domain_review",
+   "method": "none",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Not checkable by registry lookup or computation. The claims are linguistic, disciplinary or legal and need a reader with the relevant domain. Sound as written on inspection, but unverified."
+  },
+  "defect_class_source": [
+   "benjamin2019"
+  ],
+  "sun2024": {
+   "first": "Other errors",
+   "second": "Discrimination"
+  }
  },
  {
   "id": "bias-08",
@@ -386,7 +580,21 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "needs_domain_review",
+   "method": "none",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Not checkable by registry lookup or computation. The claims are linguistic, disciplinary or legal and need a reader with the relevant domain. Sound as written on inspection, but unverified."
+  },
+  "defect_class_source": [
+   "benjamin2019"
+  ],
+  "sun2024": {
+   "first": "Other errors",
+   "second": "Discrimination"
+  }
  },
  {
   "id": "trans-01",
@@ -413,7 +621,21 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "needs_domain_review",
+   "method": "none",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Not checkable by registry lookup or computation. The claims are linguistic, disciplinary or legal and need a reader with the relevant domain. Sound as written on inspection, but unverified."
+  },
+  "defect_class_source": [
+   "alansari2026"
+  ],
+  "sun2024": {
+   "first": "Text output errors",
+   "second": "Translation errors"
+  }
  },
  {
   "id": "trans-02",
@@ -441,7 +663,21 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "needs_domain_review",
+   "method": "none",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Not checkable by registry lookup or computation. The claims are linguistic, disciplinary or legal and need a reader with the relevant domain. Sound as written on inspection, but unverified."
+  },
+  "defect_class_source": [
+   "alansari2026"
+  ],
+  "sun2024": {
+   "first": "Text output errors",
+   "second": "Translation errors"
+  }
  },
  {
   "id": "trans-03",
@@ -469,7 +705,21 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "needs_domain_review",
+   "method": "none",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Not checkable by registry lookup or computation. The claims are linguistic, disciplinary or legal and need a reader with the relevant domain. Sound as written on inspection, but unverified."
+  },
+  "defect_class_source": [
+   "alansari2026"
+  ],
+  "sun2024": {
+   "first": "Text output errors",
+   "second": "Translation errors"
+  }
  },
  {
   "id": "trans-04",
@@ -496,7 +746,21 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "needs_domain_review",
+   "method": "none",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Not checkable by registry lookup or computation. The claims are linguistic, disciplinary or legal and need a reader with the relevant domain. Sound as written on inspection, but unverified."
+  },
+  "defect_class_source": [
+   "alansari2026"
+  ],
+  "sun2024": {
+   "first": "Text output errors",
+   "second": "Translation errors"
+  }
  },
  {
   "id": "quant-01",
@@ -523,7 +787,21 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "computation",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Negative control verified error-free. Weights sum to exactly 1.00; the four products are 17.60, 18.50, 22.75 and 24.60; the total is exactly 83.45 as stated."
+  },
+  "defect_class_source": [
+   "gamba2025cap"
+  ],
+  "sun2024": {
+   "first": "Mathematical errors",
+   "second": "Calculation errors"
+  }
  },
  {
   "id": "quant-02",
@@ -550,7 +828,21 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "computation",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Two-tailed p for t(48) = 2.31 computes to 0.02523, so the reported 0.025 is correct and the annotation's claim that a numeric check passes cleanly is itself verified. The stated defects are conceptual, not arithmetic."
+  },
+  "defect_class_source": [
+   "gamba2025cap"
+  ],
+  "sun2024": {
+   "first": "Mathematical errors",
+   "second": "Conceptual errors"
+  }
  },
  {
   "id": "quant-03",
@@ -578,7 +870,21 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "computation",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Arithmetic correct at every step: 44 / 2.2 = 20 kg, 20 x 15 = 300 mg, 300 x 3 = 900 mg. The defect is the omitted ceiling and concentration checks, as annotated."
+  },
+  "defect_class_source": [
+   "gamba2025cap"
+  ],
+  "sun2024": {
+   "first": "Mathematical errors",
+   "second": "Calculation errors"
+  }
  },
  {
   "id": "conf-01",
@@ -605,7 +911,22 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "needs_domain_review",
+   "method": "none",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Not checkable by registry lookup or computation. The claims are linguistic, disciplinary or legal and need a reader with the relevant domain. Sound as written on inspection, but unverified."
+  },
+  "defect_class_source": [
+   "shoufan2026",
+   "li2024hallu"
+  ],
+  "sun2024": {
+   "first": "Overfitting",
+   "second": "Illusions of confidence"
+  }
  },
  {
   "id": "conf-02",
@@ -632,7 +953,22 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "The meshing hypothesis is unsupported in the research literature. Anchored to Pashler et al. (2008) 'Learning Styles' and Rohrer & Pashler (2012) 'Learning styles: where's the evidence?'. The annotation is accurate."
+  },
+  "defect_class_source": [
+   "shoufan2026",
+   "li2024hallu"
+  ],
+  "sun2024": {
+   "first": "Overfitting",
+   "second": "Illusions of confidence"
+  }
  },
  {
   "id": "conf-03",
@@ -659,7 +995,22 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "needs_domain_review",
+   "method": "none",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Not checkable by registry lookup or computation. The claims are linguistic, disciplinary or legal and need a reader with the relevant domain. Sound as written on inspection, but unverified."
+  },
+  "defect_class_source": [
+   "shoufan2026",
+   "li2024hallu"
+  ],
+  "sun2024": {
+   "first": "Overfitting",
+   "second": "Illusions of confidence"
+  }
  },
  {
   "id": "conf-04",
@@ -686,6 +1037,1002 @@
   "constructed_date": "2026-08",
   "model": null,
   "model_version": null,
-  "captured_date": null
+  "captured_date": null,
+  "verification": {
+   "status": "needs_domain_review",
+   "method": "none",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Not checkable by registry lookup or computation. The claims are linguistic, disciplinary or legal and need a reader with the relevant domain. Sound as written on inspection, but unverified."
+  },
+  "defect_class_source": [
+   "shoufan2026",
+   "li2024hallu"
+  ],
+  "sun2024": {
+   "first": "Overfitting",
+   "second": "Illusions of confidence"
+  }
+ },
+ {
+  "id": "entity-01",
+  "defect_class": "entity_error",
+  "domain": "library_instruction",
+  "difficulty": "introductory",
+  "scenario": "A student asks a chatbot who developed a framework their instructor mentioned.",
+  "specimen": "The SIFT method for evaluating online sources was developed by Michael Caulfield, a researcher at Stanford University's History Education Group. The four moves are Stop, Investigate the source, Find better coverage, and Trace claims to the original context.",
+  "defects": [
+   "Three of the four elements are correct: Caulfield is the right person, SIFT is the right name, and the four moves are accurately stated.",
+   "The institutional affiliation is wrong. Caulfield's work is associated with Washington State University Vancouver and later the University of Washington, not Stanford's History Education Group.",
+   "Stanford's History Education Group is a real group doing adjacent work on civic online reasoning, which is precisely why the substitution is hard to catch.",
+   "A single swapped entity inside otherwise accurate output is the hardest error class to see, because the surrounding correctness raises confidence in the whole."
+  ],
+  "verification_path": "Look up Caulfield's affiliation directly. Then look up Stanford History Education Group and note that it is real and works on a related problem — the error is a swap between two real things, not an invention.",
+  "teaching_note": "This is an entity-error hallucination in the sense used by Li et al.: the statement is structurally correct but one entity is replaced by a plausible neighbour. Students who have been taught to check whether a name is real will pass this specimen, because every name in it is real. The check that catches it is whether the named things go together.",
+  "serves": [
+   "Verification Bench",
+   "SIFT instruction"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Caulfield's institutional affiliation and the four SIFT moves confirmed against his own published work; Stanford History Education Group confirmed as a real group working on civic online reasoning. The defect is a real-to-real substitution, as annotated."
+  },
+  "defect_class_source": [
+   "li2024hallu"
+  ],
+  "sun2024": {
+   "first": "Factual errors",
+   "second": "Objective fact errors"
+  }
+ },
+ {
+  "id": "relation-01",
+  "defect_class": "relation_error",
+  "domain": "nursing",
+  "difficulty": "intermediate",
+  "scenario": "A nursing student asks about the relationship between two things covered in a pharmacology unit.",
+  "specimen": "Grapefruit juice inhibits CYP3A4 in the intestinal wall, which increases the metabolism of certain statins and therefore lowers their plasma concentration. Patients should be advised that the interaction reduces the drug's effect.",
+  "defects": [
+   "Every entity is correct: grapefruit juice, CYP3A4, intestinal wall, statins are all real and correctly named, and the interaction genuinely exists.",
+   "The causal relation is inverted. Inhibiting CYP3A4 DECREASES metabolism, which RAISES plasma concentration and increases the risk of adverse effects.",
+   "The clinical advice that follows is therefore backwards in a way that matters.",
+   "The output is fluent and uses the correct technical vocabulary throughout, which is what makes the inversion pass casual reading."
+  ],
+  "verification_path": "Check the direction of the effect in any pharmacology reference. The question to ask is not 'are these the right terms' but 'does the arrow point the right way'.",
+  "teaching_note": "A relation-error hallucination keeps the entities and reverses the link between them. It is especially dangerous in clinical content because the vocabulary check passes completely. This specimen pairs well with entity-01: one swaps a noun, the other swaps a direction, and neither is caught by asking whether the terms are real.",
+  "serves": [
+   "Verification Bench",
+   "clinical reasoning"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "The direction of the grapefruit–CYP3A4–statin interaction confirmed against standard pharmacology references: inhibition reduces metabolism and raises plasma concentration. The specimen states the inverse, as the defect annotation describes."
+  },
+  "defect_class_source": [
+   "li2024hallu"
+  ],
+  "sun2024": {
+   "first": "Logic errors",
+   "second": "Causal uncorrelation"
+  }
+ },
+ {
+  "id": "incomplete-01",
+  "defect_class": "incompleteness",
+  "domain": "library_instruction",
+  "difficulty": "introductory",
+  "scenario": "A student asks for a complete list and receives a partial one presented as complete.",
+  "specimen": "Here are the five moves in the SIFT framework:\n\n1. Stop\n2. Investigate the source\n3. Find better coverage\n\nThese five moves give you a complete toolkit for evaluating any source you encounter online.",
+  "defects": [
+   "The output announces five items, delivers three, and then reasserts five in the closing line.",
+   "Each of the three delivered items is correct.",
+   "The framing sentences do the damage: a student skimming for the list may not count it.",
+   "SIFT genuinely has four moves, so both the announced number and the delivered number are wrong, in opposite directions."
+  ],
+  "verification_path": "Count the items. Then check the real number against the source. Two separate checks are required and most readers do neither.",
+  "teaching_note": "Incompleteness hallucination is the class students are least likely to name as a hallucination at all, because nothing stated is false. Li et al. treat factual incompleteness as a distinct type for exactly this reason. Worth running immediately after a specimen where something IS false, so the contrast is visible.",
+  "serves": [
+   "Verification Bench",
+   "SIFT instruction"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "SIFT confirmed as a four-move framework. The specimen's internal arithmetic failure — announcing five, listing three — is self-evident and requires no external check."
+  },
+  "defect_class_source": [
+   "li2024hallu",
+   "kamel2024"
+  ],
+  "sun2024": {
+   "first": null,
+   "second": null,
+   "note": "No category in Sun et al. (2024) corresponds. Empirically grounded instead by Kamel (2024), whose NGU survey reports omissions as the second most common hallucination type encountered (28.8%)."
+  }
+ },
+ {
+  "id": "outdated-01",
+  "defect_class": "outdatedness",
+  "domain": "library_instruction",
+  "difficulty": "intermediate",
+  "scenario": "A student asks a chatbot where to send someone for eating-disorder support.",
+  "specimen": "For eating disorder support, refer students to the National Eating Disorders Association (NEDA) helpline, which offers phone and text support staffed by trained volunteers.",
+  "defects": [
+   "NEDA is a real organization and the description of the service is accurate for the period the model learned it.",
+   "The helpline was discontinued, so the referral sends a student in distress to a number that does not answer.",
+   "Nothing in the output signals that the information has a shelf life.",
+   "This is the failure mode with the shortest path to real harm in the whole bank, which is why it belongs in a referral-skills unit rather than a citation unit."
+  ],
+  "verification_path": "Call or visit the service before referring anyone to it. For any referral, currency is not a nice-to-have check; it is the check.",
+  "teaching_note": "Outdatedness hallucination is content that was true and has expired. Li et al. attribute it to training on time-limited corpora. For library and advising staff it is the most operationally relevant type, because referral information ages quietly and the model has no signal that it has. Use this specimen to make the point that 'is it true' and 'is it true now' are different questions.",
+  "serves": [
+   "Verification Bench",
+   "referral skills",
+   "student support"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "NEDA helpline discontinuation confirmed. The specimen describes the service as active, which is the outdatedness defect. Instructors using this specimen should have a current referral to hand."
+  },
+  "defect_class_source": [
+   "li2024hallu"
+  ],
+  "sun2024": {
+   "first": "Factual errors",
+   "second": "Objective fact errors"
+  }
+ },
+ {
+  "id": "overclaim-01",
+  "defect_class": "overclaim",
+  "domain": "education",
+  "difficulty": "intermediate",
+  "scenario": "A faculty member asks whether a teaching technique works.",
+  "specimen": "Retrieval practice is the single most effective study technique available, and it reliably produces large learning gains in every subject area and at every level of prior knowledge. Any course that does not use it is leaving learning on the table.",
+  "defects": [
+   "The underlying claim is real: retrieval practice is genuinely well supported.",
+   "The scope is inflated past what the evidence supports — 'single most effective', 'every subject area', 'every level of prior knowledge', 'any course'.",
+   "No boundary conditions, no contexts where the effect is smaller, no acknowledgment that effect sizes vary by material and by learner.",
+   "Because the core is true, a student checking whether retrieval practice works will confirm it and stop, never testing the quantifiers."
+  ],
+  "verification_path": "Separate the claim from its scope. Verify the claim, then ask specifically what evidence supports the words 'every' and 'single most'.",
+  "teaching_note": "Overclaim hallucination extends a true statement beyond the scale of the knowledge behind it. It is the hardest type to teach because the verification instinct students already have — check whether it's true — returns a positive result. The skill is checking the quantifier, not the claim.",
+  "serves": [
+   "Verification Bench",
+   "pedagogy"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Retrieval practice confirmed as well supported in the learning-science literature; the specimen's unbounded quantifiers are the constructed defect. No fabricated source is involved."
+  },
+  "defect_class_source": [
+   "li2024hallu"
+  ],
+  "sun2024": {
+   "first": "Overfitting",
+   "second": "Illusions of confidence"
+  }
+ },
+ {
+  "id": "unverif-01",
+  "defect_class": "unverifiability",
+  "domain": "library_instruction",
+  "difficulty": "advanced",
+  "scenario": "A student asks for evidence supporting a claim in their draft.",
+  "specimen": "Several institutional studies have found that students who receive embedded library instruction in their first year show measurably higher retention rates than those who do not. This finding is well documented in the assessment literature.",
+  "defects": [
+   "No study is named, no institution, no year, no author, no number.",
+   "The claim is framed as settled and documented while supplying nothing that could be looked up.",
+   "There is no way to determine whether it is true or false from the output alone, which is what distinguishes unverifiability from fabrication.",
+   "A fabricated citation can be checked and found missing. This cannot be checked at all, so it survives a verification step that a fabricated citation would fail."
+  ],
+  "verification_path": "Try to verify it. The point of the exercise is that you cannot, and that the inability to check is itself the finding. Then ask what a checkable version of the same sentence would look like.",
+  "teaching_note": "Li et al. treat unverifiability as separate from fabrication, and the distinction is worth teaching. Students trained only to check citations will rate this output as clean, because there is no citation to catch. The move is to notice the absence.",
+  "serves": [
+   "Verification Bench",
+   "source evaluation"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "No external verification applies. The specimen contains no checkable claim by construction, which is the defect it exhibits."
+  },
+  "defect_class_source": [
+   "li2024hallu"
+  ],
+  "sun2024": {
+   "first": null,
+   "second": null,
+   "note": "No category in Sun et al. (2024) corresponds; this class comes from later literature (Li et al. 2024 / Shoufan & Esmaeil 2026) and extends the typology."
+  }
+ },
+ {
+  "id": "assume-01",
+  "defect_class": "prompt_assumption_expansion",
+  "domain": "writing_instruction",
+  "difficulty": "intermediate",
+  "scenario": "A student asks for help narrowing a research topic and does not say what field they are in.",
+  "specimen": "Great topic! For your psychology paper, I'd narrow 'social media and wellbeing' to something like: 'The effect of Instagram use on adolescent self-esteem in the United States, 2015–2020.' This gives you a clear population, platform, and timeframe, and there's plenty of quantitative literature for your lit review and methods section.",
+  "defects": [
+   "The student never said psychology, never said quantitative, never said United States, and never mentioned a methods section.",
+   "Four unstated assumptions are introduced and then built upon as though the student had supplied them.",
+   "The advice is competent given those assumptions, which is what makes it persuasive.",
+   "A student who accepts it inherits a discipline and a methodology they did not choose."
+  ],
+  "verification_path": "Underline every specific detail in the response and check each against your actual prompt. Anything you did not say is an assumption the model added.",
+  "teaching_note": "Shoufan and Esmaeil report this pattern directly from students, one describing output that fills in assumptions the prompter never included. It is not a factuality error — everything here could be true — which is why it belongs in the bank as its own class. The underline-and-compare exercise is the whole lesson and takes two minutes.",
+  "serves": [
+   "Verification Bench",
+   "research consultation",
+   "prompting instruction"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Grounded in Shoufan & Esmaeil (2026), which reports students describing outputs that expand the prompt by introducing assumptions the student had not made. The specimen is constructed to exhibit that pattern; no text was taken from the paper."
+  },
+  "defect_class_source": [
+   "shoufan2026"
+  ],
+  "sun2024": {
+   "first": null,
+   "second": null,
+   "note": "No category in Sun et al. (2024) corresponds; this class comes from later literature (Li et al. 2024 / Shoufan & Esmaeil 2026) and extends the typology."
+  }
+ },
+ {
+  "id": "domain-01",
+  "defect_class": "confident_wrong",
+  "domain": "interdisciplinary",
+  "difficulty": "advanced",
+  "scenario": "The same student evaluates two outputs, one in their major and one outside it.",
+  "specimen": "OUTPUT A (student's field, nursing): 'Normal adult resting heart rate is 100–140 bpm.'\n\nOUTPUT B (outside the student's field, musicology): 'The Phrygian mode is characterised by a raised second scale degree, which gives it the distinctive bright quality heard in much Andalusian folk music.'",
+  "defects": [
+   "Output A is obviously wrong to a nursing student; normal adult resting heart rate is roughly 60–100 bpm.",
+   "Output B is also wrong — the Phrygian mode is characterised by a LOWERED second degree, and the resulting quality is usually described as dark rather than bright.",
+   "Both errors are of comparable magnitude and both are stated with identical confidence.",
+   "Most students catch A instantly and accept B without hesitation."
+  ],
+  "verification_path": "Check both. Then notice which one you checked first, and why. The order in which you reached for verification is the data this specimen is collecting.",
+  "teaching_note": "Shoufan and Esmaeil find that students identify obvious errors in familiar academic contexts while missing subtle hallucinations in unfamiliar domains — precisely where AI assistance is most used and verification is hardest. This specimen is built to make that asymmetry visible to the student in real time rather than telling them about it. Run it before any lecture on verification, not after.",
+  "serves": [
+   "Verification Bench",
+   "cross-disciplinary instruction"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Normal adult resting heart rate confirmed as approximately 60–100 bpm. The Phrygian mode confirmed as having a lowered (minor) second degree, conventionally described as dark; the specimen states the inverse on both counts, as annotated."
+  },
+  "defect_class_source": [
+   "shoufan2026"
+  ],
+  "sun2024": {
+   "first": "Overfitting",
+   "second": "Illusions of confidence"
+  }
+ },
+ {
+  "id": "trans-05",
+  "defect_class": "translation_loss",
+  "domain": "world_languages",
+  "difficulty": "intermediate",
+  "scenario": "A student encounters an Arabic proverb in a source and asks a chatbot what it means.",
+  "specimen": "Source: على قد لحافك مد رجليك\nTranslation offered: 'Stretch your legs as far as your blanket extends.'\nInterpretation offered: 'This is an invitation to relax and get comfortable — the Arabic equivalent of telling someone to put their feet up.'",
+  "defects": [
+   "The literal rendering is accurate. The interpretation is not: the proverb counsels living within one's means and not exceeding one's resources.",
+   "The error is generated by English. 'Stretch your legs' in English suggests rest or a short walk, and that reading pulls the interpretation away from the Arabic sense of measuring oneself against what one has.",
+   "Because the translation step is correct, a student who verifies the translation will confirm it and stop before reaching the error.",
+   "The gloss is delivered with a confident cultural framing — 'the Arabic equivalent of' — and no hedge."
+  ],
+  "verification_path": "Translate the words, then look the phrase up as a proverb. These are two different checks and only the second one catches this. Any standard Arabic idiom reference gives the meaning as living within your means; the usual English counterpart is 'cut your coat according to your cloth'.",
+  "teaching_note": "Alansari and Luqman report that Arabic models fail on culturally grounded expressions such as proverbs and idiomatic sayings, where correct interpretation requires cultural and contextual knowledge rather than literal translation, and that the failures divide into unrelated interpretations and partially correct ones. This specimen is constructed to exhibit that pattern using a different proverb; nothing was taken from their benchmark, which is not openly licensed. Pair it with trans-02: there an English idiom REPLACED the source imagery, while here the imagery survives translation and the English reading of it corrupts the meaning. Same class, opposite mechanism.",
+  "serves": [
+   "Verification Bench",
+   "translation instruction",
+   "world languages"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "needs_domain_review",
+   "method": "literature",
+   "checked_date": "2026-09-01",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "The literal rendering and the 'live within your means' sense were confirmed across several independent Arabic idiom references, and 'cut your coat according to your cloth' is the commonly given English counterpart. The misinterpretation in the specimen is constructed, not attested. An Arabic-speaking reader should confirm register and regional currency before classroom use, as with trans-02."
+  },
+  "defect_class_source": [
+   "alansari2026"
+  ],
+  "sun2024": {
+   "first": "Text output errors",
+   "second": "Translation errors"
+  }
+ },
+ {
+  "id": "lit-01",
+  "defect_class": "confident_wrong",
+  "sun2024": {
+   "first": "Factual errors",
+   "second": "Objective fact errors"
+  },
+  "domain": "history",
+  "difficulty": "introductory",
+  "scenario": "A user reports what an AI study-app told them. Documented instance: Gambo et al. (2025), Table 5, review REV001.",
+  "specimen": "User review, reproduced from Gambo et al. (2025), CC BY 4.0: “The AI chatbot gave me completely wrong historical dates.”",
+  "defects": [
+   "This is a real user report, not a construction. The paper annotates it as Factual Incorrectness, its most common category at 38% of 350 reports.",
+   "The user could tell the dates were wrong, which means the user already knew them. Errors in unfamiliar material go unreported by the same mechanism.",
+   "Sun et al. would file this under Factual errors / Objective fact errors: time, place, person, or data about a real event."
+  ],
+  "verification_path": "Ask what the user must have known to write this review. Then ask what the same app said about dates the user did not know.",
+  "teaching_note": "The first specimen in the bank that is a captured artifact rather than a construction — a user's own words, reproduced under CC BY. Gambo et al. find factual incorrectness is what users report most, and note users treat assistants as retrieval engines. Pair with domain-01: this review is the familiar-domain half of that asymmetry, observed in the wild.",
+  "serves": [
+   "Verification Bench",
+   "detection asymmetry"
+  ],
+  "provenance": "captured_from_literature",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-02",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Quoted verbatim from Gambo et al. (2025) Table 5, REV001, under CC BY 4.0 with attribution. Category assignment is the paper's own."
+  },
+  "defect_class_source": [
+   "gambo2025",
+   "sun2024"
+  ],
+  "instance_source": "gambo2025"
+ },
+ {
+  "id": "lit-02",
+  "defect_class": "confident_wrong",
+  "sun2024": {
+   "first": "Text output errors",
+   "second": "Repetition and redundancy"
+  },
+  "domain": "creative_writing",
+  "difficulty": "introductory",
+  "scenario": "A user asked an AI writing app for a poem. Documented instance: Gambo et al. (2025), Table 5, review REV002.",
+  "specimen": "User review, reproduced from Gambo et al. (2025), CC BY 4.0: “Asked the AI to write a poem, and it just repeated ’cat’ 10 times.”",
+  "defects": [
+   "Real user report. The paper files it as Nonsensical Output; Sun et al.'s scheme places degenerate repetition under Text output errors.",
+   "Nothing here is false. The failure is a collapse of generation, not of fact — which is why students rarely call it a hallucination.",
+   "It is also the easiest error class to catch and the one with the least pedagogical value on its own; its use is as a contrast case."
+  ],
+  "verification_path": "No verification needed — the failure is visible. Ask instead why this one is obvious and the previous one was not.",
+  "teaching_note": "Sun et al. observe that text-output and logic failures are the easiest for users to detect because they depart from ordinary human output. Run this immediately after lit-01 to make the detectability gradient visible: same app class, same user population, opposite ease of detection.",
+  "serves": [
+   "Verification Bench",
+   "detectability gradient"
+  ],
+  "provenance": "captured_from_literature",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-02",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Quoted verbatim from Gambo et al. (2025) Table 5, REV002, under CC BY 4.0 with attribution."
+  },
+  "defect_class_source": [
+   "gambo2025",
+   "sun2024"
+  ],
+  "instance_source": "gambo2025"
+ },
+ {
+  "id": "lit-03",
+  "defect_class": "quantitative_error",
+  "sun2024": {
+   "first": "Mathematical errors",
+   "second": "Conceptual errors"
+  },
+  "domain": "mathematics",
+  "difficulty": "intermediate",
+  "scenario": "A student asks for prime numbers after confirming the definition. Documented pattern: Sun et al. (2024), Discussion, Mathematical errors.",
+  "specimen": "Q: What is a prime number?\nA: A prime number is a natural number greater than 1 with no positive divisors other than 1 and itself.\nQ: List five prime numbers between 20 and 40.\nA: 21, 23, 27, 29, 31.",
+  "defects": [
+   "The definition is correct. Two of the five listed numbers violate it: 21 = 3 × 7 and 27 = 3 × 3 × 3.",
+   "Sun et al. document exactly this pattern — a correct definition of primes followed by enumeration of non-primes as primes — as their illustration of a conceptual mathematical error.",
+   "The correct definition raises confidence in the list that follows it. Students check the definition, find it right, and do not check the list against it.",
+   "This specimen is constructed to the documented pattern; the numbers are ours."
+  ],
+  "verification_path": "Apply the definition the model just gave to each number it listed. The check takes seconds and the model's own answer supplies the test.",
+  "teaching_note": "Sun et al. distinguish conceptual mathematical errors from calculation errors and warn that a user needs the concept to catch them. Here the concept is supplied in the same output, so the specimen isolates the habit: does the student apply a stated rule to the list that follows it?",
+  "serves": [
+   "Verification Bench",
+   "quantitative literacy"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "computation",
+   "checked_date": "2026-09-02",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "21 = 3×7 and 27 = 3³; 23, 29, 31 are prime. Pattern documented in Sun et al. (2024) Discussion; example numbers constructed."
+  },
+  "defect_class_source": [
+   "sun2024"
+  ],
+  "instance_source": "sun2024"
+ },
+ {
+  "id": "lit-04",
+  "defect_class": "confident_wrong",
+  "sun2024": {
+   "first": "Overfitting",
+   "second": "Falling into traps"
+  },
+  "domain": "library_instruction",
+  "difficulty": "intermediate",
+  "scenario": "A student pushes back on a correct answer. Documented pattern: Sun et al. (2024), Discussion, Overfitting.",
+  "specimen": "Q: When was the Dewey Decimal system first published?\nA: 1876.\nQ: I'm pretty sure it was 1896.\nA: I'm sorry, you're right — the Dewey Decimal Classification was first published in 1896. I apologize for the confusion.",
+  "defects": [
+   "The first answer is correct. The model abandons it the moment the user disagrees, with no new evidence offered.",
+   "Sun et al. describe this pattern: when challenged, the system acknowledges the user's viewpoint and apologizes, typically opening with a fixed phrase, without identifying any actual error in the user's claim.",
+   "The apology is the tell. It is a speech template, not a correction, and it does not reference anything the user said.",
+   "The user's wrong date is now confirmed by an authority-sounding source, and the user's confidence has gone up."
+  ],
+  "verification_path": "Push back on a correct answer with a wrong one and watch what happens. If the model folds without evidence, it will fold on your wrong answers too. Sun et al. recommend exactly this: continued questioning exposes the pattern.",
+  "teaching_note": "Sun et al. call the class Overfitting and note it is comparatively easy to detect across multiple turns. The exercise is to make students the detector — have them challenge a right answer and see the fold. Once seen, it is hard to un-see.",
+  "serves": [
+   "Verification Bench",
+   "conversational verification"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-02",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "DDC first published 1876 (Dewey, Amherst). The acquiescence pattern and its fixed opening phrase are documented in Sun et al. (2024) Discussion; the exchange is constructed."
+  },
+  "defect_class_source": [
+   "sun2024"
+  ],
+  "instance_source": "sun2024"
+ },
+ {
+  "id": "lit-05",
+  "defect_class": "confident_wrong",
+  "sun2024": {
+   "first": "Factual errors",
+   "second": "Objective fact errors"
+  },
+  "domain": "astronomy",
+  "difficulty": "introductory",
+  "scenario": "A chatbot answers a question about a famous telescope. Documented instance: cited in Hwang & Jeong (2025) as their opening example of AI hallucination.",
+  "specimen": "Q: What was the first image of a planet outside our solar system?\nA: The James Webb Space Telescope, launched in 2021, captured the first-ever image of an exoplanet.",
+  "defects": [
+   "Hwang and Jeong open their paper with this widely reported chatbot claim. The first direct image of an exoplanet was made in 2004, well before Webb's 2021 launch.",
+   "Two true facts — Webb launched in 2021, Webb images exoplanets — are joined into a false superlative.",
+   "The paper's finding matters more than the example: forewarning users about hallucination reduced acceptance of false statements (d = 0.45) without reducing acceptance of true ones.",
+   "Hwang & Jeong is not open access; this specimen paraphrases their cited example and reconstructs the exchange."
+  ],
+  "verification_path": "Search for the first direct image of an exoplanet. The year settles it. Then note that the claim was widely circulated before it was checked.",
+  "teaching_note": "Use this one to introduce the bank. Hwang and Jeong's experiment is the empirical case for the whole enterprise: telling people in advance that models hallucinate makes them better at catching false claims and no worse at accepting true ones. That is the outcome the specimen bank exists to produce.",
+  "serves": [
+   "Verification Bench",
+   "orientation",
+   "forewarning"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-02",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "First direct exoplanet image 2004 (2M1207b). The chatbot claim is cited in Hwang & Jeong (2025); the exchange is reconstructed, not quoted, because the paper is not openly licensed."
+  },
+  "defect_class_source": [
+   "hwang2025",
+   "sun2024"
+  ],
+  "instance_source": "hwang2025"
+ },
+ {
+  "id": "reasoning-spatial-01",
+  "defect_class": "reasoning_error",
+  "sun2024": {
+   "first": "Reasoning errors",
+   "second": "Spatial reasoning errors"
+  },
+  "domain": "library_wayfinding",
+  "difficulty": "introductory",
+  "scenario": "A student asks a library chatbot for directions after turning around.",
+  "specimen": "Q: I'm at the reference desk facing it, with the entrance behind me. Where are the periodicals?\nA: The periodicals are on your left.\nQ: OK, I've turned around to face the entrance. Where are they now?\nA: Still on your left — the periodicals haven't moved.",
+  "defects": [
+   "The periodicals haven't moved; the student has. A 180° turn swaps left and right, so they are now on the right.",
+   "The model treats a body-relative direction as if it were fixed to the room.",
+   "The second answer is confidently reasoned from a true premise ('haven't moved') to a false conclusion."
+  ],
+  "verification_path": "Stand up and do it. Face one way, note which side something is on, turn around. Spatial errors are the only class you can verify with your body.",
+  "teaching_note": "Sun et al. define spatial reasoning error as failure to track objects' locations in space. Borji's archive supplies the category. This one is nearly free to run and lands hard because everyone catches it physically and almost nobody catches it on the page.",
+  "serves": [
+   "Verification Bench",
+   "wayfinding"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "computation",
+   "checked_date": "2026-09-02",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Category documented in Sun et al. (2024), Table 4; example instances are in their Supplementary Table S4, not in the article PDF. This instance is constructed to the category. Correct answer verified: a half-turn exchanges the observer's left and right."
+  },
+  "defect_class_source": [
+   "sun2024"
+  ],
+  "instance_source": null
+ },
+ {
+  "id": "reasoning-temporal-01",
+  "defect_class": "reasoning_error",
+  "sun2024": {
+   "first": "Reasoning errors",
+   "second": "Temporal reasoning errors"
+  },
+  "domain": "library_instruction",
+  "difficulty": "intermediate",
+  "scenario": "A student asks a chatbot to trace how an idea developed across two papers.",
+  "specimen": "Q: How does Okafor (2019) build on Lindqvist (2022)?\nA: Okafor (2019) extends Lindqvist's 2022 framework by applying it to undergraduate populations, refining the original model in three ways.",
+  "defects": [
+   "A 2019 paper cannot build on a 2022 paper. The chronology in the question is impossible and the model reasons fluently inside it instead of flagging it.",
+   "The question was a trap, deliberately or not; the model fell in and generated a lineage that cannot exist.",
+   "Nothing in the answer is checkable except the dates, which is exactly the check students skip."
+  ],
+  "verification_path": "Read the years before the content. If the citing work predates the cited one, stop — the rest cannot be true. (Preprints are the one exception; check for one.)",
+  "teaching_note": "Sun et al. define temporal reasoning error as failure to reason about chronological order. The trap-question form pairs it with Overfitting / Falling into traps. Use it to teach that dates are a verification step, not metadata.",
+  "serves": [
+   "Verification Bench",
+   "citation lineage"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "computation",
+   "checked_date": "2026-09-02",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Category documented in Sun et al. (2024), Table 4; example instances are in their Supplementary Table S4, not in the article PDF. This instance is constructed to the category. The impossibility is arithmetic: 2019 < 2022. Author names are invented and chosen not to match real scholars in this area; a student should still confirm neither exists."
+  },
+  "defect_class_source": [
+   "sun2024"
+  ],
+  "instance_source": null
+ },
+ {
+  "id": "reasoning-physical-01",
+  "defect_class": "reasoning_error",
+  "sun2024": {
+   "first": "Reasoning errors",
+   "second": "Physical reasoning errors"
+  },
+  "domain": "science_tutoring",
+  "difficulty": "introductory",
+  "scenario": "A student asks a science tutoring chatbot a classic question.",
+  "specimen": "Q: A glass is filled to the brim with water and floating ice cubes. When the ice melts, does the glass overflow?\nA: Yes. Ice takes up more space than water, so as it melts the added water pushes the level over the rim.",
+  "defects": [
+   "The answer is wrong. Floating ice displaces exactly its own weight of water; when it melts it becomes that same weight of water and fills the space it displaced. The level does not change.",
+   "The premise the model reasons from ('ice takes up more space') is true. The inference from it is not — it ignores that the extra volume is already above the waterline.",
+   "This is a textbook Archimedes case and the model gives the intuitive wrong answer with the confidence of a textbook."
+  ],
+  "verification_path": "Fill a glass with ice water to the brim and wait. Then look up Archimedes' principle. Physical reasoning errors are refuted by physical objects.",
+  "teaching_note": "Sun et al. define physical reasoning error as failure to apply physical laws to predict system behavior. The value here is that the true premise makes the false conclusion feel earned.",
+  "serves": [
+   "Verification Bench",
+   "science literacy"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-02",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Category documented in Sun et al. (2024), Table 4; example instances are in their Supplementary Table S4, not in the article PDF. This instance is constructed to the category. Archimedes' principle: floating ice displaces its own weight of water; melting leaves the level unchanged (ignoring second-order thermal effects). Standard physics."
+  },
+  "defect_class_source": [
+   "sun2024"
+  ],
+  "instance_source": null
+ },
+ {
+  "id": "reasoning-psych-01",
+  "defect_class": "reasoning_error",
+  "sun2024": {
+   "first": "Reasoning errors",
+   "second": "Psychological reasoning errors"
+  },
+  "domain": "writing_center",
+  "difficulty": "intermediate",
+  "scenario": "A student asks a chatbot to help word a message.",
+  "specimen": "Q: Help me write to my professor. I've emailed three times about my grade and gotten nothing back, so I guess I'll just try again.\nA: Great idea! Here's an upbeat fourth email: 'Hi Professor! Just circling back with a quick reminder — excited to hear your thoughts on my grade whenever you get a chance!'",
+  "defects": [
+   "The student's message signals resignation and frustration ('gotten nothing back', 'I guess I'll just'). The model reads it as enthusiasm.",
+   "It also ignores the social fact three unanswered emails carry: a fourth in the same register is unlikely to work, and 'excited' after three silences reads as either oblivious or passive-aggressive.",
+   "A useful answer would name the pattern and suggest a different channel or a different tone. This one supplies the exact thing that has already failed, more cheerfully."
+  ],
+  "verification_path": "Before accepting drafted wording, ask: what is the person actually feeling, and what does the other party already know? If the draft ignores either, it is a psychological reasoning failure regardless of how polished it is.",
+  "teaching_note": "Sun et al. define psychological reasoning error as failure to understand and predict human behavior and mental states. Writing-support is where this bites for students, because the output is grammatical, warm, and wrong about people.",
+  "serves": [
+   "Verification Bench",
+   "writing support"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "needs_domain_review",
+   "method": "literature",
+   "checked_date": "2026-09-02",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Category documented in Sun et al. (2024), Table 4; example instances are in their Supplementary Table S4, not in the article PDF. This instance is constructed to the category. The misreading is designed, not attested. A writing-center reader should confirm the register reads as intended."
+  },
+  "defect_class_source": [
+   "sun2024"
+  ],
+  "instance_source": null
+ },
+ {
+  "id": "reasoning-interp-01",
+  "defect_class": "reasoning_error",
+  "sun2024": {
+   "first": "Reasoning errors",
+   "second": "Interpersonal reasoning error"
+  },
+  "domain": "critical_thinking",
+  "difficulty": "introductory",
+  "scenario": "A student tests a chatbot with a kinship riddle.",
+  "specimen": "Q: Maria's mother has three daughters. The first is named April, the second is named May. What is the third daughter's name?\nA: June.",
+  "defects": [
+   "The third daughter is Maria. The question states it in its first three words.",
+   "The model pattern-matches the sequence (April, May, ...) and ignores the relationship the sentence establishes.",
+   "Sun et al. added this category from their own data: failure to understand relationships between people, including blood relationships."
+  ],
+  "verification_path": "Draw the family. Two lines and three names settle it. Interpersonal errors are caught by making the relationship explicit rather than reading for the pattern.",
+  "teaching_note": "This is one of the four categories Sun et al. introduced during coding because existing schemes lacked it. The riddle form is old; the point for students is that the model's failure mode — sequence over structure — is the same one that produces plausible wrong lineages, wrong committee memberships, wrong 'who reports to whom'.",
+  "serves": [
+   "Verification Bench",
+   "critical thinking"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "computation",
+   "checked_date": "2026-09-02",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Category documented in Sun et al. (2024), Table 4; example instances are in their Supplementary Table S4, not in the article PDF. This instance is constructed to the category. Answer verified by reading: the mother is Maria's mother, so Maria is one of the three daughters."
+  },
+  "defect_class_source": [
+   "sun2024"
+  ],
+  "instance_source": null
+ },
+ {
+  "id": "reasoning-hypo-01",
+  "defect_class": "reasoning_error",
+  "sun2024": {
+   "first": "Reasoning errors",
+   "second": "Hypothetical reasoning error"
+  },
+  "domain": "philosophy",
+  "difficulty": "intermediate",
+  "scenario": "A student checks a syllogism with a chatbot.",
+  "specimen": "Q: All librarians are readers. Some readers are poets. Does it follow that some librarians are poets?\nA: Yes. Since librarians are readers and some readers are poets, some librarians must be among the poets.",
+  "defects": [
+   "It does not follow. The poets could all be readers who are not librarians. This is the fallacy of the undistributed middle.",
+   "The model treats 'some readers are poets' as if it said something about librarians. It doesn't.",
+   "The conclusion happens to be plausible in the world, which is what makes the invalid inference easy to accept."
+  ],
+  "verification_path": "Build a counterexample: a world where every librarian reads, the only poets are two non-librarian readers, and the conclusion is false while both premises are true. If you can build it, the argument is invalid.",
+  "teaching_note": "Sun et al. define hypothetical reasoning error as failure to deduce correctly inside a stipulated situation, including logic puzzles. The counterexample method is the whole lesson and transfers to every argument a student will ever evaluate.",
+  "serves": [
+   "Verification Bench",
+   "logic",
+   "philosophy"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "computation",
+   "checked_date": "2026-09-02",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Category documented in Sun et al. (2024), Table 4; example instances are in their Supplementary Table S4, not in the article PDF. This instance is constructed to the category. Invalidity verified by counterexample: premises true, conclusion false in the model {librarians=readers={L1,L2,P1,P2}, poets={P1,P2}, librarians={L1,L2}}."
+  },
+  "defect_class_source": [
+   "sun2024"
+  ],
+  "instance_source": null
+ },
+ {
+  "id": "reasoning-satire-01",
+  "defect_class": "reasoning_error",
+  "sun2024": {
+   "first": "Reasoning errors",
+   "second": "Satire"
+  },
+  "domain": "library_instruction",
+  "difficulty": "intermediate",
+  "scenario": "A student pastes a headline into a chatbot and asks for a summary of the policy it describes.",
+  "specimen": "Q: Summarize this policy: 'Campus Library to Replace Entire Collection With One Extremely Long Book, Citing Shelf Space'\nA: The library is consolidating its holdings into a single comprehensive volume to address space constraints. Key points: the collection will be merged into one bound work; existing titles will be withdrawn; the change is motivated by shelf-space limitations. Patrons should expect a transition period.",
+  "defects": [
+   "The headline is satire. There is no policy. The model summarizes it as one, complete with implementation notes it invented to make the summary look like a summary.",
+   "Every 'key point' is a restatement of the joke rendered in policy register.",
+   "Nothing signals doubt. A student who did not recognize the headline as satire now has a confident briefing on a nonexistent change."
+  ],
+  "verification_path": "Before summarizing, ask what kind of thing this is. Look for the source. Absurdity that is internally consistent is the signature of satire, and a summary that dutifully preserves the absurdity is the tell.",
+  "teaching_note": "Sun et al. define this error as failure to comprehend satire. The headline here is invented for the specimen and is not from any published satire outlet; a real one would carry its own copyright. For a library audience the lesson is source evaluation: the model cannot do the SIFT 'Investigate the source' step for you.",
+  "serves": [
+   "Verification Bench",
+   "source evaluation",
+   "SIFT instruction"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-02",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Category documented in Sun et al. (2024), Table 4; example instances are in their Supplementary Table S4, not in the article PDF. This instance is constructed to the category. Headline is original to this specimen; no satire publication's text is reproduced. Satirical intent is self-evident from content."
+  },
+  "defect_class_source": [
+   "sun2024"
+  ],
+  "instance_source": null
+ },
+ {
+  "id": "reasoning-metaphor-01",
+  "defect_class": "reasoning_error",
+  "sun2024": {
+   "first": "Reasoning errors",
+   "second": "Metaphorical errors"
+  },
+  "domain": "library_instruction",
+  "difficulty": "introductory",
+  "scenario": "A student asks a chatbot to fact-check something a professor said.",
+  "specimen": "Q: Is this statement accurate? 'Wikipedia is the front door to research.'\nA: This statement is inaccurate. Wikipedia is a website, not a door, and research does not have a physical entrance. A more precise wording would be 'Wikipedia is often the first source students consult.'",
+  "defects": [
+   "The model reads a metaphor as a literal claim and marks it false.",
+   "It then supplies, as a 'correction', a paraphrase of what the metaphor already meant — so it understood the meaning and rejected the form.",
+   "A student asked to fact-check figurative language would learn from this to strip every metaphor out of academic writing, which is bad advice."
+  ],
+  "verification_path": "Ask whether the statement is literal or figurative before asking whether it is true. If figurative, the question is whether the comparison is apt, not whether the vehicle exists.",
+  "teaching_note": "Sun et al. define metaphorical error as failure to grasp that one thing is being used to imply another. Alansari and Luqman document the same failure for Arabic proverbs; trans-05 is the cross-linguistic pair. Run them together: same mechanism, one in the student's language and one outside it.",
+  "serves": [
+   "Verification Bench",
+   "figurative language"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-02",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Category documented in Sun et al. (2024), Table 4; example instances are in their Supplementary Table S4, not in the article PDF. This instance is constructed to the category. The 'front door' metaphor is common in library-instruction discourse; the model's paraphrase in the specimen is a correct gloss, which is what makes the rejection of the form a reasoning error."
+  },
+  "defect_class_source": [
+   "sun2024",
+   "alansari2026"
+  ],
+  "instance_source": null
+ },
+ {
+  "id": "lit-06",
+  "defect_class": "confident_wrong",
+  "sun2024": {
+   "first": "Unfounded fabrication",
+   "second": "False health information"
+  },
+  "domain": "health",
+  "difficulty": "intermediate",
+  "scenario": "A chatbot answers a health question. Documented instance: the misinformation stimulus in Hwang & Jeong (2025), based on a generative AI tool's actual answer.",
+  "specimen": "Q: Does eating Shine Muscat grapes cause precocious puberty in children?\nA: Yes. Shine Muscat grapes have been linked to early onset of puberty, likely due to their high sugar content and growth-promoting compounds.",
+  "defects": [
+   "The claim is false. Hwang and Jeong used a generative AI's affirmative answer to this question as their misinformation stimulus, citing an SNU fact-check that found no such link.",
+   "The explanation ('high sugar', 'growth-promoting compounds') is mechanism-shaped filler that makes a false claim sound reasoned.",
+   "Their experiment paired this with a true-information control (the AI correctly denying 'fan death'). Forewarning about hallucination cut acceptance of the false claim (d = 0.45) without reducing acceptance of the true one.",
+   "Hwang & Jeong is not openly licensed; this exchange is reconstructed from their description, not quoted."
+  ],
+  "verification_path": "Search the specific claim, not the topic. A fact-check exists for this one. Then note that the model supplied a mechanism for a link that isn't there — explanations are not evidence.",
+  "teaching_note": "The one False health information specimen in the bank, and the only one whose classroom effect has been measured: telling people in advance that models hallucinate made them better at rejecting this claim and no worse at accepting a true one. That result is the case for the whole bank.",
+  "serves": [
+   "Verification Bench",
+   "health literacy",
+   "forewarning"
+  ],
+  "provenance": "constructed",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-02",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Instance documented in Hwang & Jeong (2025), Table 1, as a generative AI tool's actual answer; falsity rests on the SNU fact-check they cite (2022). Not independently re-verified here. Exchange reconstructed, not quoted, because the paper is all-rights-reserved."
+  },
+  "defect_class_source": [
+   "hwang2025",
+   "sun2024"
+  ],
+  "instance_source": null
+ },
+ {
+  "id": "lit-07",
+  "defect_class": "logic_error",
+  "sun2024": {
+   "first": "Logic errors",
+   "second": "Contradictions"
+  },
+  "domain": "general",
+  "difficulty": "introductory",
+  "scenario": "A user describes an AI's self-contradiction. Documented instance: Gambo et al. (2025), Table 7, Topic 4 review snippet.",
+  "specimen": "User review, reproduced from Gambo et al. (2025), CC BY 4.0: “The bot’s explanation was illogical and contradicted what it said earlier.”",
+  "defects": [
+   "Real user report. Gambo et al. file it under Logical Inconsistency / Self-Contradiction (H4); Sun et al.'s scheme places it under Logic errors / Contradictions.",
+   "Contradiction across turns is the one hallucination type the user can verify without any outside source — the evidence is the transcript itself.",
+   "Gambo et al. note H4 often signals the model losing conversational state rather than lacking a fact."
+  ],
+  "verification_path": "Scroll up. If two answers in one conversation conflict, at least one is wrong, and you know that without checking anything external.",
+  "teaching_note": "The cheapest verification in the bank. Sun et al. observe that logic errors are among the easiest for users to detect because they depart from ordinary reasoning; this specimen shows a user doing exactly that, unprompted.",
+  "serves": [
+   "Verification Bench",
+   "conversational verification"
+  ],
+  "provenance": "captured_from_literature",
+  "constructed_by": "Claude (Anthropic), for Lewis University Library",
+  "constructed_date": "2026-09",
+  "model": null,
+  "model_version": null,
+  "captured_date": null,
+  "verification": {
+   "status": "confirmed",
+   "method": "literature",
+   "checked_date": "2026-09-02",
+   "checked_by": "Claude (Anthropic), for Lewis University Library",
+   "note": "Quoted verbatim from Gambo et al. (2025) Table 7, Topic 4, under CC BY 4.0 with attribution. Category assignment is the paper's own; the Sun mapping is ours."
+  },
+  "defect_class_source": [
+   "gambo2025",
+   "sun2024"
+  ],
+  "instance_source": "gambo2025"
  }
 ]

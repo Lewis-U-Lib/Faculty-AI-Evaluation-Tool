@@ -14,6 +14,8 @@ Checks
     - activities missing a required field
     - duplicate activity titles
     - source ids referenced by the mapping layers but absent from sources.json
+    - invalid specimen classes, provenance values, or source references
+    - duplicate specimen ids or specimens missing required fields
     - rules with no activities
     - malformed URLs in sources
   WARNINGS problems a human should look at
@@ -21,7 +23,7 @@ Checks
     - other known copy errors
     - unqualified efficacy claims (ensures / dramatically / perfect / essential)
     - runtime metadata coverage below 100% (tier, mode, bloom)
-    - sources defined but never referenced anywhere
+    - sources defined but never referenced by activity mappings or specimens
 """
 import argparse
 import collections
@@ -38,6 +40,17 @@ REQUIRED_ACTIVITY_FIELDS = ["title", "desc", "time", "bloom", "tags", "instructi
 # not consumed by either runtime and is not part of the required activity
 # schema. Coverage checks therefore apply only to metadata the site uses.
 COVERAGE_FIELDS = ["tier", "mode", "bloom"]
+SPECIMEN_REQUIRED_FIELDS = [
+    "id", "defect_class", "domain", "difficulty", "scenario", "specimen",
+    "defects", "verification_path", "teaching_note", "serves", "provenance",
+]
+SPECIMEN_CLASSES = {
+    "fabricated_citation", "bias_stereotype", "translation_loss",
+    "quantitative_error", "confident_wrong", "entity_error", "relation_error",
+    "incompleteness", "outdatedness", "overclaim", "unverifiability",
+    "prompt_assumption_expansion", "reasoning_error", "logic_error",
+}
+SPECIMEN_PROVENANCE = {"constructed", "captured", "captured_from_literature"}
 
 MALFORMED = re.compile(
     r"can support (?:scope|draft|build|create|design|generate|identify|compare|analyze"
@@ -60,8 +73,10 @@ def main():
 
     rules = load("rules")
     sources = load("sources")
+    specimens = load("specimens")
     activities = [a for r in rules for a in r.get("activities", []) if isinstance(a, dict)]
-    stats.update(rules=len(rules), activities=len(activities), sources=len(sources))
+    stats.update(rules=len(rules), activities=len(activities), sources=len(sources),
+                 specimens=len(specimens))
 
     # --- structural -------------------------------------------------------
     for r in rules:
@@ -93,6 +108,32 @@ def main():
         if url and not re.match(r"^https?://", url) and not rec.get("retired"):
             errors.append(f"source {sid!r} has a malformed url: {url[:60]!r}")
 
+    for specimen_id, n in collections.Counter(s.get("id") for s in specimens).items():
+        if specimen_id and n > 1:
+            errors.append(f"duplicate specimen id {specimen_id!r} appears {n} times")
+
+    for specimen in specimens:
+        specimen_id = specimen.get("id", "?")
+        missing = [field for field in SPECIMEN_REQUIRED_FIELDS
+                   if specimen.get(field) in (None, "", [])]
+        if missing:
+            errors.append(f"specimen {specimen_id!r} missing {missing}")
+        if specimen.get("defect_class") not in SPECIMEN_CLASSES:
+            errors.append(f"specimen {specimen_id!r} has unknown defect class "
+                          f"{specimen.get('defect_class')!r}")
+        provenance = specimen.get("provenance")
+        if provenance not in SPECIMEN_PROVENANCE:
+            errors.append(f"specimen {specimen_id!r} has unknown provenance {provenance!r}")
+        if provenance == "captured_from_literature" and not specimen.get("instance_source"):
+            errors.append(f"specimen {specimen_id!r} is literature-sourced but has no instance_source")
+
+        specimen_source_ids = set(specimen.get("defect_class_source") or [])
+        if specimen.get("instance_source"):
+            specimen_source_ids.add(specimen["instance_source"])
+        referenced |= specimen_source_ids
+        for sid in sorted(specimen_source_ids - set(sources)):
+            errors.append(f"specimen {specimen_id!r} references undefined source id {sid!r}")
+
     # --- editorial --------------------------------------------------------
     for a in activities:
         text = " ".join(str(a.get(f, "")) for f in ("title", "desc", "instructions"))
@@ -119,13 +160,14 @@ def main():
     unused = sorted(set(sources) - referenced)
     stats["sources_unreferenced"] = len(unused)
     if unused:
-        warnings.append(f"{len(unused)} sources defined but not referenced by any mapping layer")
+        warnings.append(f"{len(unused)} sources defined but not referenced by activity mappings or specimens")
 
     # --- report -----------------------------------------------------------
     if args.as_json:
         print(json.dumps({"stats": stats, "errors": errors, "warnings": warnings}, indent=1))
     else:
-        print(f"rules={stats['rules']}  activities={stats['activities']}  sources={stats['sources']}")
+        print(f"rules={stats['rules']}  activities={stats['activities']}  "
+              f"sources={stats['sources']}  specimens={stats['specimens']}")
         for k, v in stats.items():
             if k.startswith("coverage_"):
                 print(f"  {k[9:]:<10} {v}")

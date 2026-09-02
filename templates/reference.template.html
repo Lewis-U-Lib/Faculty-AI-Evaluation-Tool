@@ -224,6 +224,7 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 .act-card__instr .guide-link{color:#f0d98c;text-decoration-color:rgba(240,217,140,.4);}
 .act-card__instr .guide-link:hover{color:#ffe8a0;text-decoration-color:#ffe8a0;}
 @media(prefers-reduced-motion:reduce){.guide-link{transition:none;}}
+.sr-only{position:absolute !important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
 
 /* ── BIBLIOGRAPHY ── */
 .bib-alpha-group{margin-bottom:32px;}
@@ -551,6 +552,7 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 .slide-icon{font-size:52px;margin-bottom:18px;
   filter:drop-shadow(0 4px 20px rgba(222,187,112,.3));animation:float-icon 3.5s ease-in-out infinite;}
 @keyframes float-icon{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+@media(prefers-reduced-motion:reduce){.slide-icon{animation:none;}}
 
 .slide-number{font-family:var(--font-h);font-size:11px;font-weight:700;letter-spacing:.14em;
   text-transform:uppercase;color:var(--gold);background:rgba(222,187,112,.12);
@@ -2088,6 +2090,7 @@ body.chat-open{overflow:hidden;}
 .spec-id{font-family:ui-monospace,Consolas,monospace;font-size:.78rem;font-weight:700;color:#ffe8a0;border:1px solid rgba(222,187,112,.45);border-radius:999px;padding:.1rem .5rem}
 .spec-dom,.spec-diff{font-size:.75rem;opacity:.85;border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:.1rem .5rem}
 .spec-prov{font-size:.82rem;line-height:1.5;border-left:3px solid #debb70;padding:.4rem .6rem;margin:0 0 .55rem;background:rgba(222,187,112,.10)}
+.spec-prov--lit{border-left:4px solid var(--cyan,#debb70);background:rgba(222,187,112,.10);}
 .spec-prov--cap{border-left-color:#7fc4a0;background:rgba(127,196,160,.10)}
 .spec-scen{font-size:.85rem;font-style:italic;opacity:.92;margin:0 0 .5rem}
 .spec-body{font-family:ui-monospace,Consolas,monospace;font-size:.8rem;line-height:1.55;white-space:pre-wrap;background:rgba(0,0,0,.28);border-radius:7px;padding:.6rem .7rem;margin:0 0 .55rem;overflow-x:auto}
@@ -2227,7 +2230,7 @@ body.chat-open{overflow:hidden;}
         <span class="hub-ico" aria-hidden="true">📋</span> Ideas <span class="hub-count">1,131</span>
       </button>
       <button class="hub-btn ref-section-btn" data-section="bibliography" type="button">
-        <span class="hub-ico" aria-hidden="true">📚</span> Sources <span class="hub-count" data-audit-count="sources">144</span>
+        <span class="hub-ico" aria-hidden="true">📚</span> Sources <span class="hub-count" data-audit-count="sources">153</span>
       </button>
       <button class="hub-btn ref-section-btn" data-section="spectrum" type="button">
         <span class="hub-ico" aria-hidden="true">🏛️</span> Policies <span class="hub-count">21</span>
@@ -2320,7 +2323,7 @@ body.chat-open{overflow:hidden;}
         <div class="slide-title">Your Guide to the<br/>AI Evaluation Tool Reference</div>
         <div class="slide-body">
           This interactive reference is your <strong>companion to the AI Evaluation Tool</strong>. 
-          It houses all <span data-audit-count="tools">32</span> AI tools, <span data-audit-count="activities">1,131</span> activity ideas, and <span data-audit-count="sources">144</span> active scholarly sources in one searchable, browseable interface, with counts pulled from the live page dataset.
+          It houses all <span data-audit-count="tools">32</span> AI tools, <span data-audit-count="activities">1,131</span> activity ideas, and <span data-audit-count="sources">153</span> active scholarly sources in one searchable, browseable interface, with counts pulled from the live page dataset.
           <span class="tip">💡 Swipe or use the arrows to walk through each feature.</span>
         </div>
       </div>
@@ -2383,7 +2386,7 @@ body.chat-open{overflow:hidden;}
         <div class="slide-number">Step 5 of 6</div>
         <div class="slide-title">Consult the Bibliography</div>
         <div class="slide-body">
-          The <strong>Sources tab</strong> contains all <span data-audit-count="sources">144</span> active scholarly references that informed the tool.
+          The <strong>Sources tab</strong> contains all <span data-audit-count="sources">153</span> active scholarly references that informed the tool.
           Sources marked with a <strong style="color:var(--gold);">✦ gold star</strong> are directly linked to individual ideas through the tool's provenance system.
           <span class="tip">💡 Look for the 🔗 icon next to entries for direct links to the original publication.</span>
         </div>
@@ -2536,15 +2539,20 @@ body.chat-open{overflow:hidden;}
 'use strict';
 var TOOLS = /*@@TOOLS@@*/null;;
 /* ══ SPECIMEN BANK v1 ═══════════════════════════════════════════════
-   ALL specimens are provenance:"constructed". None were captured from a
-   live model. They are teaching artifacts written to exhibit a documented
-   defect class, the way a case study or a lab specimen is built.
-   To replace one with a captured output: set provenance:"captured" and
-   populate model, model_version, captured_date and prompt. The renderer
-   displays the provenance banner for every specimen regardless of value,
-   and refuses to render a specimen whose provenance is missing. */
+   Specimens may be constructed teaching artifacts, captured model output,
+   or attributed examples reproduced from published literature. The renderer
+   displays a provenance banner for every specimen and refuses to render a
+   record whose provenance is missing. */
 var SPECIMENS = /*@@SPECIMENS@@*/null;;
-var SPECIMEN_CLASSES = {fabricated_citation:'Fabricated citation',bias_stereotype:'Bias and stereotype',translation_loss:'Translation loss',quantitative_error:'Quantitative error',confident_wrong:'Confident but wrong'};
+var SPECIMEN_CLASSES = {
+  fabricated_citation:'Fabricated citation', bias_stereotype:'Bias and stereotype',
+  translation_loss:'Translation loss', quantitative_error:'Quantitative error',
+  confident_wrong:'Confident but wrong',
+  entity_error:'Entity error', relation_error:'Relation error', incompleteness:'Incompleteness',
+  outdatedness:'Outdatedness', overclaim:'Overclaim', unverifiability:'Unverifiability',
+  prompt_assumption_expansion:'Prompt assumption expansion',
+  reasoning_error:'Reasoning error', logic_error:'Logic error'
+};
 
 /* ══ SPECIMEN LIBRARY RENDERER ═══════════════════════════════════════
    Builds the library markup from SPECIMENS. The provenance banner is
@@ -2560,13 +2568,20 @@ function specimenCard(sp){
   if(!sp || !sp.provenance){
     return '<div class="spec-card spec-card--err"><strong>Specimen withheld.</strong> '+
            'This record carries no provenance value, so it cannot be displayed. '+
-           'Every specimen must state whether it was captured or constructed.</div>';
+           'Every specimen must state whether it was constructed, captured, or reproduced from literature.</div>';
   }
   var constructed = sp.provenance === 'constructed';
+  var fromLit = sp.provenance === 'captured_from_literature';
+  var litSrc = fromLit && sp.instance_source && typeof BIB !== 'undefined' && BIB[sp.instance_source]
+             ? (BIB[sp.instance_source].short || sp.instance_source) : (sp.instance_source || 'the cited source');
   var banner = constructed
     ? '<div class="spec-prov spec-prov--made"><strong>Constructed specimen.</strong> '+
       'Written to exhibit a documented defect class. This is <em>not</em> a transcript '+
       'of any model\'s output and must never be presented to students as one.</div>'
+    : fromLit
+    ? '<div class="spec-prov spec-prov--lit"><strong>Reproduced from the literature.</strong> '+
+      'A real user report quoted, with attribution, from '+specimenEsc(litSrc)+' under an open license. '+
+      'The words are the user\'s; the model and version are not recorded in the source.</div>'
     : '<div class="spec-prov spec-prov--cap"><strong>Captured output.</strong> '+
       specimenEsc(sp.model||'model unrecorded')+
       (sp.model_version ? ' ('+specimenEsc(sp.model_version)+')' : '')+
@@ -2590,13 +2605,13 @@ function specimenCard(sp){
   return h;
 }
 function buildSpecimenLibrary(){
-  var h = '<p class="spec-intro">Twenty-five teaching specimens, each written to exhibit '+
-          'a documented defect class so students have a stable object to practise detection on. '+
-          'Every specimen here is <strong>constructed, not captured</strong>. A constructed '+
-          'hallucination shows what a hallucination looks like; it is not evidence about how '+
-          'often models produce them. For claims about incidence, students need captured outputs '+
-          'or published research.</p>';
-  var order = ['bias_stereotype','fabricated_citation','translation_loss','quantitative_error','confident_wrong'];
+  var h = '<p class="spec-intro">These examples are a faculty development bank for the '+
+          '<strong>Verification Bench</strong>. The bank combines deliberately constructed teaching '+
+          'specimens with clearly attributed examples reproduced from published research; every card '+
+          'states its provenance. A specimen shows what a defect can look like, not how often models '+
+          'produce it. Use published research or a documented sample of captured outputs for claims '+
+          'about incidence.</p>';
+  var order = Object.keys(SPECIMEN_CLASSES);
   order.forEach(function(cls){
     var group = SPECIMENS.filter(function(s){ return s.defect_class === cls; });
     if(!group.length) return;
@@ -4256,8 +4271,8 @@ function renderBibliography(){
       // Link button
       if(entry.url){
         h += '<a class="bib-card__link" href="' + esc(entry.url) + '" target="_blank" rel="noopener noreferrer">';
-        h += '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
-        h += 'View Source</a>';
+        h += '<svg aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
+        h += 'View Source<span class="sr-only"> for ' + esc(entry.short || entry.cite || 'this source') + ' (opens in a new tab)</span></a>';
       }
       h += '</div>';
     });
@@ -4399,7 +4414,7 @@ stb.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'
     referenceLogic: {
       eyebrow: 'Reference logic',
       title: 'Live companion dataset',
-      body: `This guide mirrors the tool's current in-page dataset and updates page totals from live arrays at runtime: <strong><span data-audit-count="tools">32</span> tools</strong>, <strong><span data-audit-count="activities">1,131</span> activity ideas</strong>, and <strong><span data-audit-count="sources">144</span> active sources</strong>. It is designed as a companion layer for browsing the same tools, activity ideas, and source structures that power the evaluation tool itself.`
+      body: `This guide mirrors the tool's current in-page dataset and updates page totals from live arrays at runtime: <strong><span data-audit-count="tools">32</span> tools</strong>, <strong><span data-audit-count="activities">1,131</span> activity ideas</strong>, and <strong><span data-audit-count="sources">153</span> active sources</strong>. It is designed as a companion layer for browsing the same tools, activity ideas, and source structures that power the evaluation tool itself.`
     },
     provenanceLegend: {
       eyebrow: 'Provenance legend',
@@ -4409,7 +4424,7 @@ stb.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'
     specimens: { eyebrow: 'Teaching specimens', title: 'Specimen Library', get body(){ return buildSpecimenLibrary(); } }, editorialPosture: {
       eyebrow: 'Editorial posture',
       title: 'HCAI with human sign-off',
-      body: 'This reference layer supports an <strong>HCAI workflow</strong>: AI assistance accelerated coding and structured synthesis, while human editors remain responsible for final provenance correction, scholarly framing, and institutional publication decisions.<br><br>Every activity in this corpus is written to nine published commitments:<ul><li><strong>AI is never the terminal step.</strong> Whatever a person consults last functions as the answer key, so an AI output is never the final consultation before work is settled.</li><li><strong>Independent production precedes AI.</strong> Where students later compare against a model, they produce and commit to their own version first.</li><li><strong>Modality is hedged; magnitudes are sourced.</strong> No categorical claim about what a model cannot do, and no efficiency figure without a citation.</li><li><strong>Criteria, not conclusions.</strong> Students receive the criteria for judging, never the finding they are expected to reach.</li><li><strong>Third-party material carries an in-body line.</strong> Education records, clinical data, research transcripts, recordings, and unpublished manuscripts each carry their handling requirement in the instructions themselves.</li><li><strong>Assessment is framed by construct visibility</strong> &mdash; whether a task elicits observable evidence of learning, not whether it defeats a model.</li><li><strong>Capability naming over product naming</strong> wherever the pedagogy does not turn on a specific product.</li><li><strong>Specimens carry provenance.</strong> Constructed teaching specimens are labeled as constructed and never presented as model output.</li><li><strong>Titles are stable.</strong> Renaming an activity orphans saved copies, so titles are not edited for style.</li></ul>Detection finds candidates; reading decides them. No edit ships on a pattern match alone, and each adjudication is logged with its reasoning.'
+      body: 'This reference layer supports an <strong>HCAI workflow</strong>: AI assistance accelerated coding and structured synthesis, while human editors remain responsible for final provenance correction, scholarly framing, and institutional publication decisions.<br><br>Every activity in this corpus is written to nine published commitments:<ul><li><strong>AI is never the terminal step.</strong> Whatever a person consults last functions as the answer key, so an AI output is never the final consultation before work is settled.</li><li><strong>Independent production precedes AI.</strong> Where students later compare against a model, they produce and commit to their own version first.</li><li><strong>Modality is hedged; magnitudes are sourced.</strong> No categorical claim about what a model cannot do, and no efficiency figure without a citation.</li><li><strong>Criteria, not conclusions.</strong> Students receive the criteria for judging, never the finding they are expected to reach.</li><li><strong>Third-party material carries an in-body line.</strong> Education records, clinical data, research transcripts, recordings, and unpublished manuscripts each carry their handling requirement in the instructions themselves.</li><li><strong>Assessment is framed by construct visibility</strong> &mdash; whether a task elicits observable evidence of learning, not whether it defeats a model.</li><li><strong>Capability naming over product naming</strong> wherever the pedagogy does not turn on a specific product.</li><li><strong>Specimens carry provenance.</strong> Constructed teaching specimens are labeled as constructed; literature-sourced examples are attributed; neither is presented as raw model output.</li><li><strong>Titles are stable.</strong> Renaming an activity orphans saved copies, so titles are not edited for style.</li></ul>Detection finds candidates; reading decides them. No edit ships on a pattern match alone, and each adjudication is logged with its reasoning.'
     }
   };
 

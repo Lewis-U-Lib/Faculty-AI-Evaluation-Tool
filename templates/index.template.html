@@ -2488,6 +2488,7 @@ summary.act-popup__section-title{cursor:pointer;}
 .spec-id{font-family:ui-monospace,Consolas,monospace;font-size:.78rem;font-weight:700;color:#ffe8a0;border:1px solid rgba(222,187,112,.45);border-radius:999px;padding:.1rem .5rem}
 .spec-dom,.spec-diff{font-size:.75rem;opacity:.85;border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:.1rem .5rem}
 .spec-prov{font-size:.82rem;line-height:1.5;border-left:3px solid #debb70;padding:.4rem .6rem;margin:0 0 .55rem;background:rgba(222,187,112,.10)}
+.spec-prov--lit{border-left:4px solid var(--cyan,#debb70);background:rgba(222,187,112,.10);}
 .spec-prov--cap{border-left-color:#7fc4a0;background:rgba(127,196,160,.10)}
 .spec-scen{font-size:.85rem;font-style:italic;opacity:.92;margin:0 0 .5rem}
 .spec-body{font-family:ui-monospace,Consolas,monospace;font-size:.8rem;line-height:1.55;white-space:pre-wrap;background:rgba(0,0,0,.28);border-radius:7px;padding:.6rem .7rem;margin:0 0 .55rem;overflow-x:auto}
@@ -3066,9 +3067,29 @@ body.panels-hidden .carousel-nav{display:none !important;}
 .sec-title--fold{
   display:flex;align-items:center;gap:10px;
   cursor:pointer;user-select:none;
+  padding:8px 12px;border-radius:10px;
+  border:1px solid rgba(222,187,112,.38);
+  background:linear-gradient(160deg,rgba(222,187,112,.10),rgba(222,187,112,.04));
+  transition:background .18s var(--ease,ease),border-color .18s var(--ease,ease);
+}
+.sec-title--fold:hover{
+  background:linear-gradient(160deg,rgba(222,187,112,.20),rgba(222,187,112,.09));
+  border-color:rgba(222,187,112,.68);
+}
+.sec-fold__toggle{
+  margin-left:auto;display:inline-flex;align-items:center;gap:7px;
+  font-family:var(--font-h,inherit);font-size:13.5px;font-weight:700;
+  letter-spacing:.03em;color:var(--cyan);
+  padding:5px 11px;border-radius:999px;
+  border:1.5px solid rgba(222,187,112,.62);
+  background:rgba(82,14,32,.42);
+  white-space:nowrap;
+}
+.sec-title--fold:hover .sec-fold__toggle{
+  background:var(--cyan);color:#3d0a18;border-color:var(--cyan);
 }
 .sec-fold__chev{
-  margin-left:auto;font-size:17px;color:var(--cyan);
+  font-size:15px;color:currentColor;
   transition:transform .25s var(--ease,ease);
 }
 .sec-title--fold[aria-expanded="false"] .sec-fold__chev{transform:rotate(-90deg);}
@@ -3105,7 +3126,7 @@ body.panels-hidden .carousel-nav{display:none !important;}
   .cc-footer .neutral-disclaimer li{break-inside:avoid;}
 }
 @media(prefers-reduced-motion:reduce){
-  .sec-fold__chev,.opt-help{transition:none;}
+  .sec-fold__chev,.opt-help,.sec-title--fold,.sec-fold__toggle{transition:none;}
 }
 
 
@@ -3338,10 +3359,10 @@ button.hdr-cta{
       <div class="hdr__kicker">Lewis University Library</div>
       <h1 class="hdr__title" id="toolTitle">Faculty <span>AI Evaluation Tool</span></h1>
       <p class="hdr__tagline">Context-Based AI Tools & Ideas for Activities, Teaching, and Research</p>
-      <div class="hdr__stats"><span class="hdr__stat"><span data-audit-count="tools">32</span> AI Tools</span><span class="hdr__stat-sep" aria-hidden="true">·</span><span class="hdr__stat"><span data-audit-count="rules">157</span> Rules</span><span class="hdr__stat-sep" aria-hidden="true">·</span><span class="hdr__stat"><span data-audit-count="activities">1,131</span> Ideas for Activities</span><span class="hdr__stat-sep" aria-hidden="true">·</span><span class="hdr__stat"><span data-audit-count="sources">144</span> Sources</span></div>
+      <div class="hdr__stats"><span class="hdr__stat"><span data-audit-count="tools">32</span> AI Tools</span><span class="hdr__stat-sep" aria-hidden="true">·</span><span class="hdr__stat"><span data-audit-count="rules">157</span> Rules</span><span class="hdr__stat-sep" aria-hidden="true">·</span><span class="hdr__stat"><span data-audit-count="activities">1,131</span> Ideas for Activities</span><span class="hdr__stat-sep" aria-hidden="true">·</span><span class="hdr__stat"><span data-audit-count="sources">153</span> Sources</span></div>
       <nav class="hdr__utility" aria-label="Related AI faculty resources">
         <a class="hdr-cta hdr-cta--primary" href="https://lewisu.libguides.com/genaifacultystaff" target="_blank" rel="noopener noreferrer" data-tooltip="Lewis University Library’s Generative AI Guide for faculty — policies, prompts, AI literacy resources, and course integration strategies.">🏛️ Faculty Guide →</a>
-        <a class="hdr-cta hdr-cta--secondary" href="https://lewis-u-lib.github.io/Faculty-AI-Evaluation-Tool/Reference.html" data-tooltip="Browse the complete AI tool catalog: 32 tools, 1,131 activity ideas, and 144 active scholarly sources — no selections required.">📚 Reference Guide →</a>
+        <a class="hdr-cta hdr-cta--secondary" href="https://lewis-u-lib.github.io/Faculty-AI-Evaluation-Tool/Reference.html" data-tooltip="Browse the complete AI tool catalog: 32 tools, 1,131 activity ideas, and 153 active scholarly sources — no selections required.">📚 Reference Guide →</a>
         <a class="hdr-cta hdr-cta--secondary" href="https://lewisu.libwizard.com/f/Faculty-AI-Eval-Tool-feedback" target="_blank" rel="noopener noreferrer" data-tooltip="Tell us what works and what doesn’t — a short form that goes to the librarians who maintain this tool.">💬 Feedback for Tool →</a>
         <button type="button" class="hdr-cta hdr-cta--secondary" id="hdrDisclosure" data-tooltip="This is a neutral educational resource — it does not endorse any AI tool or require faculty to use one. Read the full statement.">⚖️ Neutral-Use Disclosure</button>
       </nav>
@@ -3416,7 +3437,7 @@ button.hdr-cta{
     <!-- 1 · FACULTY FOCUS -->
     <div class="panel" id="panel-focus">
       <div class="panel__hd">
-        <span class="panel__ico">🎯</span>
+        <span class="panel__ico" aria-hidden="true">🎯</span>
         <span class="panel__hdwrap">
           <span class="panel__title">Faculty Focus</span>
           <span class="panel__sub">What is your primary goal right now?</span>
@@ -3446,7 +3467,7 @@ button.hdr-cta{
     <!-- 2 · TIME & DEPTH -->
     <div class="panel" id="panel-depth">
       <div class="panel__hd">
-        <span class="panel__ico">⏱️</span>
+        <span class="panel__ico" aria-hidden="true">⏱️</span>
         <span class="panel__hdwrap">
           <span class="panel__title">Time & Depth</span>
           <span class="panel__sub">How much time or scope does this involve?</span>
@@ -3491,7 +3512,7 @@ button.hdr-cta{
     <!-- 3 · AUDIENCE & MODALITY -->
     <div class="panel" id="panel-audience">
       <div class="panel__hd">
-        <span class="panel__ico">👥</span>
+        <span class="panel__ico" aria-hidden="true">👥</span>
         <span class="panel__hdwrap">
           <span class="panel__title">Audience & Modality</span>
           <span class="panel__sub">Who are your students and how do you meet?</span>
@@ -3529,7 +3550,7 @@ button.hdr-cta{
     <!-- 4 · DISCIPLINE -->
     <div class="panel" id="panel-discipline">
       <div class="panel__hd">
-        <span class="panel__ico">🔭</span>
+        <span class="panel__ico" aria-hidden="true">🔭</span>
         <span class="panel__hdwrap">
           <span class="panel__title">Discipline</span>
           <span class="panel__sub">What field or cluster best fits your course?</span>
@@ -3582,7 +3603,7 @@ button.hdr-cta{
     <!-- 5 · TEACHING TASK -->
     <div class="panel" id="panel-task">
       <div class="panel__hd">
-        <span class="panel__ico">✏️</span>
+        <span class="panel__ico" aria-hidden="true">✏️</span>
         <span class="panel__hdwrap">
           <span class="panel__title">Teaching Task</span>
           <span class="panel__sub">What specific job are you trying to do?</span>
@@ -3640,7 +3661,7 @@ button.hdr-cta{
     <!-- 6 · BLOOM'S + TOPIC -->
     <div class="panel" id="panel-bloom">
       <div class="panel__hd">
-        <span class="panel__ico">🧠</span>
+        <span class="panel__ico" aria-hidden="true">🧠</span>
         <span class="panel__hdwrap">
           <span class="panel__title">Bloom's Level & Topic</span>
           <span class="panel__sub">What cognitive depth? (Optional topic for context)</span>
@@ -3712,7 +3733,7 @@ button.hdr-cta{
         <button class="ab-btn" id="pdfBtn" data-tooltip="Open a clean printable report in a new tab with tools, activity ideas, and provenance notes you can save or print.">⬇ Export PDF</button>
         <button class="ab-btn" id="safeStartBtn" aria-describedby="filterHelp" data-tooltip="Show only shorter, lower-risk activities — good first steps for exploring AI before committing it to a course or assignment.">🟢 Lower-stakes ideas</button>
         <button class="ab-btn" id="resetBtn" data-tooltip="Clear all selections and return to the beginning — useful for starting a completely new search.">✕ Reset All</button>
-        <a href="https://lewis-u-lib.github.io/Faculty-AI-Evaluation-Tool/Reference.html" class="ab-btn" style="text-decoration:none;display:inline-flex;align-items:center;" data-tooltip="Browse the full dataset — 32 tools, 157 rules, 1,131 activity ideas, and 144 active sources — with no selections required.">📚 Reference</a>
+        <a href="https://lewis-u-lib.github.io/Faculty-AI-Evaluation-Tool/Reference.html" class="ab-btn" style="text-decoration:none;display:inline-flex;align-items:center;" data-tooltip="Browse the full dataset — 32 tools, 157 rules, 1,131 activity ideas, and 153 active sources — with no selections required.">📚 Reference</a>
       </div>
       <details class="filter-help" id="filterHelp">
         <summary>What do these filters and labels mean?</summary>
@@ -3836,7 +3857,7 @@ var lastFocusBeforePopup = null;
 /* Each tool: icon, name, url, badge, desc, bestFor[] tags */
 var TOOLS = /*@@TOOLS@@*/null;;
 
-/* ── Rule Database  (157 rules, 1131 activities, 144 active sources) ────
+/* ── Rule Database  (157 rules, 1131 activities, 153 active sources) ────
    Format:
    { id, when:{focus[], depth[], audience[], discipline[], task[]},
      priority, tools[], activities[] }
@@ -4216,15 +4237,20 @@ var ORIGIN_TYPE_LINKS = /*@@ORIGIN_TYPE_LINKS@@*/null;;
 
 
 /* ══ SPECIMEN BANK v1 ═══════════════════════════════════════════════
-   ALL specimens are provenance:"constructed". None were captured from a
-   live model. They are teaching artifacts written to exhibit a documented
-   defect class, the way a case study or a lab specimen is built.
-   To replace one with a captured output: set provenance:"captured" and
-   populate model, model_version, captured_date and prompt. The renderer
-   displays the provenance banner for every specimen regardless of value,
-   and refuses to render a specimen whose provenance is missing. */
+   Specimens may be constructed teaching artifacts, captured model output,
+   or attributed examples reproduced from published literature. The renderer
+   displays a provenance banner for every specimen and refuses to render a
+   record whose provenance is missing. */
 var SPECIMENS = /*@@SPECIMENS@@*/null;;
-var SPECIMEN_CLASSES = {fabricated_citation:'Fabricated citation',bias_stereotype:'Bias and stereotype',translation_loss:'Translation loss',quantitative_error:'Quantitative error',confident_wrong:'Confident but wrong'};
+var SPECIMEN_CLASSES = {
+  fabricated_citation:'Fabricated citation', bias_stereotype:'Bias and stereotype',
+  translation_loss:'Translation loss', quantitative_error:'Quantitative error',
+  confident_wrong:'Confident but wrong',
+  entity_error:'Entity error', relation_error:'Relation error', incompleteness:'Incompleteness',
+  outdatedness:'Outdatedness', overclaim:'Overclaim', unverifiability:'Unverifiability',
+  prompt_assumption_expansion:'Prompt assumption expansion',
+  reasoning_error:'Reasoning error', logic_error:'Logic error'
+};
 
 /* ══ SPECIMEN LIBRARY RENDERER ═══════════════════════════════════════
    Builds the library markup from SPECIMENS. The provenance banner is
@@ -4240,13 +4266,20 @@ function specimenCard(sp){
   if(!sp || !sp.provenance){
     return '<div class="spec-card spec-card--err"><strong>Specimen withheld.</strong> '+
            'This record carries no provenance value, so it cannot be displayed. '+
-           'Every specimen must state whether it was captured or constructed.</div>';
+           'Every specimen must state whether it was constructed, captured, or reproduced from literature.</div>';
   }
   var constructed = sp.provenance === 'constructed';
+  var fromLit = sp.provenance === 'captured_from_literature';
+  var litSrc = fromLit && sp.instance_source && typeof SOURCES !== 'undefined' && SOURCES[sp.instance_source]
+             ? (SOURCES[sp.instance_source].short || sp.instance_source) : (sp.instance_source || 'the cited source');
   var banner = constructed
     ? '<div class="spec-prov spec-prov--made"><strong>Constructed specimen.</strong> '+
       'Written to exhibit a documented defect class. This is <em>not</em> a transcript '+
       'of any model\'s output and must never be presented to students as one.</div>'
+    : fromLit
+    ? '<div class="spec-prov spec-prov--lit"><strong>Reproduced from the literature.</strong> '+
+      'A real user report quoted, with attribution, from '+specimenEsc(litSrc)+' under an open license. '+
+      'The words are the user\'s; the model and version are not recorded in the source.</div>'
     : '<div class="spec-prov spec-prov--cap"><strong>Captured output.</strong> '+
       specimenEsc(sp.model||'model unrecorded')+
       (sp.model_version ? ' ('+specimenEsc(sp.model_version)+')' : '')+
@@ -4270,13 +4303,13 @@ function specimenCard(sp){
   return h;
 }
 function buildSpecimenLibrary(){
-  var h = '<p class="spec-intro">Twenty-five teaching specimens, each written to exhibit '+
-          'a documented defect class so students have a stable object to practise detection on. '+
-          'Every specimen here is <strong>constructed, not captured</strong>. A constructed '+
-          'hallucination shows what a hallucination looks like; it is not evidence about how '+
-          'often models produce them. For claims about incidence, students need captured outputs '+
-          'or published research.</p>';
-  var order = ['bias_stereotype','fabricated_citation','translation_loss','quantitative_error','confident_wrong'];
+  var h = '<p class="spec-intro">These examples are a faculty development bank for the '+
+          '<strong>Verification Bench</strong>. The bank combines deliberately constructed teaching '+
+          'specimens with clearly attributed examples reproduced from published research; every card '+
+          'states its provenance. A specimen shows what a defect can look like, not how often models '+
+          'produce it. Use published research or a documented sample of captured outputs for claims '+
+          'about incidence.</p>';
+  var order = Object.keys(SPECIMEN_CLASSES);
   order.forEach(function(cls){
     var group = SPECIMENS.filter(function(s){ return s.defect_class === cls; });
     if(!group.length) return;
@@ -5222,13 +5255,17 @@ function render(opts){
   /* 2026-08-13: results stay expanded, but this one block folds — it is
      the longest run above the ideas people actually came for. */
   html+='<div class="sec-title sec-title--fold" id="toolsFold" role="button" tabindex="0" aria-expanded="true" aria-controls="toolGridFold">'+
-        '🛠️ Recommended AI Tools<span class="sec-fold__chev" aria-hidden="true">\u25BE</span></div>';
+        '🛠️ Recommended AI Tools'+
+        '<span class="sec-fold__toggle" aria-hidden="true">'+
+          '<span class="sec-fold__label">Hide</span>'+
+          '<span class="sec-fold__chev">\u25BE</span>'+
+        '</span></div>';
   html+='<div class="tool-grid" id="toolGridFold">';
   displayTools.forEach(function(tk,idx){
     var t=TOOLS[tk]; if(!t) return;
     var delay=(idx*0.06)+"s";
     html+='<div class="tool-card" style="animation-delay:'+delay+'">';
-    html+='<div class="tool-card__ico-col"><div class="tool-card__ico">'+t.icon+'</div></div>';
+    html+='<div class="tool-card__ico-col"><div class="tool-card__ico" aria-hidden="true">'+t.icon+'</div></div>';
     html+='<div class="tool-card__body">';
     html+='<div class="tool-card__name"><a href="'+t.url+'" target="_blank" rel="noopener noreferrer">'+esc(t.name)+'</a><span class="t-badge">'+esc(t.badge)+'</span></div>';
     html+='<div class="tool-card__desc">'+linkifyGuide(esc(t.desc))+'</div>';
@@ -6040,7 +6077,9 @@ function init(){
       var slideForStep = Math.floor(i/2);
       var isCurrent=slideForStep===curSlide;
       el.classList.toggle('current', isCurrent);
-      el.setAttribute('aria-current', isCurrent?'step':'false');
+      el.setAttribute('aria-current', (isCurrent && i % 2 === 0) ? 'step' : 'false');
+      if(!el.getAttribute('data-step-label')) el.setAttribute('data-step-label', el.getAttribute('aria-label')||'');
+      el.setAttribute('aria-label', el.getAttribute('data-step-label') + (isCurrent ? ' (currently shown)' : ''));
     });
   }
 
@@ -6933,7 +6972,7 @@ if(document.readyState==="loading"){
 })();
 </script>
 
-<div class="chat-overlay" id="specimenModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="specimenModalTitle" style="align-items:center;justify-content:center;"><div class="chat-modal"><div class="chat-modal__head"><div><div class="chat-modal__title" id="specimenModalTitle">🧪 Specimen Library</div><div class="chat-modal__sub">Constructed teaching specimens — not model transcripts</div></div><button class="chat-modal__close" id="specimenModalClose" aria-label="Close specimen library">✕</button></div><div class="chat-modal__body" id="specimenModalBody"></div></div></div><div class="chat-overlay" id="chatModal" aria-hidden="true">
+<div class="chat-overlay" id="specimenModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="specimenModalTitle" style="align-items:center;justify-content:center;"><div class="chat-modal"><div class="chat-modal__head"><div><div class="chat-modal__title" id="specimenModalTitle">🧪 Specimen Library</div><div class="chat-modal__sub">Provenance-labeled teaching specimens and published examples</div></div><button class="chat-modal__close" id="specimenModalClose" aria-label="Close specimen library">✕</button></div><div class="chat-modal__body" id="specimenModalBody"></div></div></div><div class="chat-overlay" id="chatModal" aria-hidden="true">
   <div class="chat-modal" role="dialog" aria-modal="true" aria-labelledby="chatModalTitle">
     <div class="chat-modal__head">
       <div>
@@ -7195,7 +7234,7 @@ if(document.readyState==="loading"){
 <p class="wt-p"><strong>📋 Copy Link</strong> saves a permanent URL for your current selections so you can bookmark or share it.</p>
 <p class="wt-p"><strong>✕ Reset All</strong> clears everything and returns to page 1. <strong>↻ Regenerate</strong> refreshes the same selection set.</p>
 <p class="wt-p"><strong>⬇ Export PDF</strong> opens a clean report in a new tab for printing or saving. You can also click any <strong>tool name</strong> to visit its site directly.</p>
-<p class="wt-p">The companion <strong>AI Evaluation Tool Reference Guide</strong> lets you browse the full dataset: <span data-audit-count="tools">32</span> tools, <span data-audit-count="activities">1,131</span> ideas for activities, and <span data-audit-count="sources">144</span> active sources.</p>
+<p class="wt-p">The companion <strong>AI Evaluation Tool Reference Guide</strong> lets you browse the full dataset: <span data-audit-count="tools">32</span> tools, <span data-audit-count="activities">1,131</span> ideas for activities, and <span data-audit-count="sources">153</span> active sources.</p>
 </div>
 <div class="wt-slide-visual">
 <div class="wt-mock">
@@ -7221,7 +7260,7 @@ if(document.readyState==="loading"){
 </div>
 </div>
 </div>
-<div class="wt-tip">💡 <strong>Tip:</strong> <span data-audit-count="tools">32</span> AI tools, <span data-audit-count="rules">157</span> rules, <span data-audit-count="activities">1,131</span> ideas for activities across 62 categories and 9 disciplines — backed by <span data-audit-count="sources">144</span> active sources. Provenance labels distinguish direct, synthesized, and framework-based grounding.</div>
+<div class="wt-tip">💡 <strong>Tip:</strong> <span data-audit-count="tools">32</span> AI tools, <span data-audit-count="rules">157</span> rules, <span data-audit-count="activities">1,131</span> ideas for activities across 62 categories and 9 disciplines — backed by <span data-audit-count="sources">153</span> active sources. Provenance labels distinguish direct, synthesized, and framework-based grounding.</div>
 </div>
 
 </div><!-- /wt-track -->
@@ -7567,6 +7606,8 @@ if(document.readyState==="loading"){
       var open = grid.hasAttribute('hidden');
       if(open) grid.removeAttribute('hidden'); else grid.setAttribute('hidden','');
       hd.setAttribute('aria-expanded', open ? 'true' : 'false');
+      var lbl = hd.querySelector('.sec-fold__label');
+      if(lbl) lbl.textContent = open ? 'Hide' : 'Show';
     }
     hd.addEventListener('click', toggle);
     hd.addEventListener('keydown', function(e){
@@ -7584,6 +7625,21 @@ if(document.readyState==="loading"){
     document.addEventListener('click', function(ev){
       if(ev.target.closest && ev.target.closest('.opt[data-value]')) setTimeout(refresh, 0);
     }, true);
+
+    function railStepReopen(ev){
+      if(ev.type === 'keydown' && ev.key !== 'Enter' && ev.key !== ' ') return;
+      if(!ev.target.closest) return;
+      if(!ev.target.closest('.railcol .step')) return;
+      if(!document.body.classList.contains('panels-hidden')) return;
+      setPanels(false);
+      var sg = document.querySelector('.sel-grid');
+      if(sg && sg.scrollIntoView){
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+        sg.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'start'});
+      }
+    }
+    document.addEventListener('click', railStepReopen, true);
+    document.addEventListener('keydown', railStepReopen, true);
 
     if(window.MutationObserver){
       var mo = new MutationObserver(function(){ wireHelp(); refresh(); wireToolsFold(); });
