@@ -16,6 +16,8 @@ Checks
     - source ids referenced by the mapping layers but absent from sources.json
     - invalid specimen classes, provenance values, or source references
     - duplicate specimen ids or specimens missing required fields
+    - specimen classes absent from either HTML renderer map
+    - missing templates that prevent renderer validation
     - rules with no activities
     - malformed URLs in sources
   WARNINGS problems a human should look at
@@ -34,6 +36,12 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
+BUILD_CONFIG = ROOT / "build.json"
+
+# The renderers group specimens by this map and skip classes absent from it.
+# Checking data alone cannot catch a valid specimen that silently never renders.
+SPECIMEN_CLASS_MAP = re.compile(r"var SPECIMEN_CLASSES\s*=\s*\{(.*?)\};", re.S)
+SPECIMEN_CLASS_KEY = re.compile(r"(?:^|,)\s*([A-Za-z_]\w*)\s*:", re.M)
 
 REQUIRED_ACTIVITY_FIELDS = ["title", "desc", "time", "bloom", "tags", "instructions", "mode", "tier"]
 # `arch` is retained where it already exists for editorial history, but it is
@@ -133,6 +141,53 @@ def main():
         referenced |= specimen_source_ids
         for sid in sorted(specimen_source_ids - set(sources)):
             errors.append(f"specimen {specimen_id!r} references undefined source id {sid!r}")
+
+    # --- specimen renderer maps -----------------------------------------
+    # build.json is authoritative for the templates that become published
+    # pages. Each one must explicitly list every class present in the data.
+    try:
+        build_config = json.loads(BUILD_CONFIG.read_text(encoding="utf-8"))
+        template_paths = [ROOT / target["template"]
+                          for target in build_config.get("targets", [])
+                          if target.get("template")]
+    except (FileNotFoundError, json.JSONDecodeError, KeyError) as exc:
+        template_paths = []
+        errors.append(f"cannot load template paths from build.json: {exc}")
+
+    if not template_paths:
+        errors.append("build.json defines no templates; cannot verify specimen renderers")
+
+    data_classes = {specimen.get("defect_class") for specimen in specimens
+                    if specimen.get("defect_class")}
+    renderer_classes = {}
+    for template_path in template_paths:
+        if not template_path.is_file():
+            errors.append(f"missing template {template_path.relative_to(ROOT)}; "
+                          "cannot verify its specimen renderer")
+            continue
+        match = SPECIMEN_CLASS_MAP.search(template_path.read_text(encoding="utf-8"))
+        if not match:
+            errors.append(f"{template_path.name}: no SPECIMEN_CLASSES map found")
+            continue
+        declared = set(SPECIMEN_CLASS_KEY.findall(match.group(1)))
+        renderer_classes[template_path.name] = declared
+        for specimen_class in sorted(data_classes - declared):
+            count = sum(1 for specimen in specimens
+                        if specimen.get("defect_class") == specimen_class)
+            errors.append(f"{template_path.name}: defect class {specimen_class!r} "
+                          f"is used by {count} specimen(s) but is absent from "
+                          "SPECIMEN_CLASSES, so those cards will not render")
+        for specimen_class in sorted(declared - data_classes):
+            warnings.append(f"{template_path.name}: SPECIMEN_CLASSES lists "
+                            f"{specimen_class!r}, but no specimen uses it")
+
+    if len(renderer_classes) > 1:
+        names = sorted(renderer_classes)
+        baseline_name = names[0]
+        baseline = renderer_classes[baseline_name]
+        for name in names[1:]:
+            if renderer_classes[name] != baseline:
+                errors.append(f"specimen renderer maps disagree: {baseline_name} and {name}")
 
     # --- editorial --------------------------------------------------------
     for a in activities:

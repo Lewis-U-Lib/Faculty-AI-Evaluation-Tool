@@ -14,6 +14,8 @@ The cases are drawn from the tool's own version history:
   5. malformed 'can support'        the May 2026 rewrite residue, still live
   6. unknown specimen class         would silently omit a specimen from the library
   7. dangling specimen source       would display an internal id instead of attribution
+  8. missing renderer template      makes renderer validation impossible
+  9. renderer map missing a class   silently omits valid specimen cards
 
     python3 scripts/selftest.py
 """
@@ -39,6 +41,7 @@ def sandbox():
     (tmp / "scripts").mkdir()
     shutil.copy(ROOT / "scripts" / "validate.py", tmp / "scripts" / "validate.py")
     shutil.copytree(ROOT / "data", tmp / "data")
+    shutil.copytree(ROOT / "templates", tmp / "templates")
     shutil.copy(ROOT / "build.json", tmp / "build.json")
     return tmp
 
@@ -109,6 +112,16 @@ def dangling_specimen_source(data):
     return data
 
 
+@case("missing renderer templates")
+def missing_renderer_templates(data):
+    return data
+
+
+@case("renderer map missing a specimen class")
+def renderer_map_missing_class(data):
+    return data
+
+
 def main():
     base = {name: json.loads((ROOT / "data" / f"{name}.json").read_text(encoding="utf-8"))
             for name in ("rules", "sources", "specimens", "kw_sources", "rule_fallback", "bloom_src")}
@@ -121,6 +134,15 @@ def main():
             for key, value in data.items():
                 (tmp / "data" / f"{key}.json").write_text(
                     json.dumps(value, ensure_ascii=False), encoding="utf-8")
+            if name == "missing renderer templates":
+                shutil.rmtree(tmp / "templates", ignore_errors=True)
+            elif name == "renderer map missing a specimen class":
+                template = tmp / "templates" / "reference.template.html"
+                text = template.read_text(encoding="utf-8")
+                needle = ", logic_error:'Logic error'"
+                if needle not in text:
+                    raise RuntimeError("self-test fixture no longer matches the renderer map")
+                template.write_text(text.replace(needle, "", 1), encoding="utf-8")
             code, out = run_validate(tmp)
             caught = code != 0
             want = expect_fail if name != "baseline: unmodified data validates" else False
