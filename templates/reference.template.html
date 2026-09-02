@@ -2656,21 +2656,51 @@ function ideaFbWrite(slug, code){
     localStorage.setItem(IDEA_FB_KEY, JSON.stringify(o));
   } catch(e){ /* private browsing or storage full: the count still sends */ }
 }
-/* Add #debug-feedback to the URL to see, in the console, exactly what each tap
+/* Add #debug-feedback to the URL to see, in the console, exactly what each action
    sends and whether either tracker accepted or refused it. Silent failure is right
    for a faculty member mid-click and wrong for the person maintaining this, who
    otherwise has to infer a problem from an absence of data. */
 var IDEA_FB_DEBUG = (location.hash || '').indexOf('debug-feedback') !== -1;
-function ideaFbSend(slug, code, tier, title, mode){
-  var path = 'idea-feedback/t' + (tier||'x') + '/' + slug + '/' + code;
-  var umamiEvent = IDEA_FB_UMAMI_EVENTS[code] || 'idea-feedback-unknown';
-  var umamiData = {
-    verdict: code,
+var IDEA_ANALYTICS_SEEN = Object.create(null);
+function ideaAnalyticsData(title, tier, mode, surface){
+  var slug = ideaFbSlug(title);
+  return {
     slug: slug,
     tier: (tier === null || tier === undefined || tier === '') ? 'x' : tier,
     mode: (mode === null || mode === undefined || mode === '') ? 'unset' : mode,
+    surface: surface || 'reference',
     title: String(title || slug).slice(0, 200)
   };
+}
+/* Reference cards are accordions, so count the first expansion of an idea during
+   a page load and ignore subsequent close/reopen toggles. */
+function ideaAnalyticsTrack(eventName, title, tier, mode, surface, oncePerPage){
+  var data = ideaAnalyticsData(title, tier, mode, surface);
+  var seenKey = eventName + '|' + data.surface + '|' + data.slug;
+  if(oncePerPage && IDEA_ANALYTICS_SEEN[seenKey]) return false;
+  var sent = false;
+  var why = null;
+  try {
+    if(!window.umami) why = 'umami script not loaded, blocked, or excluded on this domain';
+    else if(typeof window.umami.track !== 'function') why = 'umami loaded but track() is unavailable';
+    else {
+      window.umami.track(eventName, data);
+      sent = true;
+      if(oncePerPage) IDEA_ANALYTICS_SEEN[seenKey] = true;
+    }
+  } catch(err){ why = 'umami track() threw: ' + (err && err.message ? err.message : err); }
+  if(IDEA_FB_DEBUG){
+    console.log('[idea-analytics:umami]', sent ? 'sent' : 'NOT COUNTED', {
+      event: eventName, data: data, reason: why || 'accepted'
+    });
+  }
+  return sent;
+}
+function ideaFbSend(slug, code, tier, title, mode){
+  var path = 'idea-feedback/t' + (tier||'x') + '/' + slug + '/' + code;
+  var umamiEvent = IDEA_FB_UMAMI_EVENTS[code] || 'idea-feedback-unknown';
+  var umamiData = ideaAnalyticsData(title || slug, tier, mode, 'reference');
+  umamiData.verdict = code;
   if (IDEA_FB_DEBUG) {
     var why = null;
     if (!window.goatcounter) why = 'goatcounter script not loaded (blocked, offline, or still loading)';
@@ -4008,11 +4038,15 @@ function syllabusSpectrumCompactHtml(acts,S){
   var SLOTS = [];
   function reset(){ SLOTS = []; }
   function register(a, rule){ SLOTS.push({a:a, rule:rule}); return SLOTS.length - 1; }
+  function record(slot){
+    if(!slot) return null;
+    var i = parseInt(slot.getAttribute('data-idea'), 10);
+    return SLOTS[i] || null;
+  }
   function hydrate(slot){
     if(!slot || slot.getAttribute('data-built') === '1') return;
     slot.setAttribute('data-built','1');
-    var i = parseInt(slot.getAttribute('data-idea'), 10);
-    var rec = SLOTS[i];
+    var rec = record(slot);
     if(!rec) return;
     try { slot.innerHTML = build(rec.a, rec.rule)
         + '<div class="idea-detail__promptlink">Writing the prompt is where most of the adaptation happens. The library&rsquo;s <a href="https://lewisu.libguides.com/c.php?g=1501284&p=11329548" target="_blank" rel="noopener noreferrer">prompting guide</a> collects worked examples for educators.</div>'
@@ -4020,7 +4054,7 @@ function syllabusSpectrumCompactHtml(acts,S){
     catch(err){ slot.innerHTML = '<div class="idea-detail"><p class="idea-detail__hint">Supporting detail could not be assembled for this idea.</p></div>'; }
   }
 
-  return { build: build, reset: reset, register: register, hydrate: hydrate };
+  return { build: build, reset: reset, register: register, record: record, hydrate: hydrate };
 })();
 
 
@@ -4478,7 +4512,12 @@ document.addEventListener('click', function(e) {
     if(e.target.closest('.idea-detail, .idea-detail-slot')){ return; }
     card.classList.toggle('open');
     if(card.classList.contains('open')){
-      IDEA_DETAIL.hydrate(card.querySelector('.idea-detail-slot'));
+      var slot = card.querySelector('.idea-detail-slot');
+      IDEA_DETAIL.hydrate(slot);
+      var rec = IDEA_DETAIL.record(slot);
+      if(rec && rec.a){
+        ideaAnalyticsTrack('idea-opened', rec.a.title, rec.a.tier, rec.a.mode, 'reference', true);
+      }
     }
     return;
   }

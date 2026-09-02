@@ -4354,21 +4354,52 @@ function ideaFbWrite(slug, code){
     localStorage.setItem(IDEA_FB_KEY, JSON.stringify(o));
   } catch(e){ /* private browsing or storage full: the count still sends */ }
 }
-/* Add #debug-feedback to the URL to see, in the console, exactly what each tap
+/* Add #debug-feedback to the URL to see, in the console, exactly what each action
    sends and whether either tracker accepted or refused it. Silent failure is right
    for a faculty member mid-click and wrong for the person maintaining this, who
    otherwise has to infer a problem from an absence of data. */
 var IDEA_FB_DEBUG = (location.hash || '').indexOf('debug-feedback') !== -1;
-function ideaFbSend(slug, code, tier, title, mode){
-  var path = 'idea-feedback/t' + (tier||'x') + '/' + slug + '/' + code;
-  var umamiEvent = IDEA_FB_UMAMI_EVENTS[code] || 'idea-feedback-unknown';
-  var umamiData = {
-    verdict: code,
+var IDEA_ANALYTICS_SEEN = Object.create(null);
+function ideaAnalyticsData(title, tier, mode, surface){
+  var slug = ideaFbSlug(title);
+  return {
     slug: slug,
     tier: (tier === null || tier === undefined || tier === '') ? 'x' : tier,
     mode: (mode === null || mode === undefined || mode === '') ? 'unset' : mode,
+    surface: surface || 'index',
     title: String(title || slug).slice(0, 200)
   };
+}
+/* Opens, saves, and prints are deliberately counted at most once per idea during
+   one page load. Reopening a pop-up or toggling a star should not manufacture
+   popularity. A reload starts a new visit and therefore a new opportunity. */
+function ideaAnalyticsTrack(eventName, title, tier, mode, surface, oncePerPage){
+  var data = ideaAnalyticsData(title, tier, mode, surface);
+  var seenKey = eventName + '|' + data.surface + '|' + data.slug;
+  if(oncePerPage && IDEA_ANALYTICS_SEEN[seenKey]) return false;
+  var sent = false;
+  var why = null;
+  try {
+    if(!window.umami) why = 'umami script not loaded, blocked, or excluded on this domain';
+    else if(typeof window.umami.track !== 'function') why = 'umami loaded but track() is unavailable';
+    else {
+      window.umami.track(eventName, data);
+      sent = true;
+      if(oncePerPage) IDEA_ANALYTICS_SEEN[seenKey] = true;
+    }
+  } catch(err){ why = 'umami track() threw: ' + (err && err.message ? err.message : err); }
+  if(IDEA_FB_DEBUG){
+    console.log('[idea-analytics:umami]', sent ? 'sent' : 'NOT COUNTED', {
+      event: eventName, data: data, reason: why || 'accepted'
+    });
+  }
+  return sent;
+}
+function ideaFbSend(slug, code, tier, title, mode){
+  var path = 'idea-feedback/t' + (tier||'x') + '/' + slug + '/' + code;
+  var umamiEvent = IDEA_FB_UMAMI_EVENTS[code] || 'idea-feedback-unknown';
+  var umamiData = ideaAnalyticsData(title || slug, tier, mode, 'index');
+  umamiData.verdict = code;
   if (IDEA_FB_DEBUG) {
     var why = null;
     if (!window.goatcounter) why = 'goatcounter script not loaded (blocked, offline, or still loading)';
@@ -5382,6 +5413,7 @@ function printActivityIdea(popup){
   if(!popup) return;
   var bodyEl=popup.querySelector('.act-popup__body');
   if(!bodyEl) return;
+  ideaAnalyticsTrack('idea-printed', popup.__title, popup.__tier, popup.__mode, 'index', true);
   var clone=bodyEl.cloneNode(true);
 
   var tr=clone.querySelector('.act-popup__titlerow'); if(tr) tr.remove();
@@ -5603,10 +5635,13 @@ function attachActCardListeners(){
       popup.__wording=wordingOptions;
       popup.__title=(a&&a.title)||'';
       popup.__emoji=activityEmoji(a);
+      popup.__tier=a&&a.tier;
+      popup.__mode=a&&a.mode;
       card.classList.add('act-card--active');
       activePopup=popup;
       activePopupCard=card;
       popup.focus({preventScroll:true});
+      ideaAnalyticsTrack('idea-opened', a.title, a.tier, a.mode, 'index', true);
 
       // Position using viewport-fixed coordinates to avoid scroll jumps
       requestAnimationFrame(function(){ requestAnimationFrame(function(){
@@ -6202,7 +6237,11 @@ function init(){
       if(!acts[idx]||!acts[idx].a) return;
       var a=acts[idx].a, key=activityKey(a);
       if(SHORTLIST[key]){ delete SHORTLIST[key]; toast('Removed from shortlist.'); }
-      else{ SHORTLIST[key]={title:a.title,time:a.time,bloom:a.bloom,added:new Date().toISOString()}; toast('Saved to shortlist.'); }
+      else{
+        SHORTLIST[key]={title:a.title,time:a.time,bloom:a.bloom,added:new Date().toISOString()};
+        ideaAnalyticsTrack('idea-saved', a.title, a.tier, a.mode, 'index', true);
+        toast('Saved to shortlist.');
+      }
       saveShortlist(); render();
     }
   });
