@@ -4303,6 +4303,11 @@ var IDEA_FB_VERDICTS = [
   {code:'adapted', label:'Used it \u2014 needed changes'},
   {code:'skipped', label:'Looked, didn\u2019t use'}
 ];
+var IDEA_FB_UMAMI_EVENTS = {
+  worked:  'idea-feedback-used-as-written',
+  adapted: 'idea-feedback-modified',
+  skipped: 'idea-feedback-not-used'
+};
 function ideaFbSlug(title){
   return String(title||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 }
@@ -4323,6 +4328,7 @@ function ideaFbWrite(slug, code){
 var IDEA_FB_DEBUG = (location.hash || '').indexOf('debug-feedback') !== -1;
 function ideaFbSend(slug, code, tier, title, mode){
   var path = 'idea-feedback/t' + (tier||'x') + '/' + slug + '/' + code;
+  var umamiEvent = IDEA_FB_UMAMI_EVENTS[code] || 'idea-feedback-unknown';
   var umamiData = {
     verdict: code,
     slug: slug,
@@ -4345,7 +4351,7 @@ function ideaFbSend(slug, code, tier, title, mode){
     if (!window.umami) umamiWhy = 'umami script not loaded, blocked, or excluded on this domain';
     else if (typeof window.umami.track !== 'function') umamiWhy = 'umami loaded but track() is unavailable';
     console.log('[idea-feedback:umami]', umamiWhy ? 'NOT COUNTED' : 'sent', {
-      event: 'idea-feedback',
+      event: umamiEvent,
       data: umamiData,
       reason: umamiWhy || 'accepted'
     });
@@ -4368,7 +4374,7 @@ function ideaFbSend(slug, code, tier, title, mode){
   } catch(e){ /* never let a counting failure surface to the user */ }
   try {
     if(window.umami && typeof window.umami.track === 'function'){
-      window.umami.track('idea-feedback', umamiData);
+      window.umami.track(umamiEvent, umamiData);
     }
   } catch(e){ /* analytics must never interrupt the activity interface */ }
 }
