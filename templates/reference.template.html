@@ -2145,6 +2145,15 @@ body.chat-open{overflow:hidden;}
 .ss-foot{color:var(--gold-dim);font-size:11.5px;margin-top:14px;line-height:1.5;}
 @media(max-width:560px){.ss-lbl{font-size:10.5px;}}
 </style>
+<script
+  defer
+  src="https://cloud.umami.is/script.js"
+  data-website-id="80635adb-f2b4-41bc-9f59-15376ca0b5e8"
+  data-domains="lewis-u-lib.github.io"
+  data-do-not-track="true"
+  data-exclude-search="true"
+  data-exclude-hash="true"
+></script>
 </head>
 <body>
 <a href="#sec-tools" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.cssText='position:fixed;top:0;left:0;width:auto;height:auto;overflow:visible;padding:8px 16px;background:var(--gold);color:#3a0818;font-weight:700;z-index:99999;border-radius:0 0 8px 0;font-family:var(--font-b);'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;'">Skip to content</a>
@@ -2263,7 +2272,7 @@ body.chat-open{overflow:hidden;}
     <button class="fab-item" id="fabAskUs" type="button" title="Chat with a librarian" aria-label="Ask Us — Lewis University Library Chat">
       <span class="fab-item-ico">💬</span> Ask Us
     </button>
-    <button class="fab-item" id="fabSpecimens" type="button"><span class="fab-item-ico" aria-hidden="true">🧪</span>Specimen Library</button><button class="fab-item" id="fabHowTo" type="button" aria-label="How to Utilize This Guide">
+    <button class="fab-item" id="fabSpecimens" type="button" hidden aria-hidden="true"><span class="fab-item-ico" aria-hidden="true">🧪</span>Specimen Library</button><button class="fab-item" id="fabHowTo" type="button" aria-label="How to Utilize This Guide">
       <span class="fab-item-ico">📖</span> How to Utilize This Guide
     </button>
     <a class="fab-item" id="fabAppointment" href="https://lewisu.libcal.com/appointments/" target="_blank" rel="noopener noreferrer" aria-label="Make a research appointment with a librarian">
@@ -2601,9 +2610,9 @@ window.specimenCard = specimenCard;
 
 
 /* ══ PER-IDEA USE SIGNAL (Phase 7) ═══════════════════════════════════
-   One tap, three verdicts, counted in aggregate through the GoatCounter
-   endpoint already used for page traffic. No identity, no cookies, no free
-   text, nothing that leaves the browser except an anonymous path hit.
+   One tap, three verdicts, counted in aggregate through the privacy-focused
+   GoatCounter and Umami trackers used for page traffic. No identity, no
+   cookies, and no free text are collected.
 
    The local record exists only to stop double-counting and to show the
    person their answer was registered; it is never read back as data. */
@@ -2627,12 +2636,19 @@ function ideaFbWrite(slug, code){
   } catch(e){ /* private browsing or storage full: the count still sends */ }
 }
 /* Add #debug-feedback to the URL to see, in the console, exactly what each tap
-   sends and whether GoatCounter accepted or refused it. Silent failure is right
+   sends and whether either tracker accepted or refused it. Silent failure is right
    for a faculty member mid-click and wrong for the person maintaining this, who
    otherwise has to infer a problem from an absence of data. */
 var IDEA_FB_DEBUG = (location.hash || '').indexOf('debug-feedback') !== -1;
-function ideaFbSend(slug, code, tier, title){
+function ideaFbSend(slug, code, tier, title, mode){
   var path = 'idea-feedback/t' + (tier||'x') + '/' + slug + '/' + code;
+  var umamiData = {
+    verdict: code,
+    slug: slug,
+    tier: (tier === null || tier === undefined || tier === '') ? 'x' : tier,
+    mode: (mode === null || mode === undefined || mode === '') ? 'unset' : mode,
+    title: String(title || slug).slice(0, 200)
+  };
   if (IDEA_FB_DEBUG) {
     var why = null;
     if (!window.goatcounter) why = 'goatcounter script not loaded (blocked, offline, or still loading)';
@@ -2643,6 +2659,14 @@ function ideaFbSend(slug, code, tier, title){
       reason: why || 'accepted',
       note: why === null ? undefined :
         'file:// and localhost are filtered by GoatCounter itself; only the hosted URL counts.'
+    });
+    var umamiWhy = null;
+    if (!window.umami) umamiWhy = 'umami script not loaded, blocked, or excluded on this domain';
+    else if (typeof window.umami.track !== 'function') umamiWhy = 'umami loaded but track() is unavailable';
+    console.log('[idea-feedback:umami]', umamiWhy ? 'NOT COUNTED' : 'sent', {
+      event: 'idea-feedback',
+      data: umamiData,
+      reason: umamiWhy || 'accepted'
     });
   }
   /* GoatCounter may legitimately be absent: offline, blocked, or the file
@@ -2661,11 +2685,16 @@ function ideaFbSend(slug, code, tier, title){
       });
     }
   } catch(e){ /* never let a counting failure surface to the user */ }
+  try {
+    if(window.umami && typeof window.umami.track === 'function'){
+      window.umami.track('idea-feedback', umamiData);
+    }
+  } catch(e){ /* analytics must never interrupt the activity interface */ }
 }
-function ideaFbMarkup(title, tier){
+function ideaFbMarkup(title, tier, mode){
   var slug = ideaFbSlug(title);
   var prior = ideaFbRead()[slug];
-  var h = '<div class="idea-fb" data-slug="'+slug+'" data-tier="'+(tier||'')+'" '+
+  var h = '<div class="idea-fb" data-slug="'+slug+'" data-tier="'+(tier||'')+'" data-mode="'+String(mode||'').replace(/"/g,'&quot;')+'" '+
           'data-title="'+String(title||'').replace(/"/g,'&quot;')+'">';
   h += '<div class="idea-fb__q">Did you use this idea?</div>';
   if(prior){
@@ -2678,7 +2707,7 @@ function ideaFbMarkup(title, tier){
     h += '</div>';
   }
   h += '<div class="idea-fb__note">Counted in aggregate only. No identity, no cookies, '+
-       'no free text \u2014 the same privacy-first counter used for page views.</div>';
+       'no free text \u2014 using the same privacy-focused analytics as page views.</div>';
   h += '</div>';
   return h;
 }
@@ -2693,9 +2722,10 @@ document.addEventListener('click', function(e){
   if(!box) return;
   var slug = box.getAttribute('data-slug');
   var tier = box.getAttribute('data-tier');
+  var mode = box.getAttribute('data-mode');
   var title = box.getAttribute('data-title');
   var code = btn.getAttribute('data-code');
-  ideaFbSend(slug, code, tier, title);
+  ideaFbSend(slug, code, tier, title, mode);
   ideaFbWrite(slug, code);
   var row = box.querySelector('.idea-fb__row');
   if(row){
@@ -3964,7 +3994,7 @@ function syllabusSpectrumCompactHtml(acts,S){
     if(!rec) return;
     try { slot.innerHTML = build(rec.a, rec.rule)
         + '<div class="idea-detail__promptlink">Writing the prompt is where most of the adaptation happens. The library&rsquo;s <a href="https://lewisu.libguides.com/c.php?g=1501284&p=11329548" target="_blank" rel="noopener noreferrer">prompting guide</a> collects worked examples for educators.</div>'
-        + ideaFbMarkup(rec.a.title, rec.a.tier); }
+        + ideaFbMarkup(rec.a.title, rec.a.tier, rec.a.mode); }
     catch(err){ slot.innerHTML = '<div class="idea-detail"><p class="idea-detail__hint">Supporting detail could not be assembled for this idea.</p></div>'; }
   }
 
